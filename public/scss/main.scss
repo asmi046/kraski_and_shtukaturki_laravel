@@ -56,7 +56,7 @@ h4 {
 }
 
 .title {
-	// text-align: center;
+	text-align: center;
 	// color: #222222;
 	margin-bottom: 38px;
 }
@@ -127,6 +127,134 @@ h4 {
 .main-banner__title {}
 
 .main-banner__subtitle {}
+
+//========================================================================================================================================================
+
+.page__popular {
+	padding: 71px 0 32px 0;
+}
+
+.popular {}
+
+.section {}
+
+._container {}
+
+.popular__title {
+	margin-bottom: 37px;
+}
+
+.title {}
+
+.popular__inner {
+	flex-wrap: wrap;
+	margin: 0 -12.5px;
+}
+
+.d-flex {}
+
+.popular__column {
+	display: flex;
+	flex: 0 1 25%;
+	padding: 0 12.5px 24px 12.5px;
+}
+
+.popular__card {}
+
+.card-popular {
+	flex: 0 1 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 24px 24px 33px 24px;
+	border: 0.4px solid #C6C6C6;
+	overflow: hidden;
+}
+
+.card-popular__img {
+	padding-bottom: 76%;
+	border: 1px solid #000;
+	margin-bottom: 23px;
+}
+
+._ibg {}
+
+.card-popular__descp {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	padding-top: 23px;
+	padding-bottom: 19px;
+	border-top: 0.4px solid #C6C6C6;
+}
+
+.card-popular__descp-title {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 31px;
+	letter-spacing: 0.015em;
+	margin-bottom: 23px;
+}
+
+.card-popular__descp-subtitle {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 22px;
+	letter-spacing: 0.015em;
+	margin-bottom: 33px;
+	flex: 1 1 auto;
+}
+
+.card-popular__descp-price {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 29px;
+	letter-spacing: 0.015em;
+}
+
+.card-popular__btn {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 22px;
+	letter-spacing: 0.015em;
+	color: #A48A7B;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #CA9E67;
+		}
+	}
+}
+
+.btn {}
+
+//========================================================================================================================================================
+
+.page__about {}
+
+.about {}
+
+.about__title {
+	margin-bottom: 30px;
+}
+
+.about__subtitle {
+	max-width: 1236px;
+	width: 100%;
+	margin: 0px auto;
+	text-align: center;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.015em;
+
+	p {
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
 
 //========================================================================================================================================================
 
