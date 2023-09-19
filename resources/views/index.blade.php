@@ -13,10 +13,14 @@
 <main class="page">
 
 <section class="page__main-banner main-banner section">
+	<div class="nuar_blk"></div>
 	<div class="_container">
 
-		<h2 class="main-banner__title">Заголовок</h2>
-		<p class="main-banner__subtitle">Подзагловок</p>
+		<h1 class="main-banner__title">
+			ДЕКОРАТИВНЫЕ
+			ШТУКАТУРКИ
+			MADE IN ITALY
+		</h1>
 
 	</div>
 </section>
@@ -51,7 +55,7 @@
 						<img src="@img" alt="">
 					</div>
 					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
+						<h3 class="card-popular__descp-title">Rotonda</h3>
 						<p class="card-popular__descp-subtitle">
 							Суперстойкая глубоко — матовая 
 							краска для создания идеальных 
@@ -87,7 +91,7 @@
 						<img src="@img" alt="">
 					</div>
 					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
+						<h3 class="card-popular__descp-title">Rotonda</h3>
 						<p class="card-popular__descp-subtitle">
 							Суперстойкая глубоко — матовая 
 							краска для создания идеальных 
@@ -101,8 +105,64 @@
 
 		</div>
 
+		<div class="popular__btn-block">
+			<button type="submit" class="popular__btn-all btn">Посмотреть все</button>
+		</div>
+
 	</div>
 </section>
+
+<section class="page__categories categories section">
+	<div class="_container">
+		<h2 class="categories__title title">Категории</h2>
+
+		<div class="categories__inner d-flex">
+
+		</div>
+
+	</div>
+</section>
+
+<section class="page__advantages advantages section">
+	<div class="_container">
+		<h2 class="advantages__title title">Наши преимущества</h2>
+
+		<div class="advantages__inner d-flex">
+
+		</div>
+
+	</div>
+</section>
+
+<section class="page__consult consult section">
+	<div class="_container">
+
+	<div class="consult__inner">
+		<h2 class="consult__title">
+			Получить консультацию 
+			специалиста
+		</h2>
+
+		<div class="consult__subtitle">
+			<p>
+				Оставьте свои контакты и наши специалисты свяжутся 
+				с Вами в течении 15 минут
+			</p>
+		</div>
+
+		<form class="consult__form d-flex">
+			<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя*" class="consult__form-input input">
+			<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Телефон*" class="consult__form-input input">
+			<button type="submit" class="consult__form-btn btn">Отправить</button>
+		</form>
+
+		<p class="consult__form-policy">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
+
+		</div>
+
+	</div>
+</section>
+
 
 <section class="page__popular popular section">
 	<div class="_container">
@@ -116,7 +176,7 @@
 						<img src="@img" alt="">
 					</div>
 					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
+						<h3 class="card-popular__descp-title">Color Quarz Primer</h3>
 						<p class="card-popular__descp-subtitle">
 							Суперстойкая глубоко — матовая 
 							краска для создания идеальных 
@@ -134,7 +194,7 @@
 						<img src="@img" alt="">
 					</div>
 					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
+						<h3 class="card-popular__descp-title">Tintofis</h3>
 						<p class="card-popular__descp-subtitle">
 							Суперстойкая глубоко — матовая 
 							краска для создания идеальных 
@@ -152,7 +212,7 @@
 						<img src="@img" alt="">
 					</div>
 					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
+						<h3 class="card-popular__descp-title">Nanofis</h3>
 						<p class="card-popular__descp-subtitle">
 							Суперстойкая глубоко — матовая 
 							краска для создания идеальных 
@@ -170,7 +230,7 @@
 						<img src="@img" alt="">
 					</div>
 					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
+						<h3 class="card-popular__descp-title">Interofis</h3>
 						<p class="card-popular__descp-subtitle">
 							Суперстойкая глубоко — матовая 
 							краска для создания идеальных 
@@ -181,6 +241,21 @@
 					<a href="#" class="card-popular__btn">Подробнее...</a>
 				</div>
 			</div>
+
+		</div>
+
+		<div class="popular__btn-block">
+			<button type="submit" class="popular__btn-all btn">Посмотреть все</button>
+		</div>
+
+	</div>
+</section>
+
+<section class="page__advantages-slider advantages-slider section">
+	<div class="_container">
+		<h2 class="advantages-slider__title title">Наши преимущества</h2>
+
+		<div class="advantages-slider__inner d-flex">
 
 		</div>
 

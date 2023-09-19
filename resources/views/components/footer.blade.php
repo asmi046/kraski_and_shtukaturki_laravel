@@ -15,7 +15,7 @@
 				<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Пункт 5</a></li>
 			</ul>
 
-			<div class="contacts footer__contact d-flex">
+			<!-- <div class="contacts footer__contact d-flex">
 				<a href="tel:84951700000" class="contacts__phone header__phone">8 (495) 170-00-00</a>
 				<p class="contacts__time-phone header__time-phone">Звонить с 08:00 до 22:00</p>
 				<a href="#callback" class="header__popup-link _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
@@ -30,7 +30,7 @@
 					class="footer__form-input input _phone _req">
 				</div>
 				<button type="submit" class="footer__form-btn btn">Записаться на прием</button> 
-			</form>
+			</form> -->
 
 		</div>
 

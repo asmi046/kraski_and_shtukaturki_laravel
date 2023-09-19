@@ -14,7 +14,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	min-width: 320px;
-	max-width: 1920px;
+	// max-width: 1920px;
 
 	a {
 		font-family: "Lato";
@@ -31,16 +31,17 @@ body {
 
 //<ЗАГОЛОВКИ>=================================================================================================================
 h1 {
-	font-size: 35px;
-	font-weight: 500;
-	line-height: 52.8 / 40 *100%;
-	line-height: 38px;
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 50px;
+	letter-spacing: 0.015em;
 }
 
 h2 {
-	font-size: 32px;
-	font-weight: 500;
-	line-height: 38px;
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 50px;
+	letter-spacing: 0.015em;
 }
 
 h3 {
@@ -116,17 +117,34 @@ h4 {
 //===================================================================================================================================
 
 .main-banner {
-	padding: 150px 0;
-	min-height: 600px;
+	position: relative;
+	padding: 148px 0 187px 0;
+	min-height: 525px;
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: cover;
 	background-image: url('../img/main-banner');
+
+	._container {
+		display: flex;
+		justify-content: flex-end;
+	}
 }
 
-.main-banner__title {}
+.main-banner__title {
+	// font-family: "Montserrat";
+	max-width: 494px;
+	width: 100%;
+	font-size: 52px;
+	font-weight: 800;
+	line-height: 63px;
+	letter-spacing: 0.015em;
+	text-align: right;
+	color: #fff;
+	position: relative;
+	z-index: 5;
+}
 
-.main-banner__subtitle {}
 
 //========================================================================================================================================================
 
@@ -226,7 +244,75 @@ h4 {
 	}
 }
 
+.popular__btn-block {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.popular__btn-all {}
+
+//========================================================================================================================================================
+
+.page__consult {}
+
+.consult {}
+
+.section {}
+
+._container {}
+
+.consult__inner {
+	max-width: 516px;
+	width: 100%;
+}
+
+.consult__title {
+	margin-bottom: 30px;
+}
+
+.consult__subtitle {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 22px;
+	letter-spacing: 0.015em;
+}
+
+.consult__form {
+	display: flex;
+	flex-direction: column;
+	max-width: 331px;
+	width: 100%;
+	margin-top: 27px;
+}
+
+.d-flex {}
+
+.consult__form-input {
+	margin-bottom: 10px;
+}
+
+.input {}
+
+.consult__form-btn {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 26px;
+	letter-spacing: 0.015em;
+	color: #fff;
+	background-color: #CA9E67;
+	border: none;
+}
+
 .btn {}
+
+.consult__form-policy {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0.015em;
+	margin-top: 22px;
+}
 
 //========================================================================================================================================================
 
