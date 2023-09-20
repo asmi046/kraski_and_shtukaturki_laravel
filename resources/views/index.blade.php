@@ -34,7 +34,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+						<img src="img/popular/01.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Maggiore</h3>
@@ -52,7 +52,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+					<img src="img/popular/01.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Rotonda</h3>
@@ -70,7 +70,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+					<img src="img/popular/02.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Maggiore</h3>
@@ -88,7 +88,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+					<img src="img/popular/01.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Rotonda</h3>
@@ -173,7 +173,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+					<img src="img/popular/03.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Color Quarz Primer</h3>
@@ -191,7 +191,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+					<img src="img/popular/03.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Tintofis</h3>
@@ -209,7 +209,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+					<img src="img/popular/03.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Nanofis</h3>
@@ -227,7 +227,7 @@
 			<div class="popular__column">
 				<div class="popular__card card-popular">
 					<div class="card-popular__img _ibg">
-						<img src="@img" alt="">
+					<img src="img/popular/03.jpg" alt="Картинка товара">
 					</div>
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Interofis</h3>
@@ -256,6 +256,79 @@
 		<h2 class="advantages-slider__title title">Наши преимущества</h2>
 
 		<div class="advantages-slider__inner d-flex">
+
+		<div class="advantages-slider__column">
+			<div class="advantages-slider__item item-advantages">
+				<span class="item-advantages__icon icon-bg-green"></span>
+				<div class="item-advantages__descp">
+					<p>
+						Lorem Ipsum - это текст-"рыба", часто 
+						используемый в печати и вэб-дизайне. 
+					</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="advantages-slider__column">
+			<div class="advantages-slider__item item-advantages">
+				<span class="item-advantages__icon icon-bg-brick"></span>
+				<div class="item-advantages__descp">
+					<p>
+						Lorem Ipsum - это текст-"рыба", часто 
+						используемый в печати и вэб-дизайне. 
+					</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="advantages-slider__column">
+			<div class="advantages-slider__item item-advantages">
+				<span class="item-advantages__icon icon-bg-green"></span>
+				<div class="item-advantages__descp">
+					<p>
+						Lorem Ipsum - это текст-"рыба", часто 
+						используемый в печати и вэб-дизайне. 
+					</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="advantages-slider__column">
+			<div class="advantages-slider__item item-advantages">
+				<span class="item-advantages__icon icon-bg-purpur"></span>
+				<div class="item-advantages__descp">
+					<p>
+						Lorem Ipsum - это текст-"рыба", часто 
+						используемый в печати и вэб-дизайне. 
+					</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="advantages-slider__column">
+			<div class="advantages-slider__item item-advantages">
+				<span class="item-advantages__icon icon-bg-green"></span>
+				<div class="item-advantages__descp">
+					<p>
+						Lorem Ipsum - это текст-"рыба", часто 
+						используемый в печати и вэб-дизайне. 
+					</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="advantages-slider__column">
+			<div class="advantages-slider__item item-advantages">
+				<span class="item-advantages__icon icon-bg-brick"></span>
+				<div class="item-advantages__descp">
+					<p>
+						Lorem Ipsum - это текст-"рыба", часто 
+						используемый в печати и вэб-дизайне. 
+					</p>
+				</div>
+			</div>
+			</div>
+			
 
 		</div>
 

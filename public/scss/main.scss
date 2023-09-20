@@ -190,7 +190,11 @@ h4 {
 
 .card-popular__img {
 	padding-bottom: 76%;
-	border: 1px solid #000;
+	flex: 0 1 30%;
+	overflow: hidden;
+	max-width: 228px;
+	width: 100%;
+	margin: 0 auto;
 	margin-bottom: 23px;
 }
 
@@ -256,7 +260,12 @@ h4 {
 
 .page__consult {}
 
-.consult {}
+.consult {
+	background: url('../img/consult.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .section {}
 
@@ -316,6 +325,92 @@ h4 {
 
 //========================================================================================================================================================
 
+.page__advantages-slider {}
+
+.advantages-slider {}
+
+.section {}
+
+._container {}
+
+.advantages-slider__title {}
+
+.title {}
+
+.advantages-slider__inner {
+	flex-wrap: wrap;
+	margin: 0 -13.5px;
+}
+
+.advantages-slider__column {
+	flex: 0 1 33.333%;
+	display: flex;
+	padding: 0 13.5px 15px 13.5px;
+}
+
+.advantages-slider__item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex: 0 1 100%;
+}
+
+.item-advantages {}
+
+.item-advantages__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	flex: 0 0 84px;
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	background-color: #fff;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		float: left;
+		width: 40px;
+		flex: 0 0 40px;
+		height: 40px;
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEiIGhlaWdodD0iNDEiIHZpZXdCb3g9IjAgMCA0MSA0MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjY2IDEuMDcwMDFMNi41NiA4LjQ0MDAxTDMyLjkzIDM0LjgxTDQwLjMgMjkuNzFMMTEuNjYgMS4wNzAwMVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS4wNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0xOS43NSAyMS42Mkw2LjU2OTk5IDguNDRDNi41Njk5OSA4LjQ0IDYuMDY5OTkgOC45NCA1LjE1OTk5IDkuODVDNC4yNzk5OSAxMC43MyA0LjI2IDExLjc1IDQuODYgMTIuNzVDNi45MSAxNi4xOSAxNC40OSAyMy45NiAxMi4xMiAyNi4yMkM4LjU0OTk5IDI5LjYzIDQuMTk5OTkgMzEuNDkgMi4yNDk5OSAzMy40NEMwLjY3OTk5NCAzNS4wMSAwLjY3OTk5NCAzNy41NSAyLjI0OTk5IDM5LjEyQzMuODE5OTkgNDAuNjkgNi4zNiA0MC42OSA3LjkzIDM5LjEyQzkuODggMzcuMTggMTEuNzQgMzIuODMgMTUuMTUgMjkuMjVDMTcuNDEgMjYuODggMjUuMTggMzQuNDYgMjguNjIgMzYuNTFDMjkuNjIgMzcuMSAzMC42NCAzNy4wOSAzMS41MiAzNi4yMUwzMi45MyAzNC44TDE5Ljc1IDIxLjYyWiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjA2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTQwLjMgMS4wNzAwMUwyOC40NiAxMi45MSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjA2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTI2LjQ2IDEuMDcwMDFMMjEuNTQgNS45OTAwMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjA2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTQwLjMgMTQuOTFMMzUuMzggMTkuODIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS4wNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0zMy4zOCAxLjA3MDAxTDI1IDkuNDUwMDEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS4wNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik00MC4zIDcuOTg5OTlMMzEuOTIgMTYuMzYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS4wNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik01LjQ0IDM2LjY1QzUuMjQgMzYuODUgNC45MSAzNi44NSA0LjcxIDM2LjY1QzQuNTEgMzYuNDUgNC41MSAzNi4xMiA0LjcxIDM1LjkyQzQuOTEgMzUuNzIgNS4yNCAzNS43MiA1LjQ0IDM1LjkyQzUuNjQgMzYuMTIgNS42NCAzNi40NSA1LjQ0IDM2LjY1WiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjA2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==');
+	}
+}
+
+.icon-bg-green {
+	background-color: #4E9E79;
+}
+
+.icon-bg-brick {
+	background-color: #CA9E67;
+}
+
+.icon-bg-purpur {
+	background-color: #A48A7B;
+}
+
+
+.item-advantages__descp {
+	padding: 42px 23px 43px 56px;
+	background-color: #F0F0F0;
+	border-radius: 0 0 60px 0;
+	margin-left: 50px;
+
+	p {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24.83px;
+		letter-spacing: 0.015em;
+	}
+}
+
+//========================================================================================================================================================
+
 .page__about {}
 
 .about {}
@@ -344,5 +439,7 @@ h4 {
 
 //========================================================================================================================================================
 
+
+//========================================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
