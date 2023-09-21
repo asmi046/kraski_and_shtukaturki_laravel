@@ -118,6 +118,73 @@
 
 		<div class="categories__inner d-flex">
 
+		<div class="categories__left-col">
+
+			<a href="#" class="categories__box box-categories">
+				<div class="box-categories__img _ibg">
+					<img src="img/categories/01.jpg" alt="Картинка">
+				</div>
+				<div class="box-categories__text">
+					<p>
+						Декоративные <br>
+						краски
+					</p>
+				</div>
+			</a>
+
+			<a href="#" class="categories__box box-categories">
+				<div class="box-categories__img _ibg">
+					<img src="img/categories/02.jpg" alt="Картинка">
+				</div>
+				<div class="box-categories__text">
+					<p>
+					Венецианская <br>
+					штукатурка
+					</p>
+				</div>
+</a>
+
+		</div>
+
+		<a href="#" class="categories__box box-categories box-categories--center">
+				<div class="box-categories__img _ibg">
+					<img src="img/categories/03.jpg" alt="Картинка">
+				</div>
+				<div class="box-categories__text">
+					<p>
+					Фактурные <br>
+					покрытия
+					</p>
+				</div>
+</a>
+
+		<div class="categories__right-col">
+
+<a href="#" class="categories__box box-categories">
+		<div class="box-categories__img _ibg">
+			<img src="img/categories/04.jpg" alt="Картинка">
+		</div>
+		<div class="box-categories__text">
+			<p>
+			Микроцемент
+			</p>
+		</div>
+</a>
+
+	<a href="#" class="categories__box box-categories">
+		<div class="box-categories__img _ibg">
+			<img src="img/categories/05.jpg" alt="Картинка">
+		</div>
+		<div class="box-categories__text">
+			<p>
+			Финишные <br>
+			покрытия
+			</p>
+		</div>
+</a>
+
+</div>
+
 		</div>
 
 	</div>
