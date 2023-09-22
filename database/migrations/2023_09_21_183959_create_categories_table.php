@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer("parentid")->comment("ID родительской категории");
+            $table->integer("parentid")->default(0)->comment("ID родительской категории");
             $table->integer("order")->default(0)->comment("Порядок сортировки");
             $table->string("name", 200)->comment("Имя категории");
             $table->string("slug", 200)->comment("Slug категории");

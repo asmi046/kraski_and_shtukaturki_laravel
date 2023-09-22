@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string("name", 200)->comment("Имя категории");
-            $table->string("slug", 200)->comment("Slug категории");
+            $table->string("name", 200)->comment("Имя торговой марки");
+            $table->string("slug", 200)->comment("Slug торговой марки");
+            $table->string("img", 300)->comment("Логотип торговой марки");
 
             $table->text('description')->comment('Описание');
 

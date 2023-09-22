@@ -26,7 +26,7 @@ class OptionSeeder extends Seeder
                     "name" => "policy",
                     "type" => "rich",
                     'title' => 'Политика конфиденциальности',
-                    "value" => file_get_contents(public_path('texts//policy.txt')),
+                    "value" => file_get_contents(public_path('base\\texts\\policy.txt')),
                 ],
 
                 [

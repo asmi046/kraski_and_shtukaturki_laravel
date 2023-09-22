@@ -13,6 +13,7 @@ class Trademark extends Model
         "parentid",
         "name",
         "slug",
+        "img",
         'description',
         'title_seo',
         'description_seo'
