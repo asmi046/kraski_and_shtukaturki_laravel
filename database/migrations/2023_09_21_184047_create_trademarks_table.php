@@ -14,6 +14,14 @@ return new class extends Migration
         Schema::create('trademarks', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->string("name", 200)->comment("Имя категории");
+            $table->string("slug", 200)->comment("Slug категории");
+
+            $table->text('description')->comment('Описание');
+
+            $table->string('title_seo', 100)->comment('SEO заголовок');
+            $table->string('description_seo', 300)->comment('SEO описание');
         });
     }
 

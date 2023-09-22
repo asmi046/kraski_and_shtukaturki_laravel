@@ -30,6 +30,13 @@ class OptionSeeder extends Seeder
                 ],
 
                 [
+                    "name" => "about",
+                    "type" => "rich",
+                    'title' => 'О компании',
+                    "value" => "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной  для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.",
+                ],
+
+                [
                     "name" => "adress",
                     "type" => "plan",
                     'title' => 'Адрес',
@@ -62,13 +69,6 @@ class OptionSeeder extends Seeder
                     "type" => "plan",
                     'title' => 'Ссылка Telegram',
                     "value" => "tg://resolve?domain=floridasfl",
-                ],
-
-                [
-                    "name" => "whatsapp_lnk",
-                    "type" => "plan",
-                    'title' => 'Ссылка WhatsApp',
-                    "value" => "https://wa.me/792071025551",
                 ],
 
                 [
