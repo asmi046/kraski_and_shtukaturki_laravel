@@ -107,6 +107,24 @@
 	.header__bottom {
 		padding: 10px 0;
 	}
+
+	.page {
+		padding-top: 50px;
+	}
+
+	.main-banner {
+		padding: 60px 0 !important;
+		min-height: auto;
+	}
+
+	.main-banner ._container {
+		justify-content: start;
+	}
+
+	.main-banner__title {
+		text-align: left;
+		max-width: 100%;
+	}
 }
 
 @media (max-width: 700px) {
@@ -170,5 +188,21 @@
 
 	.search__input {
 		border-radius: 0 !important;
+	}
+
+	.main-banner__title {
+		font-size: 36px;
+		line-height: 46px;
+	}
+
+	.main-banner {
+		padding: 30px 0 !important;
+	}
+}
+
+@media (max-width: 375px) {
+	.main-banner__title {
+		font-size: 26px;
+		line-height: 36px;
 	}
 }
