@@ -135,6 +135,20 @@
 	.popular__column {
 		flex: 0 1 50%;
 	}
+
+	.consult__title {
+		line-height: 1.2;
+		margin-bottom: 15px;
+	}
+
+	.consult__subtitle {
+		font-weight: 400;
+	}
+
+	.consult__form {
+		max-width: 70%;
+		width: 100%;
+	}
 }
 
 @media (max-width: 700px) {
@@ -173,6 +187,10 @@
 
 	.popup__form-block {
 		flex: 0 1 100%;
+	}
+
+	.consult__form {
+		max-width: 100%;
 	}
 }
 
