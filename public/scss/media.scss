@@ -25,6 +25,19 @@
 	.box-categories__text {
 		padding: 15px 30px;
 	}
+
+	.footer__top {
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.footer__logo {
+		margin-bottom: 25px;
+	}
+
+	.footer__bottom {
+		padding-top: 15px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -282,6 +295,10 @@
 
 	.popular__column {
 		flex: 0 1 50%;
+	}
+
+	.header__mob-search-btn {
+		margin-right: 15px;
 	}
 }
 
