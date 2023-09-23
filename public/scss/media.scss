@@ -9,6 +9,16 @@
 	.popular__column {
 		flex: 0 1 33.333%;
 	}
+
+	.box-categories__text {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 860px) {
+	.box-categories__text {
+		padding: 15px 30px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -149,6 +159,13 @@
 		max-width: 70%;
 		width: 100%;
 	}
+
+	.box-categories__text {
+		font-size: 14px;
+		line-height: 1.3;
+		padding: 10px 25px;
+		min-height: auto;
+	}
 }
 
 @media (max-width: 700px) {
@@ -168,6 +185,28 @@
 
 	.popup__form-block {
 		padding: 35px 15px;
+	}
+}
+
+@media (max-width: 540px) {
+	.categories__inner {
+		flex-wrap: wrap;
+	}
+
+	.categories__left-col,
+	.categories__right-col {
+		flex: 0 1 100%;
+	}
+
+	.box-categories--center {
+		flex: 0 1 100%;
+		margin: 10px 0;
+	}
+
+	.box-categories__text {
+		width: 100%;
+		border-radius: 0;
+		bottom: 0;
 	}
 }
 
