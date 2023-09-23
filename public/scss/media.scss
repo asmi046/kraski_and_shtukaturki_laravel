@@ -1,5 +1,5 @@
 //<Адаптив>===========================================================================================================================================
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
 	._container {
 		padding: 0 10px;
 	}
@@ -9,17 +9,18 @@
 	.header {
 		position: fixed;
 		width: 100%;
-		padding: 5px 0;
+		padding: 0;
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	}
 
-	.header__logo {
-		margin-right: 20px;
+	.header__top {
+		display: none;
 	}
 
-	.logo-icon {
-		flex: 0 0 45px;
-		height: 15px;
+	.header__logo {
+		flex: 0 0 100px;
+		height: 25px;
+		margin-right: 20px;
 	}
 
 	.logo-icon:before {
@@ -81,6 +82,31 @@
 	::-webkit-scrollbar {
 		display: none;
 	}
+
+	.icon-menu {
+		margin-left: 15px;
+	}
+
+	.header__bascet,
+	.header__favorit {
+		font-size: 0;
+	}
+
+	.header__favorit {
+		margin-right: 0;
+	}
+
+	.header__bascet svg {
+		margin-right: 0px;
+	}
+
+	.header__search {
+		margin-right: 15px;
+	}
+
+	.header__bottom {
+		padding: 10px 0;
+	}
 }
 
 @media (max-width: 700px) {
@@ -129,6 +155,7 @@
 
 	.header__mob-search-btn {
 		display: flex;
+		margin-left: auto;
 	}
 
 	.header__search.active {
