@@ -31,16 +31,16 @@
     @vite([
         'resources/css/app.css',
         'resources/js/app.js',
-        
+
 				'public/css/main.css',
-        
-				'public/scss/mixin.scss', 
-				'public/scss/null.scss', 
-				'public/scss/forms.scss', 
-				'public/scss/ui.scss', 
-				'public/scss/map.scss', 
-				'public/scss/popup.scss', 
-				'public/scss/main.scss', 
+
+				'public/scss/mixin.scss',
+				'public/scss/null.scss',
+				'public/scss/forms.scss',
+				'public/scss/ui.scss',
+				'public/scss/map.scss',
+				'public/scss/popup.scss',
+				'public/scss/main.scss',
 				'public/scss/header.scss',
 				'public/scss/footer.scss',
 				'public/scss/media.scss',
@@ -60,7 +60,11 @@
 	<div class="wrapper" id="global_app">
         <x-header></x-header>
 
+        <main class="page">
+
         @yield('content')
+
+        </main>
 
         <x-footer></x-footer>
     </div>

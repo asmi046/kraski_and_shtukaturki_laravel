@@ -10,8 +10,6 @@
 
 @section('content')
 
-<main class="page">
-
 <section class="page__main-banner main-banner section">
 	<div class="nuar_blk"></div>
 	<div class="_container">
@@ -39,8 +37,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Maggiore</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -57,8 +55,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Rotonda</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -75,8 +73,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Maggiore</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -93,8 +91,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Rotonda</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -206,13 +204,13 @@
 
 	<div class="consult__inner">
 		<h2 class="consult__title">
-			Получить консультацию 
+			Получить консультацию
 			специалиста
 		</h2>
 
 		<div class="consult__subtitle">
 			<p>
-				Оставьте свои контакты и наши специалисты свяжутся 
+				Оставьте свои контакты и наши специалисты свяжутся
 				с Вами в течении 15 минут
 			</p>
 		</div>
@@ -245,8 +243,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Color Quarz Primer</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -263,8 +261,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Tintofis</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -281,8 +279,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Nanofis</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -299,8 +297,8 @@
 					<div class="card-popular__descp">
 						<h3 class="card-popular__descp-title">Interofis</h3>
 						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая 
-							краска для создания идеальных 
+							Суперстойкая глубоко — матовая
+							краска для создания идеальных
 							поверхностей
 						</p>
 						<div class="card-popular__descp-price">от 1 760 руб.</div>
@@ -329,8 +327,8 @@
 				<span class="item-advantages__icon icon-bg-green"></span>
 				<div class="item-advantages__descp">
 					<p>
-						Lorem Ipsum - это текст-"рыба", часто 
-						используемый в печати и вэб-дизайне. 
+						Lorem Ipsum - это текст-"рыба", часто
+						используемый в печати и вэб-дизайне.
 					</p>
 				</div>
 			</div>
@@ -341,8 +339,8 @@
 				<span class="item-advantages__icon icon-bg-brick"></span>
 				<div class="item-advantages__descp">
 					<p>
-						Lorem Ipsum - это текст-"рыба", часто 
-						используемый в печати и вэб-дизайне. 
+						Lorem Ipsum - это текст-"рыба", часто
+						используемый в печати и вэб-дизайне.
 					</p>
 				</div>
 			</div>
@@ -353,8 +351,8 @@
 				<span class="item-advantages__icon icon-bg-green"></span>
 				<div class="item-advantages__descp">
 					<p>
-						Lorem Ipsum - это текст-"рыба", часто 
-						используемый в печати и вэб-дизайне. 
+						Lorem Ipsum - это текст-"рыба", часто
+						используемый в печати и вэб-дизайне.
 					</p>
 				</div>
 			</div>
@@ -365,8 +363,8 @@
 				<span class="item-advantages__icon icon-bg-purpur"></span>
 				<div class="item-advantages__descp">
 					<p>
-						Lorem Ipsum - это текст-"рыба", часто 
-						используемый в печати и вэб-дизайне. 
+						Lorem Ipsum - это текст-"рыба", часто
+						используемый в печати и вэб-дизайне.
 					</p>
 				</div>
 			</div>
@@ -377,8 +375,8 @@
 				<span class="item-advantages__icon icon-bg-green"></span>
 				<div class="item-advantages__descp">
 					<p>
-						Lorem Ipsum - это текст-"рыба", часто 
-						используемый в печати и вэб-дизайне. 
+						Lorem Ipsum - это текст-"рыба", часто
+						используемый в печати и вэб-дизайне.
 					</p>
 				</div>
 			</div>
@@ -389,13 +387,13 @@
 				<span class="item-advantages__icon icon-bg-brick"></span>
 				<div class="item-advantages__descp">
 					<p>
-						Lorem Ipsum - это текст-"рыба", часто 
-						используемый в печати и вэб-дизайне. 
+						Lorem Ipsum - это текст-"рыба", часто
+						используемый в печати и вэб-дизайне.
 					</p>
 				</div>
 			</div>
 			</div>
-			
+
 
 		</div>
 
@@ -407,14 +405,13 @@
 		<h2 class="about__title title">О нас</h2>
 		<div class="about__subtitle">
 			<p>
-			Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" 
-			для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя 
+			Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
+			для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя
 			Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
 			</p>
 		</div>
 	</div>
 </section>
 
-</main>
 
 @endsection
