@@ -9,6 +9,13 @@
 @section('description', $description)
 
 @section('content')
+    <div>
+        {!! $product["description"] !!}
 
+        @foreach ( $product["props"] as $key => $item)
+        <p>{{$key}} {{$item}}</p>
+
+        @endforeach
+    </div>
 
 @endsection

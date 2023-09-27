@@ -20,6 +20,20 @@ class CategorySeeder extends Seeder
         $ourData = file_get_contents(base_path() . "/public/base/category_vernici.json");
         $main_data = json_decode($ourData, true);
 
+        $main_data = [
+            "Декоративные краски" => "",
+            "Венецианские штукатурки" => "",
+            "Фактурные покрытия" => "",
+            "Лессирующие покрытия" => "",
+            "Интерьерные краски" => "",
+            "Фасадные краски" => "",
+            "Фасадные штукатурки" => "",
+            "Грунты" => "",
+            "Специальные покрытия" => "",
+            "Системы Микроцементо" => "",
+            "Инструменты" => ""
+        ];
+
         $i = 1;
         foreach ($main_data as $key => $item) {
 

@@ -14,6 +14,26 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('sku')->unique();
+            $table->string('title');
+            $table->string('slug');
+            $table->string('img')->nullable();
+            $table->text('description')->nullable();
+            $table->double('price', 10, 2);
+            $table->double('old_price', 10, 2)->default(0);
+            $table->integer('sales_count')->default(0);
+
+            $table->boolean("hit")->nullable();
+            $table->boolean("new")->nullable();
+
+            $table->json('advantages')->nullable();
+            $table->json('props')->nullable();
+            $table->string('volume', 20);
+            $table->text('short_description')->nullable();
+            $table->string('tm', 50)->nullable();
+
+            $table->string('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
         });
     }
 
