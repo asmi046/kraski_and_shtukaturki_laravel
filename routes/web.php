@@ -8,6 +8,9 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\CartController;
 
+use App\Http\Controllers\EasyPageController;
+use App\Http\Controllers\ProjectController;
+
 
 
 /*
@@ -24,6 +27,15 @@ use App\Http\Controllers\CartController;
 Route::get('/', [IndexController::class, "show"])->name('home');
 Route::get('/catalog', [CategoryController::class, "show"])->name('catalog');
 Route::get('/product', [ProductController::class, "show"])->name('product');
+
+Route::get('/contacts', [EasyPageController::class, "contacts"])->name('contacts');
+Route::get('/services', [EasyPageController::class, "services"])->name('services');
+Route::get('/about', [EasyPageController::class, "about"])->name('about');
+Route::get('/policy', [EasyPageController::class, "policy"])->name('policy');
+
+Route::get('/projects', [ProjectController::class, "index"])->name('projects');
+Route::get('/projects/{slug}', [ProjectController::class, "project_page"])->name('project_page');
+
 
 Route::get('/bascet/thencs', [CartController::class, "thencs"])->name("bascet_thencs");
 Route::get('/bascet', [CartController::class, "index"])->name("bascet");
