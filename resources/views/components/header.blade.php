@@ -5,7 +5,7 @@
 	<div class="header__bottom">
 		<div class="header__bottom-container _container">
 
-			<a href="index.html" class="logo-icon header__logo">
+			<a href="{{route('home')}}" class="logo-icon header__logo">
                 <x-svg.logo></x-svg.logo>
 			</a>
 

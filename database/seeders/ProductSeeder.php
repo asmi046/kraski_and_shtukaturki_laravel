@@ -44,6 +44,7 @@ class ProductSeeder extends Seeder
         if ($full_img_name)
             Storage::disk('public')->put($full_img_name, file_get_contents($item["pack_foto"]), 'public');
 
+
         $tovar_element = [
             "sku" => $item["sku"],
             "title" => $item["name"],
@@ -51,8 +52,8 @@ class ProductSeeder extends Seeder
             "img" => Storage::url($full_img_name),
             "description" => $item["description"],
             "price" => floatval($item["price"]),
-            "old_price" => 0,
-            "sales_count" => 0,
+            "old_price" => (rand(0, 1))?(float)$item["price"] - 100:0,
+            "sales_count" => (rand(0, 1))?rand(1, 10):0,
             "hit" => 0,
             "new" => 0,
             "tm" => "San Marco",
