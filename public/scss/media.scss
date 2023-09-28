@@ -19,6 +19,20 @@
 	.box-categories__text {
 		font-size: 20px;
 	}
+
+	.main-category__inner .popular__column {
+		flex: 0 1 50%;
+	}
+}
+
+@media (max-width: 940px) {
+	.category-sec__sidebar {
+		flex: 0 0 40%;
+	}
+
+	.category-sec__main {
+		flex: 0 0 60%;
+	}
 }
 
 @media (max-width: 860px) {
@@ -37,6 +51,25 @@
 
 	.footer__bottom {
 		padding-top: 15px;
+	}
+}
+
+@media (max-width: 812px) {
+	.category-sec__wrap {
+		flex-wrap: wrap;
+	}
+
+	.category-sec__sidebar {
+		flex: 0 1 100%;
+		margin-bottom: 25px;
+	}
+
+	.category-sec__main {
+		flex: 0 1 100%;
+	}
+
+	.main-category__inner .popular__column {
+		flex: 0 1 33.333%;
 	}
 }
 
@@ -189,6 +222,10 @@
 	.advantages-slider__column {
 		flex: 0 1 100%;
 	}
+
+	.filter-block__btn {
+		flex: 0 1 50%;
+	}
 }
 
 @media (max-width: 700px) {
@@ -199,6 +236,21 @@
 		-o-transition: right 0.8s;
 		transition: right 0.8s;
 	}
+}
+
+@media (max-width: 630px) {
+	.main-category__inner .popular__column {
+		flex: 0 1 50%;
+		padding: 0 5px 10px 5px;
+	}
+
+	.filter-block__btn {
+		flex: 0 1 100%;
+	}
+}
+
+.main-category__inner {
+	margin: 0 -5px;
 }
 
 @media (max-width: 612px) {
@@ -319,6 +371,10 @@
 		padding: 25px;
 		border-radius: 0;
 		margin-left: 0;
+	}
+
+	.main-category__inner .popular__column {
+		flex: 0 1 100%;
 	}
 }
 
