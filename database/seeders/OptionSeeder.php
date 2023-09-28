@@ -26,14 +26,14 @@ class OptionSeeder extends Seeder
                     "name" => "policy",
                     "type" => "rich",
                     'title' => 'Политика конфиденциальности',
-                    "value" => file_get_contents(public_path('base\\texts\\policy.txt')),
+                    "value" => file_get_contents(public_path('base//texts//policy.txt')),
                 ],
 
                 [
                     "name" => "about_main",
                     "type" => "rich",
                     'title' => 'О нас на главной',
-                    "value" => file_get_contents(public_path('base\\texts\\about.txt')),
+                    "value" => file_get_contents(public_path('base//texts//about.txt')),
                 ],
 
                 [

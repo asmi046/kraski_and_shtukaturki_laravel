@@ -186,77 +186,12 @@
 
 		<div class="advantages-slider__inner d-flex">
 
-		<div class="advantages-slider__column">
-			<div class="advantages-slider__item item-advantages">
-				<span class="item-advantages__icon icon-bg-green"></span>
-				<div class="item-advantages__descp">
-					<p>
-						Lorem Ipsum - это текст-"рыба", часто
-						используемый в печати и вэб-дизайне.
-					</p>
-				</div>
-			</div>
-			</div>
-
-			<div class="advantages-slider__column">
-			<div class="advantages-slider__item item-advantages">
-				<span class="item-advantages__icon icon-bg-brick"></span>
-				<div class="item-advantages__descp">
-					<p>
-						Lorem Ipsum - это текст-"рыба", часто
-						используемый в печати и вэб-дизайне.
-					</p>
-				</div>
-			</div>
-			</div>
-
-			<div class="advantages-slider__column">
-			<div class="advantages-slider__item item-advantages">
-				<span class="item-advantages__icon icon-bg-green"></span>
-				<div class="item-advantages__descp">
-					<p>
-						Lorem Ipsum - это текст-"рыба", часто
-						используемый в печати и вэб-дизайне.
-					</p>
-				</div>
-			</div>
-			</div>
-
-			<div class="advantages-slider__column">
-			<div class="advantages-slider__item item-advantages">
-				<span class="item-advantages__icon icon-bg-purpur"></span>
-				<div class="item-advantages__descp">
-					<p>
-						Lorem Ipsum - это текст-"рыба", часто
-						используемый в печати и вэб-дизайне.
-					</p>
-				</div>
-			</div>
-			</div>
-
-			<div class="advantages-slider__column">
-			<div class="advantages-slider__item item-advantages">
-				<span class="item-advantages__icon icon-bg-green"></span>
-				<div class="item-advantages__descp">
-					<p>
-						Lorem Ipsum - это текст-"рыба", часто
-						используемый в печати и вэб-дизайне.
-					</p>
-				</div>
-			</div>
-			</div>
-
-			<div class="advantages-slider__column">
-			<div class="advantages-slider__item item-advantages">
-				<span class="item-advantages__icon icon-bg-brick"></span>
-				<div class="item-advantages__descp">
-					<p>
-						Lorem Ipsum - это текст-"рыба", часто
-						используемый в печати и вэб-дизайне.
-					</p>
-				</div>
-			</div>
-			</div>
+		    <x-advantages stylem="adv_quality" color="green" text="Высокое качество материалов - только высококачественная штукатурка, которая обеспечивает прочное и долговечное покрытие" ></x-advantages>
+		    <x-advantages stylem="adv_estet" color="brick" text="Эстетическая привлекательность - наши краски и штукатурки создают элегантный и уникальный вид в вашем доме или офисе"></x-advantages>
+		    <x-advantages stylem="adv_select" color="green" text="Разнообразие оттенков - у нас вы найдете широкий выбор цветов и оттенков, чтобы подобрать идеальный вариант, отвечающий вашим предпочтениям"></x-advantages>
+		    <x-advantages stylem="adv_strong" color="brick" text="Устойчивость к воздействию - наша штукатурка и краска обладает высокой стойкостью к механическим повреждениям и воздействию влаги"></x-advantages>
+		    <x-advantages stylem="adv_uhod" color="green" text="Простота ухода - поверхность, покрытая штукатуркой, легко чистится и обслуживается, что позволяет вам сохранять красивый вид вашего интерьера"></x-advantages>
+		    <x-advantages stylem="adv_servic" color="brick" text="Профессиональное обслуживание - наша команда опытных специалистов всегда готова предоставить вам профессиональные консультации"></x-advantages>
 
 
 		</div>

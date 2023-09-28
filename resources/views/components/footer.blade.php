@@ -37,7 +37,7 @@
 				<span class="payment-footer__logo logo-master-card"></span>
 				</div>
 
-                <a href="{{ route('policy') }}" class="footer__menu-item">Политика в области персональных данных</a>
+                <a href="{{ route('policy') }}" class="footer__menu-item footer__policy">Политика в области персональных данных</a>
 			</div>
 		</div>
 
