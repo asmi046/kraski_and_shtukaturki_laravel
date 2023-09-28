@@ -26,7 +26,8 @@ use App\Http\Controllers\ProjectController;
 
 Route::get('/', [IndexController::class, "show"])->name('home');
 Route::get('/catalog', [CategoryController::class, "show"])->name('catalog');
-Route::get('/product', [ProductController::class, "show"])->name('product');
+Route::get('/catalog/{slug}', [CategoryController::class, "show_category"])->name('category');
+Route::get('/product/{slug}', [ProductController::class, "show"])->name('product');
 
 Route::get('/contacts', [EasyPageController::class, "contacts"])->name('contacts');
 Route::get('/services', [EasyPageController::class, "services"])->name('services');

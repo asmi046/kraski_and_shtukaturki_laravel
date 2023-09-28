@@ -30,6 +30,13 @@ class OptionSeeder extends Seeder
                 ],
 
                 [
+                    "name" => "about_main",
+                    "type" => "rich",
+                    'title' => 'О нас на главной',
+                    "value" => file_get_contents(public_path('base\\texts\\about.txt')),
+                ],
+
+                [
                     "name" => "about",
                     "type" => "rich",
                     'title' => 'О компании',

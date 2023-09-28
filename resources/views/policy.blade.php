@@ -9,5 +9,9 @@
 @section('description', $description)
 
 @section('content')
-
+    <section class="page_section text_styles">
+        <div class="_container">
+            {!! $options['policy'] !!}
+        </div>
+    </section>
 @endsection

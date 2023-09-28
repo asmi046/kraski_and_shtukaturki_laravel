@@ -18,6 +18,6 @@
             </p>
             <div class="card-popular__descp-price">{{$item["price"]}} руб.</div>
         </div>
-        <a href="{{route('product')}}" class="card-popular__btn">Подробнее...</a>
+        <a href="{{route('product', $item["slug"])}}" class="card-popular__btn">Подробнее...</a>
     </div>
 </div>
