@@ -29,77 +29,9 @@
 
 		<div class="popular__inner d-flex">
 
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-						<img src="img/popular/01.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
-
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-					<img src="img/popular/01.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Rotonda</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
-
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-					<img src="img/popular/02.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Maggiore</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
-
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-					<img src="img/popular/01.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Rotonda</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
+			@foreach ( $sales_liders as $item)
+                <x-product-card :item="$item"></x-product-card>
+            @endforeach
 
 		</div>
 
@@ -231,81 +163,13 @@
 
 <section class="page__popular popular section">
 	<div class="_container">
-		<h2 class="popular__title title">Популярные товары</h2>
+		<h2 class="popular__title title">товары со скидкой</h2>
 
 		<div class="popular__inner d-flex">
 
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-					<img src="img/popular/03.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Color Quarz Primer</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
-
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-					<img src="img/popular/03.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Tintofis</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
-
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-					<img src="img/popular/03.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Nanofis</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
-
-			<div class="popular__column">
-				<div class="popular__card card-popular">
-					<div class="card-popular__img _ibg">
-					<img src="img/popular/03.jpg" alt="Картинка товара">
-					</div>
-					<div class="card-popular__descp">
-						<h3 class="card-popular__descp-title">Interofis</h3>
-						<p class="card-popular__descp-subtitle">
-							Суперстойкая глубоко — матовая
-							краска для создания идеальных
-							поверхностей
-						</p>
-						<div class="card-popular__descp-price">от 1 760 руб.</div>
-					</div>
-					<a href="#" class="card-popular__btn">Подробнее...</a>
-				</div>
-			</div>
+            @foreach ( $sales as $item)
+                <x-product-card :item="$item"></x-product-card>
+            @endforeach
 
 		</div>
 
