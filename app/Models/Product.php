@@ -35,7 +35,17 @@ class Product extends Model
 
     public function tovar_trademark()
     {
-        return $this->hasMany(Trademark::class);
+        return $this->hasOne(Trademark::class);
+    }
+
+    public function tovar_images()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
+
+    public function tovar_texture()
+    {
+        return $this->hasMany(ProductTexture::class);
     }
 
     public function category_tovars() {

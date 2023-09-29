@@ -42,83 +42,7 @@
 	</div>
 </section>
 
-<section class="page__categories categories section">
-	<div class="_container">
-		<h2 class="categories__title title">Категории</h2>
-
-		<div class="categories__inner d-flex">
-
-		<div class="categories__left-col">
-
-			<a href="#" class="categories__box box-categories">
-				<div class="box-categories__img _ibg">
-					<img src="img/categories/01.jpg" alt="Картинка">
-				</div>
-				<div class="box-categories__text">
-					<p>
-						Декоративные <br>
-						краски
-					</p>
-				</div>
-			</a>
-
-			<a href="#" class="categories__box box-categories">
-				<div class="box-categories__img _ibg">
-					<img src="img/categories/02.jpg" alt="Картинка">
-				</div>
-				<div class="box-categories__text">
-					<p>
-					Венецианская <br>
-					штукатурка
-					</p>
-				</div>
-</a>
-
-		</div>
-
-		<a href="#" class="categories__box box-categories box-categories--center">
-				<div class="box-categories__img _ibg">
-					<img src="img/categories/03.jpg" alt="Картинка">
-				</div>
-				<div class="box-categories__text">
-					<p>
-					Фактурные <br>
-					покрытия
-					</p>
-				</div>
-</a>
-
-		<div class="categories__right-col">
-
-<a href="#" class="categories__box box-categories">
-		<div class="box-categories__img _ibg">
-			<img src="img/categories/04.jpg" alt="Картинка">
-		</div>
-		<div class="box-categories__text">
-			<p>
-			Микроцемент
-			</p>
-		</div>
-</a>
-
-	<a href="#" class="categories__box box-categories">
-		<div class="box-categories__img _ibg">
-			<img src="img/categories/05.jpg" alt="Картинка">
-		</div>
-		<div class="box-categories__text">
-			<p>
-			Финишные <br>
-			покрытия
-			</p>
-		</div>
-</a>
-
-</div>
-
-		</div>
-
-	</div>
-</section>
+<x-categories></x-categories>
 
 <section class="page__advantages advantages section">
 	<div class="_container">
@@ -131,34 +55,7 @@
 	</div>
 </section>
 
-<section class="page__consult consult section">
-	<div class="_container">
-
-	<div class="consult__inner">
-		<h2 class="consult__title">
-			Получить консультацию
-			специалиста
-		</h2>
-
-		<div class="consult__subtitle">
-			<p>
-				Оставьте свои контакты и наши специалисты свяжутся
-				с Вами в течении 15 минут
-			</p>
-		</div>
-
-		<form class="consult__form d-flex">
-			<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя*" class="consult__form-input input">
-			<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Телефон*" class="consult__form-input input">
-			<button type="submit" class="consult__form-btn btn">Отправить</button>
-		</form>
-
-		<p class="consult__form-policy">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
-
-		</div>
-
-	</div>
-</section>
+<x-consultation></x-consultation>
 
 
 <section class="page__popular popular section">

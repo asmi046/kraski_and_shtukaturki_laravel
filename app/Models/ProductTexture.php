@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use Orchid\Screen\AsSource;
+// use Orchid\Screen\AsSource;
 
 class ProductTexture extends Model
 {
     use HasFactory;
-    use AsSource;
+    // use AsSource;
 
 
     public $fillable = [

@@ -37,21 +37,51 @@
 
                     <div class="param">
                         @foreach ( $product->props as $key => $item)
-                            <div class="param__element">
-                                <div class="icon">
-
-                                </div>
-
-                                <div class="text">
-                                    <span>{{$key}}</span>
-                                    <span>{{$item}}</span>
-                                </div>
-                            </div>
+                            <x-tovar-page.tovar-param :key="$key" :item="$item"></x-tovar-page.tovar-param>
                         @endforeach
 
                     </div>
+
+                    <div class="sales__action">
+                        <div class="price">
+                            <span class="price__main">
+                                {{$product->price}} руб.
+                            </span>
+
+                            @if ($product->old_price)
+                                <span class="price__old">
+                                    {{$product->old_price}}  руб.
+                                </span>
+                            @endif
+
+                        </div>
+
+                        <div class="like">
+                            <a href="like_btn"></a>
+                        </div>
+
+                        <div class="sale_btn">
+                            <a href="#" class="fill_btn">Добавить в корзину</a>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </section>
+
+    <section class="product_page_section">
+        <div class="_container">
+            <h2 class="title">Фактуры для материала</h2>
+            <div class="textures">
+                @foreach ($textures as $item)
+                    <x-tovar-page.texture :textura="$item"></x-tovar-page.texture>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <x-consultation></x-consultation>
+
 @endsection

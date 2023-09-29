@@ -18,6 +18,10 @@ class ProductController extends Controller
 
         $categories = $prosuct->category_tovars()->first();
 
-        return view('product', ['product' => $prosuct, 'category'=> $categories]);
+        $textures = $prosuct->tovar_texture;
+
+        // dd($prosuct, $textures);
+
+        return view('product', ['product' => $prosuct, 'category'=> $categories, 'textures' => $textures]);
     }
 }

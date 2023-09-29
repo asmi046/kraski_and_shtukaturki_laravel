@@ -34,24 +34,131 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-top: 40px;
 
         &__element {
             width:48%;
-            border-bottom: 0.4px solid #C6C6C6;
+            border-bottom: 0.4px dotted #C6C6C6;
             display: flex;
             flex-wrap: wrap;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+
             .icon {
                 width:50px;
                 height:50px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(../img/icons/tovar_param/pack.svg);
+
+                &__instrument {
+                    background-image: url(../img/icons/tovar_param/instrument.svg);
+                }
+
+                &__rashod {
+                    background-image: url(../img/icons/tovar_param/rashod.svg);
+                }
+
+                &__layers {
+                    background-image: url(../img/icons/tovar_param/layers.svg);
+                }
+
+                &__pack {
+                    background-image: url(../img/icons/tovar_param/pack.svg);
+                }
+
+                &__razvod {
+                    background-image: url(../img/icons/tovar_param/razvod.svg);
+                }
+
+                &__sves {
+                    background-image: url(../img/icons/tovar_param/sv.svg);
+                }
             }
 
             .text {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
+                margin-left: 20px;
+                * {
+                    margin: auto 0;
+                }
+
+                span {
+                    font-weight: bold;
+                }
+
             }
         }
     }
 }
 
+.sales__action {
+    padding: 20px 0;
+    border-bottom: 0.4px dotted #C6C6C6;
+    display: flex;
+    justify-content: space-between;
+    .price {
+        flex: 1;
+        margin: auto 0;
+        &__main {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        &__old {
+            font-size: 14px;
+            color:#C6C6C6;
+            text-decoration: line-through;
+        }
+    }
 
+    .like {
+        flex: 1;
+        max-width: 50px;
+    }
+
+    .sale_btn{
+        flex: 1
+
+        a {
+            margin-right: 0;
+        }
+    }
+}
+
+
+.product_page_section {
+    margin-bottom: 40px;
+}
+
+.textures {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .texture_blk {
+        width:24%;
+        .img {
+            height:300px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .title {
+            text-align: left;
+            margin-top: 10px;
+            h3{
+                font-size: 22px;
+                line-height: 1.3;
+            }
+
+        }
+    }
+}
