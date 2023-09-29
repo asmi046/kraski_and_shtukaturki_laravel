@@ -10,7 +10,7 @@
 	background-color: #EBEBEB;
 }
 
-// Logo 
+// Logo
 .header__logo {
 	margin-right: 30px;
 }
@@ -89,6 +89,7 @@
 	display: flex;
 	align-items: center;
 	transition: all 0.3s ease 0s;
+    position:relative;
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -104,6 +105,20 @@
 	}
 }
 
+.fb_counter {
+    background-color: #CA9E67;
+    color:white;
+    position: absolute;
+    text-align: center;
+    width:13px;
+    height:13px;
+    font-size: 8px;
+    line-height: 14px;
+    border-radius: 20px;
+    top:-3px;
+    left:15px;
+}
+
 .header__favorit {
 	margin-right: 56px;
 }
@@ -112,6 +127,7 @@
 	display: flex;
 	align-items: center;
 	transition: all 0.3s ease 0s;
+    position:relative;
 
 	@media (any-hover: hover) {
 		&:hover {
