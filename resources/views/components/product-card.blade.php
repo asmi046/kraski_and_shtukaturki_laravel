@@ -18,6 +18,9 @@
             </p>
             <div class="card-popular__descp-price">{{$item["price"]}} руб.</div>
         </div>
-        <a href="{{route('product', $item["slug"])}}" class="card-popular__btn">Подробнее...</a>
+        <div class="card_control_wrap">
+            <to-bascet-btn bascet="{{route('bascet')}}" sku="{{$item['sku']}}"></to-bascet-btn>
+            <a href="{{route('product', $item["slug"])}}" class="card-popular__btn">Подробнее...</a>
+        </div>
     </div>
 </div>

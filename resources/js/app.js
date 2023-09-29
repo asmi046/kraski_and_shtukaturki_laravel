@@ -8,7 +8,11 @@ import VueAxios from 'vue-axios'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination } from 'swiper/modules';
 
+import ToBascetBtn from './components/ToBascetBtn.vue'
+import Bascet from "./components/bascet/Bascet.vue"
+
 import { store } from "./storage"
+import { useStore } from 'vuex'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -17,9 +21,17 @@ const global_app = createApp({
     components:{
         Swiper,
         SwiperSlide,
+        ToBascetBtn,
+        Bascet
     },
 
     setup() {
+
+        const store = useStore()
+
+        store.dispatch('initialBascet');
+        store.dispatch('initialFavorites');
+
         return {
           modules: [Pagination],
         };

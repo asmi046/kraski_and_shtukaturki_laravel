@@ -188,6 +188,16 @@ h4 {
 	padding: 24px 24px 33px 24px;
 	border: 0.4px solid #C6C6C6;
 	overflow: hidden;
+
+    .card_control_wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .card-popular__btn {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
 }
 
 .card-popular__img {
@@ -690,3 +700,4 @@ h4 {
 @import "breadcrumbs";
 @import "text-styles";
 @import "controls";
+@import "cart";

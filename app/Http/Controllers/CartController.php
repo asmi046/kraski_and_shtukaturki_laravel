@@ -6,18 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\OrderProduct;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\BascetSend;
 use App\Http\Requests\BascetForm;
 
-use App\Actions\BascetToTextAction;
-use App\Actions\OneClickToTextAction;
-use App\Actions\TelegramSendAction;
-use App\Services\SberApiServices;
-use App\Services\PersifloraApiSevice;
-
-use Illuminate\Support\Facades\Auth;
+use YooKassa\Client;
 
 class CartController extends Controller
 {
@@ -28,15 +23,16 @@ class CartController extends Controller
     public function add(Request $request) {
         $product_id = $request->input('product_id');
         $_token = $request->input('_token');
+        $addcount = $request->input('addcount');
 
-        Cart::add($product_id);
+        Cart::add($product_id, $addcount);
 
         return array($product_id, $_token);
     }
 
     public function get_all() {
         $cart_product = Cart::with('tovar_data')->where("carts.session_id", session()->getId())->get();
-        return ["count" => Cart::cart_coun(), "user_info" => Auth::user(),  "position" => $cart_product] ;
+        return ["count" => Cart::cart_coun(), "position" => $cart_product] ;
     }
 
     public function clear() {
@@ -54,119 +50,57 @@ class CartController extends Controller
         return Cart::delete_tovar($product_id);
     }
 
-
-    public function send_oc(BascetForm $request, OneClickToTextAction $to_text, TelegramSendAction $tgsender, SberApiServices $sber, PersifloraApiSevice $persi) {
-        $order = Order::create([
-            'name' => "Аноним",
-            'phone' => $request->input('phone'),
-            'comment' => $request->input('comment'),
-            'amount' => $request->input('tovar_position.price'),
-            'count' => 1,
-            'session_id' => session()->getId(),
-            'user_id' => ($request->user())?$request->user()->id:0,
-        ]);
-
-        $order->orderProducts()->sync(array($request->input('id')));
-
-        // Генерация номера заказа
-        $sber_order_number = "№".$order->id."_S".rand(100, 999);
-
-        // отправка заказа в Telegram
-        $to_text = $to_text->handle($request, $sber_order_number);
-        $tgsender->handle($to_text);
-
-
-        // отправка заказа в CRM
-        $token = $persi->create_session();
-        $customer_id = $persi->get_customer_id(
-            "Аноним",
-            $request->input('phone'),
-            "anonim@pf.ru",
-            "Клиент создан при оформлении заказа на сайте в 1 клик");
-
-        $tmp = $persi->create_order($request, $customer_id, $sber_order_number);
-
-        // отправка заказа на почту
-
-        Mail::to(explode(",",config('mailadresat.adresats')))->send(new BascetSend($request));
-
-
-        return ["persi" => $tmp, "rq" =>$request->all() ];
-
-        // return ["rq" =>$request->all() ];
-    }
-
-
-    public function send(BascetForm $request, BascetToTextAction $to_text, TelegramSendAction $tgsender, SberApiServices $sber, PersifloraApiSevice $persi) {
-
-
+    public function send(BascetForm $request) {
         $order = Order::create([
             'name' => $request->input('fio'),
             'email' => $request->input('email'),
             'phone' => $request->input('phone'),
             'adress' => $request->input('adress'),
             'comment' => $request->input('comment'),
+            'position_count' => $request->input('count'),
             'amount' => $request->input('amount'),
-            'count' => $request->input('count'),
             'delivery' => $request->input('delivery'),
+            'pay' => $request->input('pay'),
             'session_id' => session()->getId(),
             'user_id' => ($request->user())?$request->user()->id:0,
+
         ]);
 
-        $order->orderProducts()->sync(array_column($request->input('tovars'), "product_id"));
-
-
-        // Генерация номера заказа
-        $sber_order_number = "№".$order->id."_S".rand(100, 999);
-
-        // отправка заказа в Telegram
-        $to_text = $to_text->handle($request, $sber_order_number);
-        $tgsender->handle($to_text);
-
-
-        // отправка заказа в CRM
-        $token = $persi->create_session();
-        $customer_id = $persi->get_customer_id(
-            $request->input('fio'),
-            $request->input('phone'),
-            $request->input('email'),
-            "Клиент создан при оформлении заказа на сайте");
-
-        $tmp = $persi->create_order($request, $customer_id, $sber_order_number);
-
-        // отправка заказа на почту
-
-        Mail::to(explode(",",config('mailadresat.adresats')))->send(new BascetSend($request));
-
-        // Генерация заказа в сбере
-
-        $resSber = $sber->registerOrder($request->input('amount'), $sber_order_number, route("bascet_thencs"));
-
-        if (!empty($resSber) && isset($resSber["orderId"]))
-            Order::update_order_pay_id($order->id, $resSber["orderId"]);
-
-        Cart::cart_clear();
-
-        return ['pay_info' => $resSber, "persi" => $tmp];
-    }
-
-    public function thencs(Request $request, SberApiServices $sber, TelegramSendAction $tgsender) {
-        $orderId = $request->input("orderId");
-        if (!empty($orderId)) {
-            $orderInfo = $sber->getOrderStatus($orderId);
-
-            if (isset($orderInfo["orderStatus"]))
-            {
-                $orderStatusText = ($orderInfo["orderStatus"] == 2)?"Оплачен":"Не оплачен";
-                Order::update_order_status($orderId, $orderInfo["orderStatus"], $orderStatusText);
-
-                $pay_text = "<b>Заказ #".$orderInfo["orderNumber"]." ".$orderStatusText." </b>\n\r";
-                $pay_text .= "<b>ID Сбера: </b>".$orderId."\n\r";
-                $pay_text .= "<b>Сумма: </b>".(floatval($orderInfo["amount"])/100)." ₽\n\r";
-                $tgsender->handle($pay_text);
-            }
+        foreach ($request->input('tovars') as $item) {
+            $order->orderCart()->create($item);
         }
 
-        return view("thencscart");
+        $order->orderProducts()->sync(array_column($request->input('tovars'), "id"));
+
+        Mail::to(["asmi046@gmail.com","Miniindia@mail.ru"])->send(new BascetSend($request));
+
+        $client = new Client();
+        $client->setAuth(config('yookassa.shop_id'), config('yookassa.secret_key'));
+
+        $payment = $client->createPayment(
+            array(
+                'amount' => array(
+                    'value' => $request->input('amount'),
+                    'currency' => 'RUB',
+                ),
+                'confirmation' => array(
+                    'type' => 'redirect',
+                    'return_url' => route('bascet_thencs'),
+                ),
+                'capture' => false,
+                'description' => 'Заказ №'.$order->id,
+                'metadata' => [
+                    'order_id' => $order->id
+                ]
+            ),
+            uniqid('', true)
+        );
+
+        return ['pay_url' => $payment->confirmation->confirmation_url];
+    }
+
+    public function thencs() {
+        Cart::cart_clear();
+        return view("thencs");
     }
 }
