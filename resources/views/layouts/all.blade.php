@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" href="{{asset('/img/favicons/icon64.png')}}" sizes="64x64">
     <link rel="icon" type="image/png" href="{{asset('/img/favicons/icon32.png')}}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{asset('/img/favicons/icon16.png')}}" sizes="16x16">
-    <link rel="icon" type="image/svg" href="{{asset('/img/favicons/logo-mini.svg')}}" sizes="any">
+    <link rel="icon" type="image/svg" href="{{asset('/img/favicons/logo-main.svg')}}" sizes="any">
 
     <meta name="_token" content="{{ csrf_token() }}">
 
