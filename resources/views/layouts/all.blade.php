@@ -46,6 +46,7 @@
 				'public/scss/header.scss',
 				'public/scss/footer.scss',
 				'public/scss/media.scss',
+				'public/scss/tovar-page.scss',
 
         'public/css/header.css',
         'public/css/banner.css',

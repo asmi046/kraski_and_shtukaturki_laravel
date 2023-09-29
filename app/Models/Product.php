@@ -39,6 +39,6 @@ class Product extends Model
     }
 
     public function category_tovars() {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Category::class);
     }
 }

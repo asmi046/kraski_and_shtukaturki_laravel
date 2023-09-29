@@ -10,13 +10,14 @@ class ProductController extends Controller
 {
 
 
-    public function show() {
+    public function show($slug) {
 
-        $prosuct = Product::where('id', 1)->first();
+        $prosuct = Product::where('slug', $slug)->first();
 
         if($prosuct == null) abort('404');
 
+        $categories = $prosuct->category_tovars()->first();
 
-        return view('product', ['product' => $prosuct]);
+        return view('product', ['product' => $prosuct, 'category'=> $categories]);
     }
 }

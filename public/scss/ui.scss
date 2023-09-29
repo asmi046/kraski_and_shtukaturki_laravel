@@ -5,7 +5,7 @@
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
 .d-flex {
 	display: flex;
-	// align-items: center; 
+	// align-items: center;
 }
 
 //====================================================================================================
@@ -77,7 +77,7 @@
 }
 
 //====================================================================================================
-// Мигающий виджет 
+// Мигающий виджет
 .callback-widget {
 	position: fixed;
 	bottom: 3%;
@@ -412,8 +412,6 @@ body.ie {
 }
 
 .swiper-pagination-bullet {
-	flex: 0 0 10px;
-	height: 10px;
 	background: #660B1D;
 	border-radius: 50%;
 	opacity: 0.6;
@@ -426,9 +424,8 @@ body.ie {
 }
 
 .swiper-pagination-bullet-active {
-	flex: 0 0 15px;
-	height: 15px;
-	background: #660B1D;
+
+	background: #4E9E79!important;
 	opacity: 1;
 }
 
