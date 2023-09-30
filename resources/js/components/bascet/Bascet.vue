@@ -109,7 +109,7 @@
         </div>
     </div>
     <div class="empty_bascet" v-show="show_bascet && bascetList.length == 0">
-        <img src="../../../../public/img/icons/cart.svg" alt="">
+        <img src="../../../../public/img/icons/cart-empty.svg" alt="">
         <h3>Ваша корзина пуста</h3>
         <p>Жмите на значек корзиныи добавляйте товар!</p>
     </div>

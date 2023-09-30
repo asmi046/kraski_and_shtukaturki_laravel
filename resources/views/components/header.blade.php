@@ -24,7 +24,7 @@
 				Избранное
 			</a>
 
-			<a href="#" class="header__bascet bascet">
+			<a href="{{route('bascet')}}" class="header__bascet bascet">
                 <x-svg.bascet></x-svg.bascet>
                 <div class="fb_counter">0</div>
 				Корзина
