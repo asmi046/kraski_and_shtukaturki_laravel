@@ -21,36 +21,11 @@
 	</div>
 </section>
 
-<section class="categoty-top-sec section">
+<x-breadcrumbs title="Каталог"></x-breadcrumbs>
+
+<section class="categoty-top-sec">
 	<div class="_container">
-
-	<div class="categoty-top-sec__breadcrumbs">
-	<p id="breadcrumbs">
-	<span>
-		<span>
-			<a href="index.html">
-				Главная
-			</a> /
-			<a href="index.html">
-				Структурная штукатурка
-			</a> /
-			<span class="breadcrumb_last" aria-current="page">
-				Stucco in Rilievo
-			</span>
-		</span>
-	</span>
-</p>
-	</div>
-
-<div class="categoty-top-sec__filter-block filter-block">
-	<button class="filter-block__btn btn _active">Каталог товаров</button>
-	<button class="filter-block__btn btn">Декоративные краски</button>
-	<button class="filter-block__btn btn">Венецианская штукатурка</button>
-	<button class="filter-block__btn btn">Фактурные покрытия</button>
-	<button class="filter-block__btn btn">Финишные покрытия</button>
-	<button class="filter-block__btn btn">Микроцемент</button>
-</div>
-
+        <x-category.all-cat></x-category.all-cat>
 	</div>
 </section>
 
