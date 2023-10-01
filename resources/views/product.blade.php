@@ -82,6 +82,6 @@
         </div>
     </section>
 
-    <x-consultation></x-consultation>
+    <x-consultation-mini></x-consultation-mini>
 
 @endsection
