@@ -71,7 +71,7 @@
 		overflow: hidden;
 	}
 
-	// .popup__close
+	// .popup__close 
 	&__close {
 		position: absolute;
 		top: 18px;
@@ -95,6 +95,7 @@
 
 .popup__form-block h2 {
 	font-size: 36px;
+	line-height: 1;
 	margin-bottom: 15px;
 }
 
@@ -117,6 +118,7 @@
 .popup__form-btn {
 	font-size: 18px;
 	min-width: 160px;
+	width: 100%;
 }
 
 //====================================================================================================

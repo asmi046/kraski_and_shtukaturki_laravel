@@ -295,21 +295,21 @@ textarea.input {
 
 // Стилизация placeholder 
 ::-webkit-input-placeholder {
-	color: #8584847a;
+	color: #333;
 }
 
 ::-moz-placeholder {
-	color: #8584847a;
+	color: #333;
 }
 
 /* Firefox 19+ */
 :-moz-placeholder {
-	color: #8584847a;
+	color: #333;
 }
 
 /* Firefox 18- */
 :-ms-input-placeholder {
-	color: #8584847a;
+	color: #333;
 }
 
 // Убираем стрелки у цифрового инпута

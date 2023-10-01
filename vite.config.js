@@ -10,7 +10,7 @@ export default defineConfig({
 				'resources/css/app.css',
 				'resources/js/app.js',
 				'public/fonts/fonts.css',
-                'public/css/main.css',
+				'public/css/main.css',
 
 
 				'public/scss/mixin.scss',
@@ -31,6 +31,7 @@ export default defineConfig({
 				'public/css/category.css',
 				'public/css/cta-blk.css',
 				'public/css/footer.css',
+				'public/js/main.js',
 			],
 			refresh: true,
 		}),

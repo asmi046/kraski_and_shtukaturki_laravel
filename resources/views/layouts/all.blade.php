@@ -54,7 +54,8 @@
         'public/css/advantages.css',
         'public/css/category.css',
         'public/css/cta-blk.css',
-        'public/css/footer.css',
+        'public/css/footer.css', 
+				'public/js/main.js',
     ])
 
 </head>
