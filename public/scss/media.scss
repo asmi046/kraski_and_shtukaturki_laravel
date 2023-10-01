@@ -330,6 +330,10 @@
 		border-radius: 0;
 		bottom: 0;
 	}
+
+	.category-sec__main .pagination {
+		display: none;
+	}
 }
 
 @media (max-width: 515px) {

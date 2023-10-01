@@ -846,6 +846,71 @@ h4 {
 	}
 }
 
+
+.category-sec__main .pagination {
+	justify-content: flex-end;
+	margin-top: 25px;
+}
+
+.pagination__nav-links {
+	display: flex;
+	align-items: center;
+}
+
+.pagination__back {
+	margin-right: 10px;
+
+	@media (min-width:1025px) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.pagination__next {
+
+	// margin-left: 10px;
+	@media (min-width:1025px) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.pagination__numbers {
+	display: flex;
+	padding: 5px 10px;
+	min-width: 30px;
+	color: #C6C6C6;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #C6C6C6;
+	margin-right: 10px;
+	transition: all 0.3s ease 0s;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&.current {
+		color: #fff;
+		background-color: #CA9E67;
+		border: 1px solid #CA9E67;
+	}
+
+	@media (min-width:1025px) {
+		&:hover {
+			color: #fff;
+			background-color: #CA9E67;
+			border: 1px solid #CA9E67;
+		}
+	}
+}
+
+.pagination__block-dot {
+	margin-right: 10px;
+}
+
 //========================================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
