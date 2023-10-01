@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="like">
-                            <a href="like_btn"></a>
+                            <to-favorites-btn sku="{{$product->sku}}"></to-favorites-btn>
                         </div>
 
                         <div class="sale_btn">

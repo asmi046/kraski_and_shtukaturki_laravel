@@ -35,6 +35,10 @@ export const store = new createStore({
 
         favoritesCount: state => {
           return state.favorites_count
+        },
+
+        favoritesList: state => {
+            return state.favorites_tovars
         }
     },
 

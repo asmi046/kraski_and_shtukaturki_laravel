@@ -1,4 +1,5 @@
 <div class="popular__column">
+    <to-favorites-btn sku="{{$item["sku"]}}"></to-favorites-btn>
     <div class="popular__card card-popular">
         <div class="card-popular__img _ibg">
             @if(!empty($item["img"]))
@@ -16,7 +17,13 @@
                     {{mb_strimwidth(strip_tags ($item["description"]), 0, 50, "...")}}
                 @endif
             </p>
-            <div class="card-popular__descp-price">{{$item["price"]}} руб.</div>
+            <div class="card_price_wrap">
+                <div class="card-popular__descp-price">{{$item["price"]}} руб.</div>
+                @if ($item["price"] != 0)
+                    <span class="card-popular__descp-price old_price">{{$item["old_price"]}} руб.</span>
+                @endif
+            </div>
+
         </div>
         <div class="card_control_wrap">
             <to-bascet-btn bascet="{{route('bascet')}}" sku="{{$item['sku']}}"></to-bascet-btn>

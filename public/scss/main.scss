@@ -175,6 +175,13 @@ h4 {
 	display: flex;
 	flex: 0 1 25%;
 	padding: 0 12.5px 24px 12.5px;
+    position:relative;
+
+    .to_favorites {
+        position: absolute;
+        right:30px;
+        top:10px
+    }
 }
 
 .popular__card {}
@@ -235,12 +242,23 @@ h4 {
 	margin-bottom: 33px;
 	flex: 1 1 auto;
 }
+.card_price_wrap{
+    display: flex;
 
-.card-popular__descp-price {
-	font-size: 24px;
-	font-weight: 700;
-	line-height: 29px;
-	letter-spacing: 0.015em;
+    .card-popular__descp-price {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0.015em;
+
+        &.old_price{
+            font-size: 14px;
+            text-decoration: line-through;
+            color:gray;
+            margin: auto auto 0 10px;
+            font-weight: normal;
+        }
+    }
 }
 
 .card-popular__btn {

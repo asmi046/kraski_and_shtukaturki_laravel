@@ -1,9 +1,9 @@
 <template>
-  <div @click="addToBascet" :class="{'favorite_fill':in_favorites}" class="like to_favorites"></div>
+  <div @click="addToBascet" :class="{'favorite_fill':in_favorites}" class="to_favorites"></div>
 </template>
 
 <script>
-import { ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useStore } from 'vuex'
 export default {
     props:{
@@ -16,15 +16,21 @@ export default {
 
         let in_favorites = ref(false)
 
+        const in_favorites_chekc = () => {
+            let inFavoritesElem = store.getters.favoritesList.find((elem) => { return elem.product_sku === props.sku})
+            in_favorites.value = (inFavoritesElem != undefined)
+        }
 
         watch(() => store.getters.favoritesCount, function() {
-            let inFavoritesElem = store.state.favorites_tovars.find((elem) => { return elem.product_sku === props.sku})
-            in_favorites.value = (inFavoritesElem != undefined)
+            in_favorites_chekc()
 
             console.log('FAVORITES+++!!!!!');
         });
 
         const addToBascet = () => {
+
+            console.log(props.sku)
+
             let tiken = document.querySelector('meta[name="_token"]').content;
 
             axios.post('/favorites/add', {
