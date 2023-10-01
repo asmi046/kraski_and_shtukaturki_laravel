@@ -29,7 +29,8 @@
 
 		<div class="popular__inner d-flex">
 
-			@foreach ( $sales_liders as $item)
+
+            @foreach ( $sales_liders as $item)
                 <x-product-card :item="$item"></x-product-card>
             @endforeach
 

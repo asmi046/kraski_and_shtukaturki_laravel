@@ -1,6 +1,8 @@
+
 <div class="popular__column">
-    <to-favorites-btn sku="{{$item["sku"]}}"></to-favorites-btn>
     <div class="popular__card card-popular">
+        <to-favorites-btn sku="{{$item["sku"]}}"></to-favorites-btn>
+
         <div class="card-popular__img _ibg">
             @if(!empty($item["img"]))
                 <img loading="lazy" src="{{$item["img"]}}" alt="Купить {{$item["title"]}}">

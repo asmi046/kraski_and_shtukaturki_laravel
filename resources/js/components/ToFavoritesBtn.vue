@@ -23,8 +23,6 @@ export default {
 
         watch(() => store.getters.favoritesCount, function() {
             in_favorites_chekc()
-
-            console.log('FAVORITES+++!!!!!');
         });
 
         const addToBascet = () => {
