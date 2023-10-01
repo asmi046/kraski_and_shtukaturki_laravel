@@ -287,18 +287,16 @@
 // Строка мобильного поиска
 .header__search-mob {
 	position: fixed;
-	top: -4%;
+	top: -100%;
 	z-index: 50;
-	-webkit-transition: top 0.8s;
-	-o-transition: top 0.8s;
-	transition: top 0.8s;
+	opacity: 0;
+	transition: all 0.3s ease 0s;
 }
 
 .header__search-mob._active {
 	top: 50px;
-	-webkit-transition: top 0.8s;
-	-o-transition: top 0.8s;
-	transition: top 0.8s;
+
+	opacity: 1;
 }
 
 

@@ -648,7 +648,8 @@ h4 {
 
 	&__sidebar {
 		flex: 0 0 30%;
-		border: 1px solid #000;
+		margin-top: -15px;
+		padding-right: 25px;
 	}
 
 	&__main {
@@ -678,6 +679,7 @@ h4 {
 .sidebar {
 
 	&__title {
+		font-size: 33px;
 		margin-bottom: 25px;
 	}
 
@@ -686,12 +688,118 @@ h4 {
 
 .filters-sidebar {
 
-	&__block {}
+	&__block {
+		.spollers-block__item {
+			margin-bottom: 20px;
 
-	&__btn-reset {}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.spollers-block__title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 20px;
+			font-weight: 700;
+			padding-right: 10px;
+
+			&::after {
+				content: '';
+				float: right;
+				width: 13px;
+				height: 5px;
+				flex: 0 0 13px;
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNi45MDkiIGhlaWdodD0iOS41MzIiIHZpZXdCb3g9IjAgMCAxNi45MDkgOS41MzIiPg0KICA8ZyBpZD0i0KHQs9GA0YPQv9C/0LjRgNC+0LLQsNGC0YxfMTEiIGRhdGEtbmFtZT0i0KHQs9GA0YPQv9C/0LjRgNC+0LLQsNGC0YwgMTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00NTYuNTQ1IC00NDguNTk5KSI+DQogICAgPGxpbmUgaWQ9ItCb0LjQvdC40Y9fMSIgZGF0YS1uYW1lPSLQm9C40L3QuNGPIDEiIHgyPSI3LjczMSIgeTI9IjguMTE4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NTcuMjUyIDQ0OS4zMDYpIiBmaWxsPSJub25lIiBzdHJva2U9IiM3NTc0NzQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogICAgPGxpbmUgaWQ9ItCb0LjQvdC40Y9fMiIgZGF0YS1uYW1lPSLQm9C40L3QuNGPIDIiIHgxPSI3LjczMSIgeTI9IjguMTE4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NjUuMDE2IDQ0OS4zMDYpIiBmaWxsPSJub25lIiBzdHJva2U9IiM3NTc0NzQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwvZz4NCjwvc3ZnPg0K');
+				transition: all 0.3s ease 0s;
+			}
+
+			&._active {
+				&::after {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+
+		.spollers-block__body {
+			padding: 15px 10px;
+		}
+
+		.checkbox-item {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.checkbox {
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.checkbox__input {}
+
+		.checkbox__text {
+			color: #333;
+		}
+	}
+
+	&__btn-reset {
+		width: 100%;
+		margin-top: 30px;
+	}
 }
 
-.btn {}
+.price-filter {
+	padding: 25px 15px;
+	border: 1px solid #EBEBEB;
+	border-radius: 15px;
+}
+
+.filters-sidebar__price {
+	margin-bottom: 20px;
+}
+
+.price-filter__input-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.price-filter__input-block-item {
+	flex: 0 1 50%;
+	margin-right: 15px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.input {
+		background-color: #EBEBEB;
+		border-radius: 10px;
+		border: none;
+	}
+}
+
+.price-filter__label {
+	display: block;
+	color: #EBEBEB;
+	font-weight: 700;
+	margin-bottom: 3px;
+}
+
+.price-filter__btn {
+	margin-top: 20px;
+	width: 100%;
+	color: #fff;
+	border-radius: 10px;
+	background-color: #CA9E67;
+	border: 1px solid #CA9E67;
+}
 
 //========================================================================================================================================================
 
