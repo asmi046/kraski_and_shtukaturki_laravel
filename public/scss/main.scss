@@ -31,7 +31,7 @@ body {
 
 //<ЗАГОЛОВКИ>=================================================================================================================
 h1 {
-	font-size: 42px;
+	font-size: 36px;
 	font-weight: 700;
 	line-height: 50px;
 	letter-spacing: 0.015em;
@@ -618,11 +618,11 @@ h4 {
 
 	&__btn {
 		border: none;
-		font-size: 18px;
+		font-size: 16px;
 		background-color: #EBEBEB;
 		border-radius: 0%;
 		transition: all 0.3s ease 0s;
-		padding: 8px 33px;
+		padding: 8px 32.4px;
 
 		&._active {
 			color: #fff;

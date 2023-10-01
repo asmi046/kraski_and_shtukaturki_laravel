@@ -71,6 +71,11 @@
 	.main-category__inner .popular__column {
 		flex: 0 1 33.333%;
 	}
+
+	.filter-block__btn {
+		padding: 8px 33px;
+		flex: 1 1 auto;
+	}
 }
 
 @media (max-width: 768px) {
