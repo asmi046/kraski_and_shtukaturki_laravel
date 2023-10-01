@@ -13,7 +13,11 @@ import { Pagination } from 'swiper/modules';
 import ToBascetBtn from './components/ToBascetBtn.vue'
 import Bascet from "./components/bascet/Bascet.vue"
 import BascetCounter from "./components/bascet/BascetCounter.vue"
+
 import FavoritesCounter from "./components/bascet/FavoritesCounter.vue"
+import Favorites from './components/Favorites.vue'
+import ToFavoritesBtn from './components/ToFavoritesBtn.vue'
+
 
 import { store } from "./storage"
 import { useStore } from 'vuex'
@@ -28,7 +32,9 @@ const global_app = createApp({
         ToBascetBtn,
         BascetCounter,
         FavoritesCounter,
-        Bascet
+        Bascet,
+        Favorites,
+        ToFavoritesBtn
     },
 
     setup() {

@@ -18,7 +18,7 @@
 
             <button class="mob-search-btn header__mob-search-btn"></button>
 
-			<a href="#" class="header__favorit favorit">
+			<a href="{{route('favorites')}}" class="header__favorit favorit">
                 <x-svg.favorites></x-svg.favorites>
                 <favorites-counter></favorites-counter>
 				Избранное
