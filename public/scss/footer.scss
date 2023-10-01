@@ -39,11 +39,11 @@
 		color: #fff;
 	}
 
-    &__policy {
-        font-size: 14px;
-        margin-top: 20px;
-        display: block;
-    }
+	&__policy {
+		font-size: 14px;
+		margin-top: 20px;
+		display: block;
+	}
 
 	&__menu-link {
 		font-size: 18px;
@@ -51,7 +51,8 @@
 		line-height: 22px;
 		letter-spacing: 0em;
 		color: #fff;
-		margin-bottom: 4px;
+		margin-bottom: 10px;
+		display: inline-block;
 	}
 
 	&__bottom {

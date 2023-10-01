@@ -28,6 +28,16 @@ if (menuListItemElems) {
 	});
 }
 
+// Моб фильтры
+const filterMob = document.querySelector(".filterMob");
+const sidebarBody = document.querySelector(".sidebarBody");
+
+if (filterMob) {
+	filterMob.addEventListener("click", function () {
+		sidebarBody.classList.toggle("active");
+	});
+}
+
 // Строка поиска на мобилках 
 if (mobsearch) {
 	mobsearch.addEventListener("click", function () {

@@ -62,7 +62,11 @@
 	<div class="category-sec__sidebar sidebar">
 		<h1 class="sidebar__title">Название категории</h1>
 
-		<form action="#" class="sidebar__filters filters-sidebar">
+		<div class="page__sidebar-filter-block-mob filterMob">
+			<p class="page__sidebar-filter-block-mob-text">Фильтры</p>
+		</div>
+
+		<form action="#" class="sidebar__filters filters-sidebar sidebarBody">
 
 		<div class="filters-sidebar__price price-filter">
 
