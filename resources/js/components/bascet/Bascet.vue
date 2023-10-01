@@ -3,7 +3,7 @@
         <span></span>
         <p>Загружаем корзину...</p>
     </div>
-    <div  v-show="bascetList.length != 0" class="bascet">
+    <div  v-show="bascetList.length != 0" class="bascet__">
         <div class="bascet_tovar">
             <div class="control">
                 <a @click.prevent="clearBascet()" class="clear_bascet_btn" href="#"><span>Очистить корзину</span></a>
@@ -78,11 +78,13 @@
                 <input v-model="bascetInfo.phone" v-mask="{mask: '+N (NNN) NNN-NN-NN', model: 'cpf' }" name="phone" type="text" placeholder="Телефон*">
                 <textarea v-model="bascetInfo.comment" name="comment" placeholder="Комментарий"></textarea>
 
+                <!--
                 <h2>Адрес доставки</h2>
                 <input @change="calcDeliveryPrice" v-model="bascetInfo.city" name="city" type="text" placeholder="Город*">
                 <input @change="calcDeliveryPrice" v-model="bascetInfo.street" name="street" type="text" placeholder="Улица*">
                 <input @change="calcDeliveryPrice" v-model="bascetInfo.home" name="home" type="text" placeholder="Дом*">
                 <input @change="calcDeliveryPrice" v-model="bascetInfo.postindex" name="postindex" type="text" placeholder="Почтовый индекс*">
+                -->
 
                 <!-- <textarea v-model="bascetInfo.adress" name="adress" placeholder="Адрес"></textarea> -->
 
@@ -94,8 +96,9 @@
                 </select> -->
 
 
-                <h2>Способ оплаты</h2>
+                <!-- <h2>Способ оплаты</h2>
                 <pay-selector v-model="payType"></pay-selector>
+                -->
 
                 <ul v-show="errorList.length != 0" class ="errors_list">
                     <li v-for="item in errorList" :key="item">{{item}}</li>
@@ -104,7 +107,7 @@
 
 
                 <button @click.prevent="sendBascet()" class="btn" type="submit">Оформить</button> <span :class="{active: loadet }" class="btnLoaderCart shoved"></span>
-                <p class="policy">Заполняя данную форму и отправляя заказ вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                <p class="policy">Заполняя данную форму и отправляя заказ вы соглашаетесь с <a href="/policy">политикой конфиденциальности</a></p>
             </form>
         </div>
     </div>
@@ -193,17 +196,17 @@ export default {
             if (this.bascetInfo.phone == "")
                 this.errorList.push("Поле 'Телефон' не заполнено");
 
-            if (this.bascetInfo.city == "")
-                this.errorList.push("Поле 'Город' не заполнено");
+            // if (this.bascetInfo.city == "")
+            //     this.errorList.push("Поле 'Город' не заполнено");
 
-            if (this.bascetInfo.street == "")
-                this.errorList.push("Поле 'Улица' не заполнено");
+            // if (this.bascetInfo.street == "")
+            //     this.errorList.push("Поле 'Улица' не заполнено");
 
-            if (this.bascetInfo.home == "")
-                this.errorList.push("Поле 'Дом' не заполнено");
+            // if (this.bascetInfo.home == "")
+            //     this.errorList.push("Поле 'Дом' не заполнено");
 
-            if (this.bascetInfo.postindex == "")
-                this.errorList.push("Поле 'Почтовый индекс' не заполнено");
+            // if (this.bascetInfo.postindex == "")
+            //     this.errorList.push("Поле 'Почтовый индекс' не заполнено");
 
             if (this.errorList.length != 0 ) return;
 
@@ -225,10 +228,12 @@ export default {
                 console.log(response)
                 this.loadet = false;
 
-                if (this.payType == 1)
-                    document.location.href=response.data.pay_url
-                else
-                      document.location.href="/bascet/thencs"
+                // if (this.payType == 1)
+                //     document.location.href=response.data.pay_url
+                // else
+                //     document.location.href="/bascet/thencs"
+
+                document.location.href="/bascet/thencs"
             })
             .catch(error => console.log(error));
         },

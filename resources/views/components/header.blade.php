@@ -20,13 +20,13 @@
 
 			<a href="#" class="header__favorit favorit">
                 <x-svg.favorites></x-svg.favorites>
-                <div class="fb_counter">0</div>
+                <favorites-counter></favorites-counter>
 				Избранное
 			</a>
 
 			<a href="{{route('bascet')}}" class="header__bascet bascet">
                 <x-svg.bascet></x-svg.bascet>
-                <div class="fb_counter">0</div>
+                <bascet-counter></bascet-counter>
 				Корзина
 			</a>
 

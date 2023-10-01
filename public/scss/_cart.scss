@@ -87,13 +87,13 @@
 
 
 .bascet_tovar .control .clear_bascet_btn{
-    color:#F18614;
+    color:#CA9E67;
     margin-left: auto;
     position: relative;
 }
 
 .bascet_tovar .control .clear_bascet_btn:hover span{
-    border-bottom: 1px dashed #F18614;
+    border-bottom: 1px dashed #CA9E67;
 }
 
 .bascet_tovar .control .clear_bascet_btn:before{
@@ -295,7 +295,7 @@
 
 .tovar_wrap .bascet_count {
     display: none;
-    background-color: #2A7D5A;
+    background-color: #4E9E79;
     color: #fff;
     position: absolute;
     top: 0;
@@ -330,7 +330,7 @@
   }
 
   .number_wrapper .number_btn:hover {
-    background-color: #2A7D5A;
+    background-color: #4E9E79;
     color:white
   }
 
@@ -339,6 +339,7 @@
     border:none;
     padding: 0;
     min-height: auto;
+    height: 100%;
   }
 
   .number_wrapper input[type='number']::-webkit-outer-spin-button,
@@ -391,6 +392,10 @@
     padding: 7px 15px;
     border-radius: 12px;
     font-size: 14px;
+
+    input{
+        border:none
+    }
 
     span.cart_icon {
         display: block;
@@ -453,6 +458,21 @@
 
 .bascet_input_section {
     margin: 40px 0;
+}
+
+.thencs_message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    svg{
+        width:200px;
+        margin: 20px auto;
+    }
+
+    p{
+        margin: 20px auto;
+    }
 }
 
 /* --------- Компонент кнопка в корзину --------- */

@@ -5,11 +5,15 @@ import axios from 'axios'
 
 import VueAxios from 'vue-axios'
 
+import { VMaskDirective } from 'v-slim-mask'
+
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination } from 'swiper/modules';
 
 import ToBascetBtn from './components/ToBascetBtn.vue'
 import Bascet from "./components/bascet/Bascet.vue"
+import BascetCounter from "./components/bascet/BascetCounter.vue"
+import FavoritesCounter from "./components/bascet/FavoritesCounter.vue"
 
 import { store } from "./storage"
 import { useStore } from 'vuex'
@@ -22,6 +26,8 @@ const global_app = createApp({
         Swiper,
         SwiperSlide,
         ToBascetBtn,
+        BascetCounter,
+        FavoritesCounter,
         Bascet
     },
 
@@ -40,4 +46,5 @@ const global_app = createApp({
 
 global_app.use(VueAxios, axios)
 global_app.use(store)
+global_app.directive('mask', VMaskDirective)
 global_app.mount("#global_app")
