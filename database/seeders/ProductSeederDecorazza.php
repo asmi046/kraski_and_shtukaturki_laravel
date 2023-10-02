@@ -39,12 +39,6 @@ class ProductSeederDecorazza extends Seeder
      $no_cat = 0;
      $i = 1;
      foreach ($main_data as $item) {
-
-        if ($i < 750) {
-            $i++;
-            continue;
-        };
-
         try {
             $full_img_name = basename($item["pack_foto"]);
 
