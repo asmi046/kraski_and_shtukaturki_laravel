@@ -75,7 +75,7 @@ class ProductSeederDecorazza extends Seeder
 
             $t_id = DB::getPdo()->lastInsertId();
 
-            printf("#%s", $i);
+            printf("#%s\n\r", $i);
             printf("Добавлен товар: %s \n\r", $item["name"]);
 
             $cat_id = $this->cat_data[$item["category"]];
