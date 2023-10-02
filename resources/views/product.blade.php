@@ -27,7 +27,7 @@
                         <swiper-slide><img src="{{$product->img}}" alt="{{$product->title}}"></swiper-slide>
                         <swiper-slide><img src="{{$product->img}}" alt="{{$product->title}}"></swiper-slide>
 
-                  </swiper>
+                    </swiper>
                 </div>
 
                 <div class="tovarinfo__side">
