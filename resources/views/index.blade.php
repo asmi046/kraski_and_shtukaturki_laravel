@@ -45,23 +45,28 @@
 
 <x-categories></x-categories>
 
-<section class="page__advantages advantages section">
+<section class="page__advantages-slider advantages-slider section">
 	<div class="_container">
-		<h2 class="advantages__title title">Наши преимущества</h2>
+		<h2 class="advantages-slider__title title">Наши преимущества</h2>
 
-		<div class="advantages__inner d-flex">
-
+		<div class="advantages-slider__inner d-flex">
+		    <x-advantages stylem="adv_quality" color="green" text="Высокое качество материалов - только высококачественная штукатурка, которая обеспечивает прочное и долговечное покрытие" ></x-advantages>
+		    <x-advantages stylem="adv_estet" color="brick" text="Эстетическая привлекательность - наши краски и штукатурки создают элегантный и уникальный вид в вашем доме или офисе"></x-advantages>
+		    <x-advantages stylem="adv_select" color="green" text="Разнообразие оттенков - у нас вы найдете широкий выбор цветов и оттенков, чтобы подобрать идеальный вариант, отвечающий вашим предпочтениям"></x-advantages>
+		    <x-advantages stylem="adv_strong" color="brick" text="Устойчивость к воздействию - наша штукатурка и краска обладает высокой стойкостью к механическим повреждениям и воздействию влаги"></x-advantages>
+		    <x-advantages stylem="adv_uhod" color="green" text="Простота ухода - поверхность, покрытая штукатуркой, легко чистится и обслуживается, что позволяет вам сохранять красивый вид вашего интерьера"></x-advantages>
+		    <x-advantages stylem="adv_servic" color="brick" text="Профессиональное обслуживание - наша команда опытных специалистов всегда готова предоставить вам профессиональные консультации"></x-advantages>
 		</div>
-
 	</div>
 </section>
+
 
 <x-consultation></x-consultation>
 
 
 <section class="page__popular popular section">
 	<div class="_container">
-		<h2 class="popular__title title">товары со скидкой</h2>
+		<h2 class="popular__title title">Товары со скидкой</h2>
 
 		<div class="popular__inner d-flex">
 
@@ -78,24 +83,6 @@
 	</div>
 </section>
 
-<section class="page__advantages-slider advantages-slider section">
-	<div class="_container">
-		<h2 class="advantages-slider__title title">Наши преимущества</h2>
-
-		<div class="advantages-slider__inner d-flex">
-
-		    <x-advantages stylem="adv_quality" color="green" text="Высокое качество материалов - только высококачественная штукатурка, которая обеспечивает прочное и долговечное покрытие" ></x-advantages>
-		    <x-advantages stylem="adv_estet" color="brick" text="Эстетическая привлекательность - наши краски и штукатурки создают элегантный и уникальный вид в вашем доме или офисе"></x-advantages>
-		    <x-advantages stylem="adv_select" color="green" text="Разнообразие оттенков - у нас вы найдете широкий выбор цветов и оттенков, чтобы подобрать идеальный вариант, отвечающий вашим предпочтениям"></x-advantages>
-		    <x-advantages stylem="adv_strong" color="brick" text="Устойчивость к воздействию - наша штукатурка и краска обладает высокой стойкостью к механическим повреждениям и воздействию влаги"></x-advantages>
-		    <x-advantages stylem="adv_uhod" color="green" text="Простота ухода - поверхность, покрытая штукатуркой, легко чистится и обслуживается, что позволяет вам сохранять красивый вид вашего интерьера"></x-advantages>
-		    <x-advantages stylem="adv_servic" color="brick" text="Профессиональное обслуживание - наша команда опытных специалистов всегда готова предоставить вам профессиональные консультации"></x-advantages>
-
-
-		</div>
-
-	</div>
-</section>
 
 <section class="page__about about section">
 	<div class="_container">
