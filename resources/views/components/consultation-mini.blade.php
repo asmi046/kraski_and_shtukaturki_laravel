@@ -14,11 +14,7 @@
 			</p>
 		</div>
 
-		<form class="consult__form d-flex">
-			<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя*" class="consult__form-input input">
-			<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Телефон*" class="consult__form-input input">
-			<button type="submit" class="consult__form-btn btn">Отправить</button>
-		</form>
+		<x-forma rout="/send_consult" redirect="/thencs"></x-forma>
 
 		<p class="consult__form-policy">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
 

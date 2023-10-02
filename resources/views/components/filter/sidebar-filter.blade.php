@@ -25,72 +25,61 @@
         <div class="filters-sidebar__block spollers-block" data-spollers data-one-spoller>
 
             <div class="spollers-block__item">
-                <div class="spollers-block__title" data-spoller>Сначала со скидкой</div>
+                <div class="spollers-block__title _active" data-spoller>Торговая марка</div>
                 <div class="spollers-block__body">
                     <div class="checkbox-item">
+
                         <label for="check" class="checkbox">
-                            <input id="check" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
+                            <input id="check" class="checkbox__input" type="checkbox" {{ value_check('tm', 'San Marco')?"checked":""}} value="San Marco" name="tm[]">
+                            <span class="checkbox__text"><span>San Marco</span></span>
                         </label>
 
                         <label for="check1" class="checkbox">
-                            <input id="check1" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
+                            <input id="check1" class="checkbox__input" type="checkbox" {{ value_check('tm', 'DECORAZZA')?"checked":""}} value="DECORAZZA" name="tm[]">
+                            <span class="checkbox__text"><span>DECORAZZA</span></span>
                         </label>
 
-                        <label for="check2" class="checkbox">
-                            <input id="check2" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
-                        </label>
                     </div>
                 </div>
+
+
             </div>
 
             <div class="spollers-block__item">
-                <div class="spollers-block__title" data-spoller>Бренд</div>
+                <div class="spollers-block__title _active" data-spoller>Объем</div>
                 <div class="spollers-block__body">
                     <div class="checkbox-item">
+                        <label for="check2" class="checkbox">
+                            <input id="check2" class="checkbox__input" type="checkbox" {{ value_check('volume', '1')?"checked":""}} value="1" name="volume[]">
+                            <span class="checkbox__text"><span>1 л.</span></span>
+                        </label>
+
                         <label for="check3" class="checkbox">
-                            <input id="check3" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
+                            <input id="check3" class="checkbox__input" type="checkbox" {{ value_check('volume', '4')?"checked":""}} value="4" name="volume[]">
+                            <span class="checkbox__text"><span>4 л.</span></span>
                         </label>
 
                         <label for="check4" class="checkbox">
-                            <input id="check4" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                                <span class="checkbox__text"><span>Пункт</span></span>
+                            <input id="check4" class="checkbox__input" type="checkbox" {{ value_check('volume', '5')?"checked":""}} value="5" name="volume[]">
+                            <span class="checkbox__text"><span>5 л.</span></span>
                         </label>
 
                         <label for="check5" class="checkbox">
-                            <input id="check5" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
+                            <input id="check5" class="checkbox__input" type="checkbox" {{ value_check('volume', '10')?"checked":""}} value="10" name="volume[]">
+                            <span class="checkbox__text"><span>10 л.</span></span>
                         </label>
-                    </div>
-                </div>
-            </div>
 
-            <div class="spollers-block__item">
-                <div class="spollers-block__title" data-spoller>Цвет</div>
-                <div class="spollers-block__body">
-                    <div class="checkbox-item">
                         <label for="check6" class="checkbox">
-                            <input id="check6" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
-                        </label>
-
-                        <label for="check7" class="checkbox">
-                            <input id="chec7" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
-                        </label>
-
-                        <label for="check8" class="checkbox">
-                            <input id="check8" class="checkbox__input" type="checkbox" value="1" name="form[]">
-                            <span class="checkbox__text"><span>Пункт</span></span>
+                            <input id="check6" class="checkbox__input" type="checkbox" {{ value_check('volume', '25')?"checked":""}} value="25" name="volume[]">
+                            <span class="checkbox__text"><span>25 л.</span></span>
                         </label>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <button type="reset" class="filters-sidebar__btn-reset btn">Сбросить фильтры</button>
+            </div>
+
+        </div>
+        <button type="submit" class="price-filter__btn btn">Применить</button>
+        <a href="{{url()->current()}}" class="filters-sidebar__btn-reset btn">Сбросить фильтр</a>
     </form>
 </div>

@@ -17,6 +17,7 @@ import BascetCounter from "./components/bascet/BascetCounter.vue"
 import FavoritesCounter from "./components/bascet/FavoritesCounter.vue"
 import Favorites from './components/Favorites.vue'
 import ToFavoritesBtn from './components/ToFavoritesBtn.vue'
+import Forma from './components/Forma.vue'
 import YandexMap from './components/YandexMap.vue'
 
 
@@ -36,7 +37,8 @@ const global_app = createApp({
         FavoritesCounter,
         Bascet,
         Favorites,
-        ToFavoritesBtn
+        ToFavoritesBtn,
+        Forma
     },
 
     setup() {

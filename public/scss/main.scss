@@ -673,13 +673,13 @@ h4 {
 	}
 
 	&__sidebar {
-		flex: 0 0 30%;
+		flex: 0 0 25%;
 		margin-top: -15px;
 		padding-right: 25px;
 	}
 
 	&__main {
-		flex: 0 0 70%;
+		flex: 0 0 75%;
 	}
 }
 
@@ -735,7 +735,7 @@ h4 {
 				content: '';
 				float: right;
 				width: 13px;
-				height: 5px;
+				height: 8px;
 				flex: 0 0 13px;
 				background-size: 100%;
 				background-position: center;

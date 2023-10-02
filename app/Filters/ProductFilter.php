@@ -22,9 +22,13 @@ class ProductFilter extends QueryFilter {
     //         if ($order == "В алфавитном порядке") $this->builder->orderBy('title', 'asc');
     // }
 
-    // public function brand($brand) {
-    //         if ($brand != "%") $this->builder->where("brand", $brand);
-    // }
+    public function tm($tm) {
+            if ($tm != "%") $this->builder->whereIn("tm", $tm);
+    }
+
+    public function volume($volume) {
+            if ($volume != "%") $this->builder->whereIn("volume", $volume);
+    }
 
     // public function subcat($subcat) {
     //     if (!empty($subcat)) $this->builder->whereIn("sub_category", $subcat);
