@@ -14,7 +14,7 @@
 			</p>
 		</div>
 
-		<x-forma rout="/send_consult" redirect="/thencs"></x-forma>
+		<Forma rout="/send_consult" redirect="/thencs"></Forma>
 
 		<p class="consult__form-policy">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
 
