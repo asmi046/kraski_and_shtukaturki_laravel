@@ -1,8 +1,13 @@
 <template>
 	<form class="consult__form d-flex">
-		<input v-modal="name" autocomplete="off" type="text" name="name" placeholder="Имя" class="consult__form-input input">
-		<input required v-modal="phone" autocomplete="off" type="tel" name="phone" placeholder="Телефон*" class="consult__form-input input">
-		<button type="submit" class="consult__form-btn btn">Отправить</button>
+		<input v-model="name" autocomplete="off" type="text" name="name" placeholder="Имя" class="consult__form-input input">
+		<input required v-model="phone" @click.prevent="phoneNotSet  = false" v-mask="{mask: '+7 (NNN) NNN-NN-NN', model: 'cpf' }" autocomplete="off" :class="{ _error: phoneNotSet }" type="tel" name="phone" placeholder="Телефон*" class="consult__form-input input">
+
+        <div class="form_wrapper">
+            <button type="submit"  @click.prevent="sendMsg()" class="consult__form-btn btn">Отправить</button>
+            <div v-show="showLoader" class="loader_svg"></div>
+        </div>
+
 	</form>
 </template>
 
@@ -10,7 +15,7 @@
 import { ref } from 'vue'
 export default {
     props:{
-        route:String,
+        rout:String,
         redirect:String,
     },
 
@@ -18,32 +23,39 @@ export default {
         let name = ref('')
         let phone = ref('')
         const _token = document.querySelector('meta[name="_token"]').content
-        let showLoader = false
+        let showLoader = ref(false)
+        let phoneNotSet = ref(false)
+
+
 
         const sendMsg  = () => {
-            this.showLoader = true;
+            showLoader = true;
+
+            if (phone.value == "")
+            {
+                phoneNotSet.value = true
+                return;
+            }
 
             axios.post(props.rout, {
                 _token: _token,
-                name: name,
-                phone: phone,
+                name: name.value,
+                phone: phone.value,
                 review: "",
             })
             .then((response) => {
-                this.showLoader = false
+                showLoader = false
                 console.log(response)
-                document.location.href=this.redirect
+                document.location.href=props.redirect
             })
-            .catch( (error) => {
-                this.showLoader = false
-                this.errorList.push(error.response.data.message)
-                console.log(error)
-            });
+            .catch(error => console.log(error));
         }
 
         return {
             name,
             phone,
+            showLoader,
+            phoneNotSet,
             sendMsg
         }
     }

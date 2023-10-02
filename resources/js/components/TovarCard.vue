@@ -2,13 +2,13 @@
     <div class="popular__column">
         <to-favorites-btn :sku="tovar.sku"></to-favorites-btn>
         <div class="popular__card card-popular">
-            <div class="card-popular__img _ibg">
+            <a :href="'/product/'+tovar.slug" class="card-popular__img _ibg">
 
                     <img v-if="tovar.img != ''" loading="lazy" :src="tovar.img" :alt="tovar.title">
 
                     <img v-else loading="lazy" :src="'img/no_photo.jpg'" :alt="tovar.title">
 
-            </div>
+            </a>
             <div class="card-popular__descp">
                 <h3 class="card-popular__descp-title">{{tovar.title}}</h3>
 
@@ -29,32 +29,6 @@
         </div>
     </div>
 
-    <!-- <div class="tovar_wrap main-prod-card"  :data-prodid="tovar.sku">
-        <div class="bascet_count"> В корзине <span>1</span> шт </div>
-        <to-favorites-btn :sku="tovar.sku"></to-favorites-btn>
-        <a :href="tovar.trueLnk" class="tovat_photo_wrap">
-            <img v-if="tovar.img != ''" :src="tovar.img" :alt="tovar.title">
-            <img v-else :src="'/img/noPhoto.jpg'" :alt="tovar.title">
-
-            <div class="labels">
-                <div v-if="tovar.hit" class="label_all label_hit">hit</div>
-
-                <div v-if="tovar.new" class="label_all label_new">new</div>
-
-                <div v-if="tovar.old_price != 0" class="label_all label_procent">%</div>
-            </div>
-        </a>
-        <h3 class="tovar_wrap_padding">{{tovar.title}}</h3>
-        <div class="prices tovar_wrap_padding">
-
-            <span v-if="tovar.old_price != 0" class="old_price">{{tovar.old_price}}</span>
-
-            {{tovar.price}} <span class="rub_symbol">₽</span>
-        </div>
-        <div class="tovar_button_wrap tovar_wrap_padding">
-            <to-bascet-btn route="/bascet"  :sku="tovar.sku"></to-bascet-btn>
-        </div>
-    </div> -->
 
 </template>
 

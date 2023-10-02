@@ -11,7 +11,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\EasyPageController;
 use App\Http\Controllers\ProjectController;
 
-
+use App\Http\Controllers\SenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +54,5 @@ Route::post('/favorites/add', [FavoriteController::class, "add"])->name("favorit
 Route::delete('/favorites/delete', [FavoriteController::class, "delete"])->name("favorites_delete");
 Route::delete('/favorites/clear', [FavoriteController::class, "clear"])->name("favorites_clear");
 
+Route::get('/thencs', [SenderController::class, "show_thencs"])->name('thencs');
+Route::post('/send_consult', [SenderController::class, "send_consultation"])->name('send_consultation');

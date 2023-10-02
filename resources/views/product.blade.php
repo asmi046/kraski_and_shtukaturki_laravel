@@ -71,16 +71,19 @@
         </div>
     </section>
 
-    <section class="product_page_section">
-        <div class="_container">
-            <h2 class="title">Фактуры для материала</h2>
-            <div class="textures">
-                @foreach ($textures as $item)
-                    <x-tovar-page.texture :textura="$item"></x-tovar-page.texture>
-                @endforeach
+    @if (!empty($textura))
+        <section class="product_page_section">
+            <div class="_container">
+                <h2 class="title">Фактуры для материала</h2>
+                <div class="textures">
+                    @foreach ($textures as $item)
+                        <x-tovar-page.texture :textura="$item"></x-tovar-page.texture>
+                    @endforeach
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
+
 
     <x-consultation-mini></x-consultation-mini>
 

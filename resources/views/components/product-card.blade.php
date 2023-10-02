@@ -3,13 +3,13 @@
     <div class="popular__card card-popular">
         <to-favorites-btn sku="{{$item["sku"]}}"></to-favorites-btn>
 
-        <div class="card-popular__img _ibg">
+        <a href="{{route('product', $item["slug"])}}" class="card-popular__img _ibg">
             @if(!empty($item["img"]))
                 <img loading="lazy" src="{{$item["img"]}}" alt="Купить {{$item["title"]}}">
             @else
                 <img loading="lazy" src="{{asset('img/no_photo.jpg')}}" alt="Купить {{$item["title"]}}">
             @endif
-        </div>
+        </a>
         <div class="card-popular__descp">
             <h3 class="card-popular__descp-title">{{$item["title"]}}</h3>
             <p class="card-popular__descp-subtitle">
@@ -21,7 +21,7 @@
             </p>
             <div class="card_price_wrap">
                 <div class="card-popular__descp-price">{{$item["price"]}} руб.</div>
-                @if ($item["price"] != 0)
+                @if ($item["old_price"] != 0)
                     <span class="card-popular__descp-price old_price">{{$item["old_price"]}} руб.</span>
                 @endif
             </div>
