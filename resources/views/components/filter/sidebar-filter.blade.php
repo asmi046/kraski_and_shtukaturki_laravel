@@ -5,21 +5,21 @@
         <p class="page__sidebar-filter-block-mob-text">Фильтры</p>
     </div>
 
-    <form action="#" class="sidebar__filters filters-sidebar sidebarBody">
+    <form action="{{url()->current()}}" method="GET" class="sidebar__filters filters-sidebar sidebarBody">
 
         <div class="filters-sidebar__price price-filter">
             <div class="price-filter__input-block">
                 <div class="price-filter__input-block-item">
                     <label for="price-1" class="price-filter__label">От</label>
-                    <input type="number" name="form[]" placeholder="60" class="input">
+                    <input type="number" name="minprice" value="{{ value_check('minprice', '', 100)}}" class="input">
                 </div>
                 <div class="price-filter__input-block-item">
                     <label for="price-1" class="price-filter__label">До</label>
-                    <input type="number" name="form[]" placeholder="60 000" class="input">
+                    <input type="number" name="maxprice" value="{{ value_check('maxprice', '', 60000)}}" class="input">
                 </div>
             </div>
 
-            <button type="button" class="price-filter__btn btn">Применить</button>
+            <button type="submit" class="price-filter__btn btn">Применить</button>
         </div>
 
         <div class="filters-sidebar__block spollers-block" data-spollers data-one-spoller>
