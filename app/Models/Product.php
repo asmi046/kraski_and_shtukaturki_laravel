@@ -26,6 +26,9 @@ class Product extends Model
         'new',
         'volume',
         'short_description',
+        'color_name',
+        'color_img',
+        'series',
         'seo_title',
         'seo_description'
     ];

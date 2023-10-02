@@ -10,8 +10,8 @@
 			</a>
 
 			<div class="search header__search">
-				<form role="search" method="get" action="" id="searchform" class="search__form">
-					<input type="text" placeholder="Поиск" class="search__input input" value="" name="s" id="s">
+				<form role="search" method="GET" action="{{route('show_search_page')}}" id="searchform" class="search__form">
+					<input type="text" placeholder="Поиск" class="search__input input" value="" name="search_str" id="s">
 					<button type="submit" tabindex="2" value="" id="searchsubmit" class="search__btn"></button>
 				</form>
 			</div>

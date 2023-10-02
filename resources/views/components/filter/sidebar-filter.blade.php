@@ -7,6 +7,8 @@
 
     <form action="{{url()->current()}}" method="GET" class="sidebar__filters filters-sidebar sidebarBody">
 
+        <input type="hidden" name="search_str" value="{{Request::get('search_str')}}">
+
         <div class="filters-sidebar__price price-filter">
             <div class="price-filter__input-block">
                 <div class="price-filter__input-block-item">

@@ -24,6 +24,6 @@ class SenderController extends Controller
 
 
     public function show_thencs() {
-        return view('thencs');
+        return view('thencs-form');
     }
 }

@@ -1,8 +1,8 @@
 @extends('layouts.all')
 
 @php
-    $title = "Краски иштукатурки по выгодным ценам в Курске";
-    $description = "Краски иштукатурки по выгодным ценам в Курске";
+    $title = (!empty($product['seo_title']))?$product['seo_title']:$product['title'];
+    $description = (!empty($product['seo_description']))?$product['seo_description']:$product['title'];;
 @endphp
 
 @section('title', $title)

@@ -10,6 +10,7 @@ import { VMaskDirective } from 'v-slim-mask'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination } from 'swiper/modules';
 
+import ToBascetBtnPage from './components/ToBascetBtnPage.vue'
 import ToBascetBtn from './components/ToBascetBtn.vue'
 import Bascet from "./components/bascet/Bascet.vue"
 import BascetCounter from "./components/bascet/BascetCounter.vue"
@@ -33,6 +34,7 @@ const global_app = createApp({
         SwiperSlide,
         YandexMap,
         ToBascetBtn,
+        ToBascetBtnPage,
         BascetCounter,
         FavoritesCounter,
         Bascet,

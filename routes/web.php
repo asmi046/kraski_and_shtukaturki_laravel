@@ -13,6 +13,8 @@ use App\Http\Controllers\ProjectController;
 
 use App\Http\Controllers\SenderController;
 
+use App\Http\Controllers\SearchController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,3 +58,6 @@ Route::delete('/favorites/clear', [FavoriteController::class, "clear"])->name("f
 
 Route::get('/thencs', [SenderController::class, "show_thencs"])->name('thencs');
 Route::post('/send_consult', [SenderController::class, "send_consultation"])->name('send_consultation');
+
+Route::get('/search_pds', [SearchController::class, 'search_pds'])->name('search_pds');
+Route::get('/search', [SearchController::class, 'show_search_page'])->name('show_search_page');

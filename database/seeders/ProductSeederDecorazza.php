@@ -45,6 +45,11 @@ class ProductSeederDecorazza extends Seeder
             if ($full_img_name)
                 Storage::disk('public')->put($full_img_name, file_get_contents($item["pack_foto"]), 'public');
 
+            $full_img_name_clr = basename($item["color_img"]);
+
+            if ($full_img_name_clr)
+                Storage::disk('public')->put($full_img_name_clr, file_get_contents($item["color_img"]), 'public');
+
             $tovar_element = [
                 "sku" => $item["sku"],
                 "title" => $item["name"],
@@ -61,6 +66,9 @@ class ProductSeederDecorazza extends Seeder
                 "props" => json_encode([]),
                 "volume" => $item["volume"],
                 "short_description" => $item["short_description"],
+                'color_name' => $item["color_name"],
+                'color_img' => Storage::url($full_img_name_clr),
+                'series' => $item["series"],
                 "seo_title" => $item["name"],
                 "seo_description" => $item["name"]." - купить в курске по выгодной цене. Гарантия качества."
             ];

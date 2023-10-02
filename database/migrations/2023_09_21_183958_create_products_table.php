@@ -31,6 +31,10 @@ return new class extends Migration
             $table->string('volume', 20);
             $table->text('short_description')->nullable();
             $table->string('tm', 50)->nullable();
+            $table->string('color_name', 500)->nullable();
+            $table->string('color_img', 500)->nullable();
+            $table->string('series', 200)->nullable();
+
 
             $table->string('seo_title')->nullable();
             $table->text('seo_description')->nullable();
