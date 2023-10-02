@@ -17,6 +17,7 @@ import BascetCounter from "./components/bascet/BascetCounter.vue"
 import FavoritesCounter from "./components/bascet/FavoritesCounter.vue"
 import Favorites from './components/Favorites.vue'
 import ToFavoritesBtn from './components/ToFavoritesBtn.vue'
+import YandexMap from './components/YandexMap.vue'
 
 
 import { store } from "./storage"
@@ -29,6 +30,7 @@ const global_app = createApp({
     components:{
         Swiper,
         SwiperSlide,
+        YandexMap,
         ToBascetBtn,
         BascetCounter,
         FavoritesCounter,

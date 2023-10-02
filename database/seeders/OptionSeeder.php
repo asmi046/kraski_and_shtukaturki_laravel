@@ -51,6 +51,13 @@ class OptionSeeder extends Seeder
                 ],
 
                 [
+                    "name" => "office_coordinate",
+                    "type" => "plan",
+                    'title' => 'Координаты',
+                    "value" => "51.727245371240414,36.1819885",
+                ],
+
+                [
                     "name" => "phone",
                     "type" => "plan",
                     'title' => 'Телефон',
