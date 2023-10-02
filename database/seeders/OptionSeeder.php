@@ -61,21 +61,28 @@ class OptionSeeder extends Seeder
                     "name" => "phone",
                     "type" => "plan",
                     'title' => 'Телефон',
-                    "value" => "+7 (920) 710 25 55",
+                    "value" => "+7 (910) 275 27 26",
+                ],
+
+                [
+                    "name" => "phone_2",
+                    "type" => "plan",
+                    'title' => 'Телефон 2',
+                    "value" => "+7 (4712) 30 82 00",
                 ],
 
                 [
                     "name" => "email",
                     "type" => "plan",
                     'title' => 'e-mail',
-                    "value" => "info@florida46.ru",
+                    "value" => "cubensis2009@yandex.ru",
                 ],
 
                 [
                     "name" => "email_send",
                     "type" => "plan",
                     'title' => 'e-mail для отправки',
-                    "value" => "info@florida46.ru, asmi046@gmail.com",
+                    "value" => "cubensis2009@yandex.ru, asmi046@gmail.com",
                 ],
 
                 [
