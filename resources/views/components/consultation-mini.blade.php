@@ -1,6 +1,7 @@
-<section class="page__consult consult section">
+<section class="page__consult-product consult section">
 	<div class="_container">
 
+	<div class="consult__box">
 	<div class="consult__inner">
 		<h2 class="consult__title">
 			Получить консультацию
@@ -9,7 +10,7 @@
 
 		<div class="consult__subtitle">
 			<p>
-				Оставьте свои контакты и наши специалисты свяжутся
+				Оставьте свои контакты и наши специалисты свяжутся 
 				с Вами в течении 15 минут
 			</p>
 		</div>
@@ -20,5 +21,6 @@
 
 		</div>
 
+		</div>
 	</div>
 </section>
