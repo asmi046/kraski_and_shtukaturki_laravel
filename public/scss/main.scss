@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-	font-size: 42px;
+	font-size: 32px;
 	font-weight: 700;
 	line-height: 50px;
 	letter-spacing: 0.015em;
@@ -175,14 +175,14 @@ h4 {
 	display: flex;
 	flex: 0 1 25%;
 	padding: 0 12.5px 24px 12.5px;
-    position:relative;
+	position: relative;
 
-    .to_favorites {
-        position: absolute;
-        right:30px;
-        top:10px;
-        z-index: 10000;
-    }
+	.to_favorites {
+		position: absolute;
+		right: 30px;
+		top: 10px;
+		z-index: 10000;
+	}
 }
 
 .popular__card {}
@@ -194,7 +194,7 @@ h4 {
 	padding: 24px 24px 33px 24px;
 	border: 0.4px solid #C6C6C6;
 	overflow: hidden;
-    position: relative;
+	position: relative;
 
 
 
@@ -247,23 +247,24 @@ h4 {
 	margin-bottom: 33px;
 	flex: 1 1 auto;
 }
-.card_price_wrap{
-    display: flex;
 
-    .card-popular__descp-price {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 29px;
-        letter-spacing: 0.015em;
+.card_price_wrap {
+	display: flex;
 
-        &.old_price{
-            font-size: 14px;
-            text-decoration: line-through;
-            color:gray;
-            margin: auto auto 0 10px;
-            font-weight: normal;
-        }
-    }
+	.card-popular__descp-price {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 29px;
+		letter-spacing: 0.015em;
+
+		&.old_price {
+			font-size: 14px;
+			text-decoration: line-through;
+			color: gray;
+			margin: auto auto 0 10px;
+			font-weight: normal;
+		}
+	}
 }
 
 .card-popular__btn {
@@ -398,9 +399,9 @@ h4 {
 	width: 100%;
 	margin-top: 27px;
 
-    .form_wrapper {
-        display: flex;
-    }
+	.form_wrapper {
+		display: flex;
+	}
 }
 
 .d-flex {}
@@ -604,7 +605,7 @@ h4 {
 		color: #fff;
 		max-width: 350px;
 		text-align: right;
-        text-transform: uppercase;
+		text-transform: uppercase;
 	}
 }
 
@@ -651,8 +652,8 @@ h4 {
 		border-radius: 0%;
 		transition: all 0.3s ease 0s;
 		padding: 8px 32.4px;
-        margin: 5px 5px 5px 0;
-        border-radius: 20px;
+		margin: 5px 5px 5px 0;
+		border-radius: 20px;
 
 		&._active {
 			color: #fff;
