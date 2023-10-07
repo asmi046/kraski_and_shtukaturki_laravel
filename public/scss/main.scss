@@ -966,6 +966,58 @@ h4 {
 }
 
 //========================================================================================================================================================
+.slider-advantages__slider {
+	position: relative;
+}
+
+.slider-advantages__slider .swiper-wrapper {
+	display: flex;
+	// justify-content: center;
+}
+
+.slider-advantages__slider .swiper-slide {
+	// width: 920px !important;
+	height: 465px;
+}
+
+.slider-advantages__slider .swiper-slide-active {
+	width: 920px !important;
+	flex: 0 0 920px !important;
+}
+
+.slider-advantages__btn-block {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.slider-advantages__btn {}
+
+.slider-advantages__slider-buttons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	z-index: 5;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1050px;
+	width: 100%;
+	border: 1px solid #000;
+
+	.swiper-button {
+		position: static;
+	}
+
+	.swiper-button-next {}
+
+	.swiper-button-prev {}
+}
+
+
+//========================================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 @import "breadcrumbs";

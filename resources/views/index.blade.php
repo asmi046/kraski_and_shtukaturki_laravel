@@ -83,6 +83,47 @@
 	</div>
 </section>
 
+<section class="page__slider-advantages slider-advantages section">
+	<div class="_container">
+		<h2 class="slider-advantages__title title">Наши преимущества</h2>
+		</div>
+
+		<div class="slider-advantages__slider advantagesSl ">
+		<swiper
+			:observer= "true"
+      :slides-per-view="2"
+			:space-between= "104"
+			:centered-slides= "true"
+			:loop= "true"
+			:navigation=" {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}"
+      :modules="modules"
+			>
+      <swiper-slide><img src="img/advant-slider/01.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="img/main-banner.jpg" alt=""></swiper-slide>
+			<swiper-slide><img src="img/main-banner.jpg" alt=""></swiper-slide>
+			<swiper-slide><img src="img/advant-slider/01.jpg" alt=""></swiper-slide>
+			<swiper-slide><img src="img/main-banner.jpg" alt=""></swiper-slide>
+			<swiper-slide><img src="img/main-banner.jpg" alt=""></swiper-slide>
+    </swiper>
+
+		<div class="slider-advantages__slider-buttons">
+			<button class="swiper-button swiper-button-next"></button>
+  		<button class="swiper-button swiper-button-prev"></button>
+		</div>
+
+
+		</div>
+
+		<div class="slider-advantages__btn-block">
+			<a href="#" class="slider-advantages__btn btn">Все проекты</a>
+		</div>
+
+	<!-- </div> -->
+</section>
+
 
 <section class="page__about about section">
 	<div class="_container">
