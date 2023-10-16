@@ -15,9 +15,7 @@
 	<div class="_container">
 
 		<h1 class="main-banner__title">
-			ДЕКОРАТИВНЫЕ
-			ШТУКАТУРКИ
-			MADE IN ITALY
+			ДЕКОРАТИВНЫЕ <br/>КРАСКИ И ШТУКАТУРКИ
 		</h1>
 
 	</div>

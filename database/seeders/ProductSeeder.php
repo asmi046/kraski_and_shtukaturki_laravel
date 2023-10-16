@@ -33,6 +33,8 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
 
+    $load_img = false;
+
      $ourData = file_get_contents(base_path() . "/public/base/tovars/tovar_vernici.json");
      $main_data = json_decode($ourData, true);
 
@@ -41,8 +43,9 @@ class ProductSeeder extends Seeder
         try {
             $full_img_name = basename($item["pack_foto"]);
 
-            if ($full_img_name)
-                Storage::disk('public')->put($full_img_name, file_get_contents($item["pack_foto"]), 'public');
+            if ($load_img)
+                if ($full_img_name)
+                    Storage::disk('public')->put($full_img_name, file_get_contents($item["pack_foto"]), 'public');
 
 
             $tovar_element = [
@@ -74,7 +77,7 @@ class ProductSeeder extends Seeder
             $cat_id = $this->cat_data[$item["category"]];
 
             if ($cat_id) {
-                $cat_relation[] = [
+                $cat_relation = [
                     'category_id' => $cat_id,
                     'product_id' => $t_id,
                 ];
@@ -91,8 +94,9 @@ class ProductSeeder extends Seeder
 
                     $tex_img_name = basename($vaue);
 
-                    if ($tex_img_name)
-                        Storage::disk('public')->put($tex_img_name, file_get_contents($vaue), 'public');
+                    if ($load_img)
+                        if ($tex_img_name)
+                            Storage::disk('public')->put($tex_img_name, file_get_contents($vaue), 'public');
 
                     $tx_element = [
                         "product_id" => $t_id,

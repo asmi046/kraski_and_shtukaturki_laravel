@@ -33,6 +33,8 @@ class ProductSeederDecorazza extends Seeder
     public function run(): void
     {
 
+    $load_img = false;
+
      $ourData = file_get_contents(base_path() . "/public/base/tovars/tovar_decorazza.json");
      $main_data = json_decode($ourData, true);
 
@@ -42,11 +44,13 @@ class ProductSeederDecorazza extends Seeder
         try {
             $full_img_name = basename($item["pack_foto"]);
 
+            if ($load_img)
             if ($full_img_name)
                 Storage::disk('public')->put($full_img_name, file_get_contents($item["pack_foto"]), 'public');
 
             $full_img_name_clr = basename($item["color_img"]);
 
+            if ($load_img)
             if ($full_img_name_clr)
                 Storage::disk('public')->put($full_img_name_clr, file_get_contents($item["color_img"]), 'public');
 
@@ -83,7 +87,7 @@ class ProductSeederDecorazza extends Seeder
             $cat_id = $this->cat_data[$item["category"]];
 
             if ($cat_id) {
-                $cat_relation[] = [
+                $cat_relation = [
                     'category_id' => $cat_id,
                     'product_id' => $t_id,
                 ];
@@ -101,6 +105,7 @@ class ProductSeederDecorazza extends Seeder
 
                     $tex_img_name = basename($vaue);
 
+                    if ($load_img)
                     if ($tex_img_name)
                         Storage::disk('public')->put($tex_img_name, file_get_contents($vaue), 'public');
 

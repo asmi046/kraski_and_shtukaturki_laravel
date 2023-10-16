@@ -18,6 +18,8 @@
 
 
             <a href="tel:+7{{phone_format($options['phone'])}}" class="phone_in_pzge">{{$options['phone']}}</a>
+            <br>
+            <a href="tel:+7{{phone_format($options['phone_2'])}}" class="phone_in_pzge">{{$options['phone_2']}}</a>
 
             <p><strong>e-mail:</strong> {{$options['email']}}</p>
             <p><strong>Адрес:</strong> {{$options['adress']}}</p>

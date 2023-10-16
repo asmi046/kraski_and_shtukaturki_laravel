@@ -47,14 +47,14 @@ class OptionSeeder extends Seeder
                     "name" => "adress",
                     "type" => "plan",
                     'title' => 'Адрес',
-                    "value" => "Карла Маркса, 72 корпус 18",
+                    "value" => "Курск ул. Мирная 27а , 1й этаж",
                 ],
 
                 [
                     "name" => "office_coordinate",
                     "type" => "plan",
                     'title' => 'Координаты',
-                    "value" => "51.727245371240414,36.1819885",
+                    "value" => "51.74118707227473,36.2009559999999",
                 ],
 
                 [
