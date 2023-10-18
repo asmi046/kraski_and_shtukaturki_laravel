@@ -10,34 +10,12 @@
 
 @section('content')
 
-<section class="banner-services banner">
-	<div class="nuar_blk"></div>
-	<div class="_container">
-
-		<h1 class="banner-category__title">
-			Сервисные услуги
-		</h1>
-
-	</div>
-</section>
+<x-category.banner :h1="$title"></x-category.banner>
 
 <section class="page__categoty-top-sec categoty-top-sec section">
 	<div class="_container">
 
-	<div class="categoty-top-sec__breadcrumbs">
-	<p id="breadcrumbs">
-	<span>
-		<span>
-			<a href="index.html">
-				Главная
-			</a> /
-			<span class="breadcrumb_last" aria-current="page">
-				Сервисные услуги
-			</span>
-		</span>
-	</span>
-</p>
-	</div>
+        <x-breadcrumbs :title="$title"></x-breadcrumbs>
 
 	</div>
 </section>
@@ -45,35 +23,15 @@
 <section class="page__services services section">
 	<div class="_container">
 
-		<h2 class="services__title">
-			Услуги
-		</h2>
 
 		<div class="services__inner">
 
-			<a href="#" class="services__card card-services card-services_01">
-				<div class="card-services__descp">
-					<h3 class="card-services__title">Услуга 1</h3>
-				</div>
-			</a>
+            <x-services-blk name="Профессиональное Нанесение декоративных покрытий" img="prof-n.webp"></x-services-blk>
+            <x-services-blk name="Выезд на объект <br>для замера" img="zamer.webp"></x-services-blk>
+            <x-services-blk name="Консультация , подбор фактур и цветов по проекту" img="podbor.webp"></x-services-blk>
+            <x-services-blk name="Изготовление <br>выкрасов" img="vikras.webp"></x-services-blk>
+            <x-services-blk name="Компьютерная <br>коллеровка" img="colloring.webp"></x-services-blk>
 
-			<a href="#" class="services__card card-services card-services_02">
-				<div class="card-services__descp">
-					<h3 class="card-services__title">Услуга 2</h3>
-				</div>
-			</a>
-
-			<a href="#" class="services__card card-services card-services_01">
-				<div class="card-services__descp">
-					<h3 class="card-services__title">Услуга 3</h3>
-				</div>
-			</a>
-
-			<a href="#" class="services__card card-services card-services_02">
-				<div class="card-services__descp">
-					<h3 class="card-services__title">Услуга 4</h3>
-				</div>
-			</a>
 
 		</div>
 

@@ -59,7 +59,7 @@
 	display: flex;
 	justify-content: flex-end;
 	flex: 0 1 49.5%;
-	padding-bottom: 20%;
+	padding-bottom: 25%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -102,5 +102,6 @@
 
 	@media (max-width: 768px) {
 		font-size: 18px;
+        line-height: 1.;
 	}
 }
