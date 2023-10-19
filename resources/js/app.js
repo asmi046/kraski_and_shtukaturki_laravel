@@ -7,8 +7,7 @@ import VueAxios from 'vue-axios'
 
 import { VMaskDirective } from 'v-slim-mask'
 
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination } from 'swiper/modules';
+
 
 import ToBascetBtnPage from './components/ToBascetBtnPage.vue'
 import ToBascetBtn from './components/ToBascetBtn.vue'
@@ -22,11 +21,19 @@ import Forma from './components/Forma.vue'
 import YandexMap from './components/YandexMap.vue'
 
 
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import { EffectCoverflow } from 'swiper/modules';
+
 import { store } from "./storage"
 import { useStore } from 'vuex'
 
-import 'swiper/css';
-import 'swiper/css/pagination';
+
 
 const global_app = createApp({
     components:{
@@ -51,7 +58,7 @@ const global_app = createApp({
         store.dispatch('initialFavorites');
 
         return {
-          modules: [Pagination],
+          modules: [EffectCoverflow, Pagination],
         };
     },
 })
