@@ -21,6 +21,8 @@
 	</div>
 </section>
 
+<x-categories></x-categories>
+
 <section class="page__popular popular section">
 	<div class="_container">
 		<h2 class="popular__title title">Популярные товары</h2>
@@ -41,7 +43,7 @@
 	</div>
 </section>
 
-<x-categories></x-categories>
+
 
 <section class="page__advantages-slider advantages-slider section">
 	<div class="_container">

@@ -50,7 +50,8 @@
                     </div>
                     <div class="box-categories__text">
                         <p>
-                        Микроцемент
+
+                           Системы<br> Микроцемент
                         </p>
                     </div>
                 </a>

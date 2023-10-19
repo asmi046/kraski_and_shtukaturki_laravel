@@ -334,6 +334,11 @@ h4 {
 .box-categories__img {
 	flex: 0 1 100%;
 	padding-bottom: 38.6%;
+
+    img {
+        object-fit: cover;
+    }
+
 }
 
 .box-categories__text {
