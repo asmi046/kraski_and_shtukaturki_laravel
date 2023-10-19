@@ -51,30 +51,12 @@
                 <div class="spollers-block__title _active" data-spoller>Объем</div>
                 <div class="spollers-block__body">
                     <div class="checkbox-item">
-                        <label for="check2" class="checkbox">
-                            <input id="check2" class="checkbox__input" type="checkbox" {{ value_check('volume', '1')?"checked":""}} value="1" name="volume[]">
-                            <span class="checkbox__text"><span>1 л.</span></span>
-                        </label>
+                        <x-filter.chec-blk id="v1" parametr="volume" value="1" valuetext="1 л."></x-filter.chec-blk>
+                        <x-filter.chec-blk id="v2" parametr="volume" value="4" valuetext="4 л."></x-filter.chec-blk>
+                        <x-filter.chec-blk id="v3" parametr="volume" value="5" valuetext="5 л."></x-filter.chec-blk>
+                        <x-filter.chec-blk id="v4" parametr="volume" value="10" valuetext="10 л."></x-filter.chec-blk>
+                        <x-filter.chec-blk id="v5" parametr="volume" value="25" valuetext="25 л."></x-filter.chec-blk>
 
-                        <label for="check3" class="checkbox">
-                            <input id="check3" class="checkbox__input" type="checkbox" {{ value_check('volume', '4')?"checked":""}} value="4" name="volume[]">
-                            <span class="checkbox__text"><span>4 л.</span></span>
-                        </label>
-
-                        <label for="check4" class="checkbox">
-                            <input id="check4" class="checkbox__input" type="checkbox" {{ value_check('volume', '5')?"checked":""}} value="5" name="volume[]">
-                            <span class="checkbox__text"><span>5 л.</span></span>
-                        </label>
-
-                        <label for="check5" class="checkbox">
-                            <input id="check5" class="checkbox__input" type="checkbox" {{ value_check('volume', '10')?"checked":""}} value="10" name="volume[]">
-                            <span class="checkbox__text"><span>10 л.</span></span>
-                        </label>
-
-                        <label for="check6" class="checkbox">
-                            <input id="check6" class="checkbox__input" type="checkbox" {{ value_check('volume', '25')?"checked":""}} value="25" name="volume[]">
-                            <span class="checkbox__text"><span>25 л.</span></span>
-                        </label>
                     </div>
                 </div>
 

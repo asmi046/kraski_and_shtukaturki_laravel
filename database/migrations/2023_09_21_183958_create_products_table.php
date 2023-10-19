@@ -29,6 +29,7 @@ return new class extends Migration
             $table->json('advantages')->nullable();
             $table->json('props')->nullable();
             $table->string('volume', 20);
+            $table->string('ed_izm', 20);
             $table->text('short_description')->nullable();
             $table->string('tm', 50)->nullable();
             $table->string('color_name', 500)->nullable();

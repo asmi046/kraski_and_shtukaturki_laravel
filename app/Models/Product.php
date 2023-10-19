@@ -25,6 +25,7 @@ class Product extends Model
         'hit',
         'new',
         'volume',
+        'ed_izm',
         'short_description',
         'color_name',
         'color_img',

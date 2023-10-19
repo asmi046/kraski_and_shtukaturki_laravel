@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="popular__btn-block">
-			<button type="submit" class="popular__btn-all btn">Посмотреть все</button>
+			<a href="{{route('catalog')}}" type="submit" class="popular__btn-all btn">Посмотреть все</a>
 		</div>
 
 	</div>

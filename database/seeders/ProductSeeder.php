@@ -30,6 +30,8 @@ class ProductSeeder extends Seeder
         "Инструменты" => 11
     ];
 
+
+
     public function run(): void
     {
 
@@ -62,7 +64,8 @@ class ProductSeeder extends Seeder
                 "tm" => "San Marco",
                 "advantages" => json_encode([]),
                 "props" => json_encode($item["props"]),
-                "volume" => $item["volume"],
+                "volume" => intval($item["volume"]),
+                "ed_izm" => get_ed($item["name"]),
                 "short_description" => $item["short_description"],
                 "seo_title" => $item["name"],
                 "seo_description" => $item["name"]." - купить в курске по выгодной цене. Гарантия качества."

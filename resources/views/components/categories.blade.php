@@ -71,5 +71,10 @@
             </div>
 
 	    </div>
+
+        <div class="popular__btn-block">
+            <a href="{{route('catalog')}}" type="submit" class="popular__btn-all btn">Все категории</a>
+        </div>
+
 	</div>
 </section>

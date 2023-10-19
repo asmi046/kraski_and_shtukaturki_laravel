@@ -69,12 +69,13 @@ class ProductSeederDecorazza extends Seeder
                 "advantages" => json_encode($item["advantages"]),
                 "props" => json_encode([]),
                 "volume" => $item["volume"],
+                "ed_izm" => get_ed($item["name"]),
                 "short_description" => $item["short_description"],
                 'color_name' => $item["color_name"],
                 'color_img' => Storage::url($full_img_name_clr),
                 'series' => $item["series"],
                 "seo_title" => $item["name"],
-                "seo_description" => $item["name"]." - купить в курске по выгодной цене. Гарантия качества."
+                "seo_description" => $item["name"]." - купить в Курске по выгодной цене. Гарантия качества."
             ];
 
             DB::table("products")->insert($tovar_element);
