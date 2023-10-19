@@ -26,41 +26,28 @@
 
         <div class="filters-sidebar__block spollers-block" data-spollers data-one-spoller>
 
-            <div class="spollers-block__item">
-                <div class="spollers-block__title _active" data-spoller>Торговая марка</div>
-                <div class="spollers-block__body">
-                    <div class="checkbox-item">
+            <x-filter.blk name="Торговая марка">
+                <x-filter.chec-blk id="tm0" parametr="tm" value="San Marco" valuetext="San Marco"></x-filter.chec-blk>
+                <x-filter.chec-blk id="tm1" parametr="tm" value="DECORAZZA" valuetext="DECORAZZA"></x-filter.chec-blk>
+            </x-filter.blk>
 
-                        <label for="check" class="checkbox">
-                            <input id="check" class="checkbox__input" type="checkbox" {{ value_check('tm', 'San Marco')?"checked":""}} value="San Marco" name="tm[]">
-                            <span class="checkbox__text"><span>San Marco</span></span>
-                        </label>
+            <x-filter.blk name="Объем / Вес">
+                @if (($name === "Фактурные покрытия")|| ($name === "Венецианские штукатурки"))
+                    <x-filter.chec-blk id="v1" parametr="volume" value="1" valuetext="1 кг."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v2" parametr="volume" value="7" valuetext="7 кг."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v3" parametr="volume" value="15" valuetext="15 кг."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v4" parametr="volume" value="24" valuetext="24 кг."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v5" parametr="volume" value="25" valuetext="25 кг."></x-filter.chec-blk>
 
-                        <label for="check1" class="checkbox">
-                            <input id="check1" class="checkbox__input" type="checkbox" {{ value_check('tm', 'DECORAZZA')?"checked":""}} value="DECORAZZA" name="tm[]">
-                            <span class="checkbox__text"><span>DECORAZZA</span></span>
-                        </label>
+                @else
+                    <x-filter.chec-blk id="v1" parametr="volume" value="1" valuetext="1 л."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v2" parametr="volume" value="4" valuetext="4 л."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v3" parametr="volume" value="5" valuetext="5 л."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v4" parametr="volume" value="10" valuetext="10 л."></x-filter.chec-blk>
+                    <x-filter.chec-blk id="v5" parametr="volume" value="25" valuetext="25 л."></x-filter.chec-blk>
+                @endif
 
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="spollers-block__item">
-                <div class="spollers-block__title _active" data-spoller>Объем</div>
-                <div class="spollers-block__body">
-                    <div class="checkbox-item">
-                        <x-filter.chec-blk id="v1" parametr="volume" value="1" valuetext="1 л."></x-filter.chec-blk>
-                        <x-filter.chec-blk id="v2" parametr="volume" value="4" valuetext="4 л."></x-filter.chec-blk>
-                        <x-filter.chec-blk id="v3" parametr="volume" value="5" valuetext="5 л."></x-filter.chec-blk>
-                        <x-filter.chec-blk id="v4" parametr="volume" value="10" valuetext="10 л."></x-filter.chec-blk>
-                        <x-filter.chec-blk id="v5" parametr="volume" value="25" valuetext="25 л."></x-filter.chec-blk>
-
-                    </div>
-                </div>
-
-            </div>
+            </x-filter.blk>
 
         </div>
         <button type="submit" class="price-filter__btn btn">Применить</button>
