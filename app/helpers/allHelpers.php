@@ -5,7 +5,7 @@ use Illuminate\Support\Str;
 
 if (!function_exists("get_ed")) {
     function get_ed($str) {
-        if (strripos($str, " кг") !== false) return 'Искрящийся бархат';
+        if (strripos($str, " кг") !== false) return 'кг';
         if (strripos($str, " л") !== false) return 'л';
         if (strripos($str, " г") !== false) return 'г';
 
