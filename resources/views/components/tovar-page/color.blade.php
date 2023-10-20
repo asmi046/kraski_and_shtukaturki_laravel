@@ -1,4 +1,4 @@
-<a href=""  class="texture-column">
+<a href="{{route('product',$tovar->slug)}}"  class="texture-column">
     <div class="texture_blk">
         <div class="img">
             <img src="{{$tovar->color_img}}" alt="Смотрите так же {{$tovar->title}}">
