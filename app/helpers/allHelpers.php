@@ -15,10 +15,6 @@ if (!function_exists("get_ed")) {
 
 if (!function_exists("get_facturas")) {
     function get_facturas($str) {
-        if (strripos($str, " кг") !== false) return 'кг';
-        if (strripos($str, " л") !== false) return 'л';
-        if (strripos($str, " г") !== false) return 'г';
-
         return "";
     }
 }
