@@ -66,6 +66,8 @@ class ProductSeeder extends Seeder
                 "props" => json_encode($item["props"]),
                 "volume" => intval($item["volume"]),
                 "ed_izm" => get_ed($item["name"]),
+                "factura" => "",
+                "osnova" => "",
                 "short_description" => $item["short_description"],
                 "seo_title" => $item["name"],
                 "seo_description" => $item["name"]." - купить в курске по выгодной цене. Гарантия качества."

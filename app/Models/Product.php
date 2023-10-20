@@ -26,6 +26,8 @@ class Product extends Model
         'new',
         'volume',
         'ed_izm',
+        'factura',
+        'osnova',
         'short_description',
         'color_name',
         'color_img',
