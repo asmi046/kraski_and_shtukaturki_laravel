@@ -25,6 +25,12 @@ return new class extends Migration
             $table->string('description_seo', 300)->comment('SEO описание');
         });
 
+        Schema::create('category_product_group', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('product_group_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+        });
+
         Schema::create('category_product', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
@@ -37,6 +43,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('category_product_group');
         Schema::dropIfExists('category_product');
         Schema::dropIfExists('categories');
     }

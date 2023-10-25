@@ -19,6 +19,7 @@ import Favorites from './components/Favorites.vue'
 import ToFavoritesBtn from './components/ToFavoritesBtn.vue'
 import Forma from './components/Forma.vue'
 import YandexMap from './components/YandexMap.vue'
+import PageToBascet from './components/PageToBascet.vue'
 
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -47,6 +48,7 @@ const global_app = createApp({
         Bascet,
         Favorites,
         ToFavoritesBtn,
+        PageToBascet,
         Forma
     },
 

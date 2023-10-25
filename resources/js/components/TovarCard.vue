@@ -16,14 +16,13 @@
                 <p v-else class="card-popular__descp-subtitle" v-html="tovar.description.substring(0, 50).replace(/(<([^>]+)>)/gi, '')+'...'" ></p>
 
             <div class="card_price_wrap">
-                <div class="card-popular__descp-price">{{tovar.price}} руб.</div>
-                <span v-if="tovar.old_price != 0" class="card-popular__descp-price old_price">{{tovar.old_price}} руб.</span>
+                <div class="card-popular__descp-price">{{tovar.tovar_prices[0].price}} руб.</div>
+                <span v-if="tovar.tovar_prices[0].old_price != 0" class="card-popular__descp-price old_price">{{tovar.tovar_prices[0].old_price}} руб.</span>
 
             </div>
 
             </div>
             <div class="card_control_wrap">
-                <to-bascet-btn bascet="/bascet" :sku="tovar.sku"></to-bascet-btn>
                 <a :href="'/product/'+tovar.slug" class="card-popular__btn">Подробнее...</a>
             </div>
         </div>
@@ -38,13 +37,14 @@ import ToFavoritesBtn from './ToFavoritesBtn.vue'
 
 
 export default {
-    components: { ToBascetBtn, ToFavoritesBtn },
+    components: { ToFavoritesBtn },
 
     props:{
         tovar:Object
     },
 
     setup(props) {
+        console.log(props.tovar)
         return {
             tovar:props.tovar
         }

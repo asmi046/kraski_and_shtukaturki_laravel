@@ -19,16 +19,20 @@
                     {{mb_strimwidth(strip_tags ($item["description"]), 0, 50, "...")}}
                 @endif
             </p>
+
             <div class="card_price_wrap">
-                <div class="card-popular__descp-price">{{$item["price"]}} руб.</div>
-                @if ($item["old_price"] != 0)
-                    <span class="card-popular__descp-price old_price">{{$item["old_price"]}} руб.</span>
+            @if ($item["tovar_prices"] )
+                <div class="card-popular__descp-price">от {{$item["tovar_prices"][0]->price}} руб.</div>
+                @if ($item["tovar_prices"][0]->old_price != 0)
+                    <span class="card-popular__descp-price old_price">{{$item["tovar_prices"][0]->old_price}} руб.</span>
                 @endif
+            @endif
+
             </div>
 
         </div>
         <div class="card_control_wrap">
-            <to-bascet-btn bascet="{{route('bascet')}}" sku="{{$item['sku']}}"></to-bascet-btn>
+            {{-- <to-bascet-btn bascet="{{route('bascet')}}" sku="{{$item['sku']}}"></to-bascet-btn> --}}
             <a href="{{route('product', $item["slug"])}}" class="card-popular__btn">Подробнее...</a>
         </div>
     </div>

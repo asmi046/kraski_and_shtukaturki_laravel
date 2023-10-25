@@ -111,6 +111,8 @@
 		&__main {
 			font-size: 24px;
 			font-weight: bold;
+            margin-top: auto;
+            margin-bottom: auto;
 		}
 
 		&__old {
@@ -118,16 +120,29 @@
 			color: #C6C6C6;
 			text-decoration: line-through;
 		}
+
+        select {
+            margin-right: 20px;
+        }
 	}
 
 	.like {
 		flex: 1;
-		max-width: 50px;
+
+        .to_favorites {
+            margin:  0 0 0 auto;
+        }
+
 	}
 
 	.sale_btn {
 		flex: 1;
 		margin-right: 0;
+        display: flex;
+
+        a{
+            margin-left: auto;
+        }
 	}
 }
 

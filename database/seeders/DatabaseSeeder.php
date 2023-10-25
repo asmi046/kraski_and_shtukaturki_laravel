@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             OptionSeeder::class,
             CategorySeeder::class,
             TrademarkSeeder::class,
+            ProductGroupSeeder::class,
             ProductSeeder::class,
             ProductSeederDecorazza::class,
         ]);

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Product;
+use App\Models\ProductGroup;
 
 class ProductController extends Controller
 {
@@ -12,7 +12,7 @@ class ProductController extends Controller
 
     public function show($slug) {
 
-        $prosuct = Product::where('slug', $slug)->first();
+        $prosuct = ProductGroup::with("tovar_prices")->where('slug', $slug)->first();
 
         if($prosuct == null) abort('404');
 
@@ -25,7 +25,6 @@ class ProductController extends Controller
             return view('product-decorazza', ['product' => $prosuct, 'category'=> $categories, "galery"=>$tovar_images, "all_colors" =>$all_colors]);
         }
 
-        $textures = $prosuct->tovar_texture;
-        return view('product', ['product' => $prosuct, 'category'=> $categories, 'textures' => $textures]);
+        return view('product', ['product' => $prosuct, 'category'=> $categories]);
     }
 }

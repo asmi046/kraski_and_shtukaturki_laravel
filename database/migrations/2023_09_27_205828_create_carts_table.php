@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('session_id');
             $table->integer('user_id');
             $table->string('product_sku', 150);
+            $table->integer('product_id');
             $table->integer('quentity');
             $table->double('price', 12,2)->default(0);
         });

@@ -9,7 +9,7 @@ class Favorite extends Model
 {
     use HasFactory;
 
-    
+
     protected $fillable = [
         'session_id',
         'user_id',
@@ -18,11 +18,11 @@ class Favorite extends Model
 
 
     public function tovar_data() {
-        return $this->hasOne(Product::class, 'sku', 'product_sku');
+        return $this->hasOne(ProductGroup::class, 'sku', 'product_sku');
     }
 
     public static function add($product_id) {
-        
+
         if ($favorit = self::where(["session_id" => session()->getId(), "product_sku" => $product_id])->first()) {
             $favorit->delete();
             return false;

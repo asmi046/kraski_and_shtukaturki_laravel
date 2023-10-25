@@ -8,7 +8,7 @@
 @section('title', $title)
 @section('description', $description)
 
-@section('content')
+@section('content')''
     <x-tovar-page.head :h1="$product['title']"></x-tovar-page.head>
 
     <x-breadcrumbs :tovar="$product" :category="$category"></x-breadcrumbs>
@@ -43,26 +43,9 @@
                     </div>
 
                     <div class="sales__action">
-                        <div class="price">
-                            <span class="price__main">
-                                {{$product->price}} руб.
-                            </span>
 
-                            @if ($product->old_price)
-                                <span class="price__old">
-                                    {{$product->old_price}}  руб.
-                                </span>
-                            @endif
+                        <page-to-bascet sku="{{$product->sku}}" :prices="{{json_encode($product->tovar_prices)}}"></page-to-bascet>
 
-                        </div>
-
-                        <div class="like">
-                            <to-favorites-btn sku="{{$product->sku}}"></to-favorites-btn>
-                        </div>
-
-                        <div class="sale_btn">
-                            <a href="#" class="fill_btn">Добавить в корзину</a>
-                        </div>
                     </div>
                 </div>
 

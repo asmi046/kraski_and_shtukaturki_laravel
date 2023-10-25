@@ -20,16 +20,17 @@ class CartController extends Controller
 
     public function add(Request $request) {
         $product_id = $request->input('product_id');
+        $product_sku = $request->input('product_sku');
         $_token = $request->input('_token');
         $addcount = $request->input('addcount');
 
-        Cart::add($product_id, $addcount);
+        Cart::add($product_id, $product_sku, $addcount);
 
         return array($product_id, $_token);
     }
 
     public function get_all() {
-        $cart_product = Cart::with('tovar_data')->where("carts.session_id", session()->getId())->get();
+        $cart_product = Cart::with('tovar_data', 'tovar_content')->where("carts.session_id", session()->getId())->get();
         return ["count" => Cart::cart_coun(), "position" => $cart_product] ;
     }
 

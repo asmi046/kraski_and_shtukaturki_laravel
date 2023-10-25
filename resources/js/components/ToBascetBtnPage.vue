@@ -1,6 +1,6 @@
 <template>
 
-    <a v-if="!inBascet" href="#" @click="addToBascet" class="fill_btn">Добавить в корзину</a>
+    <a v-if="!inBascet" href="#" @click.prevent="addToBascet" class="fill_btn">В корзину</a>
     <a v-else :href="bascet" class="fill_btn">Оформить {{ inBascetCount }} шт.</a>
 
 </template>
@@ -13,6 +13,7 @@ export default {
 
 props: {
     sku:String,
+    skuid:Number,
     bascet:String
 },
 
@@ -25,8 +26,8 @@ setup(props){
     let inBascetCount = ref(1)
 
 
-    watch(() => store.getters.cartCount, function() {
-        let inBascetElem = store.state.cart_tovars.find((elem) => { return elem.product_sku === props.sku})
+    watch(() => [store.getters.cartCount,props.skuid], function() {
+        let inBascetElem = store.state.cart_tovars.find((elem) => { return elem.product_id === props.skuid})
         inBascet.value = (inBascetElem != undefined)
         inBascetCount.value =  (inBascetElem != undefined)?inBascetElem.quentity:0
     });
@@ -35,7 +36,8 @@ setup(props){
         let tiken = document.querySelector('meta[name="_token"]').content;
 
         axios.post('/bascet/add', {
-            'product_id': props.sku,
+            'product_sku': props.sku,
+            'product_id': props.skuid,
             'addcount':countToAdd.value,
             '_token': tiken
         })
