@@ -35,7 +35,7 @@ class ProductGroupSeeder extends Seeder
     public function run(): void
     {
 
-    $load_img = false;
+    $load_img = true;
 
      $ourData = file_get_contents(base_path() . "/public/base/tovars/tovar_group_vernici.json");
      $main_data = json_decode($ourData, true);
