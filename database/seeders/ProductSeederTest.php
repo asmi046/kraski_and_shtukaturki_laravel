@@ -22,15 +22,17 @@ class ProductSeederTest extends Seeder
 
         $load_img = false;
 
-        $ourData = file_get_contents(base_path() . "/public/base/tovars/tovar_decorazza.json");
+        $ourData = file_get_contents(base_path() . "/public/base/tovars/tovar_goup_decorazza.json");
         $main_data = json_decode($ourData, true);
 
-        $cats = [];
+        // $cats = [];
 
-        foreach ($main_data as $item) {
-            $cats[$item["category"]] = $item["category"];
-        }
+        // foreach ($main_data as $item) {
+        //     $cats[$item["category"]] = $item["category"];
+        // }
 
-        var_dump($cats);
+        var_dump($main_data[0]['full_galery']);
+        return;
+        var_dump($main_data->full_galery);
     }
 }

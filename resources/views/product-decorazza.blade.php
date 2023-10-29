@@ -59,39 +59,10 @@
                             </div>
                         </div>
 
-                        <div class="pack_blk_element">
-                            <div class="img_wrap">
-                                <img src="{{$product->color_img}}" alt="Цвет  {{$product->color_name}}">
-                            </div>
-
-                            <div class="text">
-                                <span><b>Цвет:</b><br/><br/>{{$product->color_name}}</span>
-                            </div>
-                        </div>
-
                     </div>
 
                     <div class="sales__action">
-                        <div class="price">
-                            <span class="price__main">
-                                {{$product->price}} руб.
-                            </span>
-
-                            @if ($product->old_price)
-                                <span class="price__old">
-                                    {{$product->old_price}}  руб.
-                                </span>
-                            @endif
-
-                        </div>
-
-                        <div class="like">
-                            <to-favorites-btn sku="{{$product->sku}}"></to-favorites-btn>
-                        </div>
-
-                        <div class="sale_btn">
-                            <to-bascet-btn-page bascet="{{route('bascet')}}" sku="{{$product->sku}}"></to-bascet-btn-page>
-                        </div>
+                        <page-to-bascet sku="{{$product->sku}}" :prices="{{json_encode($product->tovar_prices)}}"></page-to-bascet>
                     </div>
                 </div>
 
@@ -100,7 +71,7 @@
         </div>
     </section>
 
-    @if (!empty($all_colors))
+    {{-- @if (!empty($all_colors))
         <section class="product_page_section">
             <div class="_container">
                 <h2 class="title">Все товары данное серии</h2>
@@ -111,7 +82,7 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
 
     <x-consultation-mini></x-consultation-mini>

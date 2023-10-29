@@ -51,7 +51,7 @@ class ProductGroup extends Model
 
     public function tovar_images()
     {
-        return $this->hasMany(ProductImage::class);
+        return $this->hasMany(ProductGroupImage::class);
     }
 
     public function category_tovars() {

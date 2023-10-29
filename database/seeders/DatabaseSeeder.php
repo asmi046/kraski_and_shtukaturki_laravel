@@ -23,9 +23,10 @@ class DatabaseSeeder extends Seeder
             OptionSeeder::class,
             CategorySeeder::class,
             TrademarkSeeder::class,
+            ProductGroupSeederDecorazza::class,
             ProductGroupSeeder::class,
-            ProductSeeder::class,
-            ProductSeederDecorazza::class,
+            // ProductSeeder::class,
+            // ProductSeederDecorazza::class,
         ]);
     }
 }

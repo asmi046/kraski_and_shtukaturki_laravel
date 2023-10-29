@@ -231,6 +231,10 @@
         flex:1;
         .img_wrap{
             flex: 1;
+            img {
+                width: 130px;
+                height: auto;
+            }
         }
 
         .text{
