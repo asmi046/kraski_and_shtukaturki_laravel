@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string("name", 200)->comment("Имя категории");
             $table->string("slug", 200)->comment("Slug категории");
 
-            $table->text('description')->comment('Описание');
+            $table->text('description')->nullable()->comment('Описание');
 
-            $table->string('title_seo', 100)->comment('SEO заголовок');
-            $table->string('description_seo', 300)->comment('SEO описание');
+            $table->string('title_seo', 100)->nullable()->comment('SEO заголовок');
+            $table->string('description_seo', 300)->nullable()->comment('SEO описание');
         });
 
         Schema::create('category_product_group', function (Blueprint $table) {

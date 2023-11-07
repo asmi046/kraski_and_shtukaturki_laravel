@@ -31,6 +31,16 @@ class ProductGroupSeeder extends Seeder
     ];
 
 
+    protected function get_named_array($array) {
+        $rezarray = [];
+
+        foreach ($array as $key => $item) {
+            $rezarray[] = ["Параметр" => $key, "Величина" => $item];
+        }
+
+        return $rezarray;
+    }
+
 
     public function run(): void
     {
@@ -60,7 +70,7 @@ class ProductGroupSeeder extends Seeder
                 'popular' => rand(1,0),
 
                 'advantages' => json_encode([]),
-                'props' => json_encode($item["props"]),
+                'props' => json_encode($this->get_named_array($item["props"])),
                 'short_description' => $item["short_description"],
                 'tm' => "San Marco",
 

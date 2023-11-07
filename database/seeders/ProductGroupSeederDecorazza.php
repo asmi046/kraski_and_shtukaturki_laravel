@@ -30,6 +30,16 @@ class ProductGroupSeederDecorazza extends Seeder
         "Инструменты" => 11
     ];
 
+    protected function get_named_array($array) {
+        $rezarray = [];
+
+        foreach ($array as $item) {
+            $rezarray[] = ["Преимущество" => $item];
+        }
+
+        return $rezarray;
+    }
+
     public function run(): void
     {
 
@@ -58,7 +68,7 @@ class ProductGroupSeederDecorazza extends Seeder
                 'popular' => rand(1,0),
 
                 "tm" => "DECORAZZA",
-                "advantages" => json_encode($item["advantages"]),
+                "advantages" => json_encode($this->get_named_array($item["advantages"])),
                 "props" => json_encode([]),
 
                 "short_description" => $item["short_description"],

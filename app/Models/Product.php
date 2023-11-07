@@ -8,9 +8,14 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Orchid\Screen\AsSource;
+
+
 class Product extends Model
 {
     use HasFactory;
+    use AsSource;
+
 
     public $fillable = [
         'id',
@@ -39,6 +44,10 @@ class Product extends Model
     protected $casts = [
         'advantages' => 'array',
         'props' => 'array',
+    ];
+
+    protected $with = [
+        'category_tovars'
     ];
 
     public function scopeFilter(Builder $builder, QueryFilter $filter) {

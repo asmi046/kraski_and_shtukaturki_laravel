@@ -8,9 +8,18 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Orchid\Screen\AsSource;
+use Orchid\Filters\Filterable;
+
+use Orchid\Filters\Types\Like;
+
+use Illuminate\Support\Str;
+
 class ProductGroup extends Model
 {
     use HasFactory;
+    use AsSource;
+    use Filterable;
 
     public $fillable = [
         'id',
@@ -35,6 +44,19 @@ class ProductGroup extends Model
 
     protected $with = ['tovar_prices'];
 
+    protected $allowedSorts = [
+        'id',
+        'sku',
+        'title',
+        'tm',
+        'created_at'
+    ];
+
+    protected $allowedFilters  = [
+        'title' => Like::class
+    ];
+
+
     public function scopeFilter(Builder $builder, QueryFilter $filter) {
         return $filter->apply($builder);
     }
@@ -56,5 +78,13 @@ class ProductGroup extends Model
 
     public function category_tovars() {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function setSlugAttribute($value)
+    {
+        if (empty($value))
+            $this->attributes['slug'] =  Str::slug($this->name);
+        else
+            $this->attributes['slug'] =  $value;
     }
 }
