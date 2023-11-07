@@ -12,6 +12,7 @@ use App\Models\Celebration;
 use Orchid\Support\Facades\Layout;
 use Orchid\Support\Facades\Toast;
 use Orchid\Screen\Actions\ModalToggle;
+use Orchid\Screen\Actions\Link;
 use Illuminate\Validation\Rule;
 
 use App\Orchid\Layouts\Product\ProductEditFields;
@@ -64,7 +65,15 @@ class ProductEditScreen extends Screen
      */
     public function commandBar(): iterable
     {
-        return [];
+        return [
+            Link::make('Добавить в галерею')
+            ->href(route("platform.product_galery_create", $this->product->id))
+            ->icon('card-image'),
+
+            Link::make('Добавить цену')
+            ->href(route("platform.product_price_create", $this->product->id))
+            ->icon('coin'),
+        ];
     }
 
     /**
@@ -114,44 +123,15 @@ class ProductEditScreen extends Screen
         }
     }
 
-    public function save_info(Product $product, Request $request) {
+    public function save_info( Request $request) {
 
-        // dd($request->get("category"));
-
-        $new_data = $request->validate([
-            'sku' => ['required', 'string',  Rule::unique('products')->ignore($product->id)],
-            'title' => ['required', 'string'],
-            'slug' => [],
-            'tm' => ['required', 'string'],
-            'upacovka' => ['required', 'string'],
-            'quote' => [],
-
-            'param_zgirnost' => [],
-            'param_scode' => [],
-            'param_ves_ed' => [],
-            'param_ves_yashik' => [],
-            'param_count_in_pack' => [],
-            'param_srok_realiz' => [],
-
-            'category' => ['required', 'string'],
-            'category_sub' => [],
-            'img' => [],
-            'description' => ['required', 'string'],
-
-            'price_D_ht' => [],
-            'price_D_kg' => [],
-
-            'price_OPT_ht' => [],
-            'price_OPT_kg' => [],
-
-            'price_R_ht' => [],
-            'price_R_kg' => [],
-
-            'seo_title' => [],
-            'seo_description' => [],
+        $request->validate([
+            'product.title' => ['required', 'string'],
+            'product.sku' => ['required', 'string'],
         ]);
 
-        ProductGroup::where('id', $product->id)->update($new_data);
+        $this->product->fill($request->get('product'))->save();
+
         Toast::info("Продукт сохранен");
     }
 }

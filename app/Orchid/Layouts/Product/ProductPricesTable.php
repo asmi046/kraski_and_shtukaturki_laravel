@@ -52,7 +52,7 @@ class ProductPricesTable extends Table
                 ->list([
 
                     Link::make('Редактировать')
-                        ->route('platform.product_edit',$element->id)
+                        ->route('platform.product_price_edit',$element->id)
                         ->icon('pencil'),
 
                     Button::make('Удалить')

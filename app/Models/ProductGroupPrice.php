@@ -20,6 +20,10 @@ class ProductGroupPrice extends Model
         'price',
         'old_price'
     ];
+
+    public function product_info() {
+        return $this->hasOne(ProductGroup::class, 'id', 'product_group_id');
+    }
 }
 
 
