@@ -39,6 +39,10 @@ class PlatformProvider extends OrchidServiceProvider
                 ->title('Контент сайта')
                 ->route('platform.category'),
 
+            Menu::make('Визуальные эффекты')
+                ->icon('paint-bucket')
+                ->route('platform.effect'),
+
             Menu::make('Товары')
                 ->icon('grid')
                 ->route('platform.product'),

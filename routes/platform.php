@@ -24,6 +24,10 @@ use App\Orchid\Screens\Category\CategoryCreateScreen;
 use App\Orchid\Screens\Category\CategoryEditScreen;
 use App\Orchid\Screens\Category\CategoryListScreen;
 
+use App\Orchid\Screens\Effect\EffectCreateScreen;
+use App\Orchid\Screens\Effect\EffectEditScreen;
+use App\Orchid\Screens\Effect\EffectListScreen;
+
 use App\Orchid\Screens\Product\ProductCreateScreen;
 use App\Orchid\Screens\Product\ProductEditScreen;
 use App\Orchid\Screens\Product\ProductListScreen;
@@ -63,6 +67,23 @@ Route::screen('/categories/create', CategoryCreateScreen::class)
     ->name('platform.category_create')->breadcrumbs(fn (Trail $trail) => $trail
     ->parent('platform.category')
     ->push(__('Добавление категории'), route('platform.category_create')));
+
+
+// Эффекты
+Route::screen('/effect', EffectListScreen::class)
+    ->name('platform.effect')->breadcrumbs(fn (Trail $trail) => $trail
+    ->parent('platform.index')
+    ->push(__('Визуальные эффекты'), route('platform.effect')));
+
+Route::screen('/effect/{id}/edit', EffectEditScreen::class)
+    ->name('platform.effect_edit')->breadcrumbs(fn (Trail $trail, $id) => $trail
+    ->parent('platform.effect')
+    ->push(__('Редактирование визуального эффекта'), route('platform.effect_edit', $id)));
+
+Route::screen('/effect/create', EffectCreateScreen::class)
+    ->name('platform.effect_create')->breadcrumbs(fn (Trail $trail) => $trail
+    ->parent('platform.effect')
+    ->push(__('Добавление визуального эффекта'), route('platform.effect_create')));
 
 
 // Товары
