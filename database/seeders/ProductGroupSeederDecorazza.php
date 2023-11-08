@@ -101,6 +101,14 @@ class ProductGroupSeederDecorazza extends Seeder
                 $no_cat++;
             }
 
+
+            $ce_relation = [
+                'color_effect_id' => rand(1,14),
+                'product_group_id' => $t_id,
+            ];
+
+            DB::table("color_effect_product_group")->insert($ce_relation);
+
             if (!empty($item["price_variant"])) {
                 foreach ($item["price_variant"] as $el) {
 

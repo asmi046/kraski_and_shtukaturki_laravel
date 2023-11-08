@@ -66,24 +66,23 @@
 
 <section class="page__popular popular section">
 	<div class="_container">
-		<h2 class="popular__title title">Товары со скидкой</h2>
+		<h2 class="popular__title title">Визуальные эффекты</h2>
 
-		<div class="popular__inner d-flex">
-
-            @foreach ( $sales as $item)
-                <x-product-card :item="$item"></x-product-card>
+        <div class="services__inner">
+            @foreach ($effects as $item)
+                <x-effect-blk :item="$item"></x-effect-blk>
             @endforeach
-
-		</div>
+        </div>
 
 		<div class="popular__btn-block">
-			<button type="submit" class="popular__btn-all btn">Посмотреть все</button>
+			<a class="popular__btn-all btn" href="{{route('visual-effect')}}">Посмотреть все</a>
+
 		</div>
 
 	</div>
 </section>
 
-<section class="page__slider-advantages slider-advantages section">
+{{-- <section class="page__slider-advantages slider-advantages section">
 	<div class="_container">
 		<h2 class="slider-advantages__title title">Наши преимущества</h2>
 		</div>
@@ -120,9 +119,7 @@
 		<div class="slider-advantages__btn-block">
 			<a href="#" class="slider-advantages__btn btn">Все проекты</a>
 		</div>
-
-	<!-- </div> -->
-</section>
+</section> --}}
 
 
 <section class="page__about about section">

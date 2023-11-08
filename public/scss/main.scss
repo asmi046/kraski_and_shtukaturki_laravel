@@ -212,16 +212,21 @@ h4 {
 }
 
 .card-popular__img {
-	padding-bottom: 76%;
-	flex: 0 1 30%;
+    height: 200px;
 	overflow: hidden;
 	max-width: 228px;
 	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 23px;
+    display: flex;
+
+    img {
+        width:150px;
+        height: auto;
+        margin: auto;
+    }
 }
 
-._ibg {}
 
 .card-popular__descp {
 	display: flex;
@@ -233,11 +238,12 @@ h4 {
 }
 
 .card-popular__descp-title {
-	font-size: 26px;
+	font-size: 22px;
 	font-weight: 700;
-	line-height: 31px;
+	line-height: 26px;
 	letter-spacing: 0.015em;
 	margin-bottom: 23px;
+    overflow-wrap:break-word;
 }
 
 .card-popular__descp-subtitle {
@@ -692,6 +698,18 @@ h4 {
 	&__main {
 		flex: 0 0 75%;
 	}
+}
+
+.effect-sec {
+    &__main {
+		flex: 0 0 100%;
+
+        .popular__column {
+            flex: 0 1 25%!important;
+        }
+	}
+
+
 }
 
 

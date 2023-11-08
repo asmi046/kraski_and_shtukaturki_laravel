@@ -34,7 +34,7 @@ import { EffectCoverflow } from 'swiper/modules';
 import { store } from "./storage"
 import { useStore } from 'vuex'
 
-
+import FsLightbox from "fslightbox-vue/v3";
 
 const global_app = createApp({
     components:{
@@ -49,7 +49,8 @@ const global_app = createApp({
         Favorites,
         ToFavoritesBtn,
         PageToBascet,
-        Forma
+        Forma,
+        FsLightbox
     },
 
     setup() {

@@ -33,6 +33,7 @@ Route::get('/catalog/{slug}', [CategoryController::class, "show_category"])->nam
 Route::get('/product/{slug}', [ProductController::class, "show"])->name('product');
 
 Route::get('/visual-effect', [ColorEffectController::class, "index"])->name('visual-effect');
+Route::get('/visual-effect/{slug}', [ColorEffectController::class, "effect_page"])->name('effect_page');
 
 Route::get('/contacts', [EasyPageController::class, "contacts"])->name('contacts');
 Route::get('/services', [EasyPageController::class, "services"])->name('services');

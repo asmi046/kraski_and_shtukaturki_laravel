@@ -7,6 +7,11 @@
                 <span class="sep"> / </span> <span class="finish">{{$category['name']}}</span>
             @endif
 
+            @if (Request::route()->named('effect_page'))
+                <span class="sep"> / </span> <a href="{{route("visual-effect")}}">Все эффекты</a>
+                <span class="sep"> / </span> <span class="finish">{{$effect['name']}}</span>
+            @endif
+
             @if (Request::route()->named('product'))
                 <span class="sep"> / </span> <a href="{{route('category', $category->slug)}}">{{$category->name}}</a>
                 <span class="sep"> / </span> <span class="finish">{{$tovar['title']}}</span>

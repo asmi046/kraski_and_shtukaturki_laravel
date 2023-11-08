@@ -8,7 +8,7 @@
 @section('title', $title)
 @section('description', $description)
 
-@section('content')''
+@section('content')
     <x-tovar-page.head :h1="$product['title']"></x-tovar-page.head>
 
     <x-breadcrumbs :tovar="$product" :category="$category"></x-breadcrumbs>
@@ -24,8 +24,13 @@
                           }"
                         :modules="modules"
                     >
-                        <swiper-slide><img src="{{$product->img}}" alt="{{$product->title}}"></swiper-slide>
-                        <swiper-slide><img src="{{$product->img}}" alt="{{$product->title}}"></swiper-slide>
+                        <swiper-slide>
+                            <a data-fslightbox="prod_g1" href="{{$product->img}}">
+                                <img src="{{$product->img}}" alt="{{$product->title}}">
+                            </a>
+
+                        </swiper-slide>
+
 
                     </swiper>
                 </div>
@@ -36,8 +41,8 @@
                     </div>
 
                     <div class="param">
-                        @foreach ( $product->props as $key => $item)
-                            <x-tovar-page.tovar-param :key="$key" :item="$item"></x-tovar-page.tovar-param>
+                        @foreach ( $product->props as $item)
+                            <x-tovar-page.tovar-param :key="$item['Параметр']" :item="$item['Величина']"></x-tovar-page.tovar-param>
                         @endforeach
 
                     </div>

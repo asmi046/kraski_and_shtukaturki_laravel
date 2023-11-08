@@ -1,4 +1,4 @@
-<a href="#" @class([
+<a href="{{route('effect_page', $item->slug)}}" @class([
     'services__card',
     'card-services'
 ])

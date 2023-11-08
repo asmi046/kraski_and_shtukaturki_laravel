@@ -14,13 +14,16 @@
         </span>
     </div>
 
-    <div class="like">
-            <to-favorites-btn :sku="sku"></to-favorites-btn>
+    <div class="lb_wrapper">
+        <div class="like">
+                <to-favorites-btn :sku="sku"></to-favorites-btn>
+        </div>
+
+        <div class="sale_btn">
+            <to-bascet-btn-page :sku="sku" :skuid="id_sku" :bascet="'/bascet'"></to-bascet-btn-page>
+        </div>
     </div>
 
-    <div class="sale_btn">
-        <to-bascet-btn-page :sku="sku" :skuid="id_sku" :bascet="'/bascet'"></to-bascet-btn-page>
-    </div>
 
 </template>
 

@@ -24,9 +24,9 @@ return new class extends Migration
             $table->text('seo_description')->nullable();
         });
 
-        Schema::create('color_effects_product_group', function (Blueprint $table) {
+        Schema::create('color_effect_product_group', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('color_effects_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('color_effect_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('product_group_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
@@ -36,7 +36,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('color_effects_product_group');
+        Schema::dropIfExists('color_effect_product_group');
         Schema::dropIfExists('color_effects');
     }
 };

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Product;
+use App\Models\ProductGroup;
 use App\Models\Category;
 use App\Models\Brand;
 use Illuminate\Support\Facades\Storage;
@@ -17,7 +17,7 @@ class SearchController extends Controller
     public function show_search_page(ProductFilter $request) {
         $search_str = $request->request->get('search_str');
 
-        $tovars = Product::where('title', 'LIKE', "%".$search_str."%")
+        $tovars = ProductGroup::where('title', 'LIKE', "%".$search_str."%")
         ->orWhere('description', 'LIKE', "%".$search_str."%")
         ->orWhere('sku', 'LIKE', "%".$search_str."%")
         ->filter($request)

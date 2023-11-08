@@ -94,6 +94,14 @@ class ProductSeeder extends Seeder
                 print("Категория: " . $item["category"] );
             }
 
+            // if () {
+
+            // }
+
+
+
+            // DB::table("color_effects_product_group")->insert($cat_relation);
+
             if (!empty($item["textutes"])) {
                 foreach ($item["textutes"] as $key => $vaue) {
 

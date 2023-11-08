@@ -3,7 +3,7 @@
     <div class="popular__card card-popular">
         <to-favorites-btn sku="{{$item["sku"]}}"></to-favorites-btn>
 
-        <a href="{{route('product', $item["slug"])}}" class="card-popular__img _ibg">
+        <a href="{{route('product', $item["slug"])}}" class="card-popular__img ">
             @if(!empty($item["img"]))
                 <img loading="lazy" src="{{$item["img"]}}" alt="Купить {{$item["title"]}}">
             @else

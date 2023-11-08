@@ -34,7 +34,9 @@ export default defineConfig({
 				'public/css/category.css',
 				'public/css/cta-blk.css',
 				'public/css/footer.css',
-				'public/js/main.js',
+				"public/js/fslightbox.js",
+                'public/js/main.js',
+
 			],
 			refresh: true,
 		}),

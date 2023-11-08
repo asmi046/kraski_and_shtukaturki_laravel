@@ -48,7 +48,7 @@
 				'public/scss/header.scss',
 				'public/scss/footer.scss',
 				'public/scss/media.scss',
-				'public/scss/tovar-page.scss', 
+				'public/scss/tovar-page.scss',
 				'public/scss/services.scss',
 
         'public/css/header.css',
@@ -58,6 +58,7 @@
         'public/css/category.css',
         'public/css/cta-blk.css',
         'public/css/footer.css',
+        'public/js/fslightbox.js',
 				'public/js/main.js',
     ])
 

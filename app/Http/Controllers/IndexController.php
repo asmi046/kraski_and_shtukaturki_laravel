@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\ProductGroup;
 use App\Models\Category;
+use App\Models\ColorEffect;
 
 class IndexController extends Controller
 {
@@ -19,9 +20,11 @@ class IndexController extends Controller
         $sales_liders = Product::select()->orderBy('sales_count')->take(4)->get();
         $sales = Product::where('old_price', '!=', 0)->take(4)->get();
 
+        $effects = ColorEffect::inRandomOrder()->take(4)->get();
         return view('index', [
             'sales_liders' => $sales_group_liders,
             'sales' => $sales,
+            'effects' => $effects
         ]);
     }
 }

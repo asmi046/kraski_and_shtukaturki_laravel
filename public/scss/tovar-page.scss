@@ -25,7 +25,7 @@
 			display: flex;
 		}
 
-		.swiper-slide img {
+		.swiper-slide a {
 			max-width: 520px;
 			margin: auto;
 		}
@@ -90,6 +90,7 @@
 
 				span {
 					font-weight: bold;
+                    margin-top: 10px;
 				}
 
 			}
@@ -123,27 +124,59 @@
 
         select {
             margin-right: 20px;
+            background-color: white;
         }
 	}
 
-	.like {
-		flex: 1;
-
-        .to_favorites {
-            margin:  0 0 0 auto;
-        }
-
-	}
-
-	.sale_btn {
-		flex: 1;
-		margin-right: 0;
+    .lb_wrapper {
         display: flex;
+        flex: 1;
+        .like {
+            flex: 1;
+            display: flex;
+            height: 100%;
 
-        a{
-            margin-left: auto;
+            .to_favorites {
+                margin:  auto 0 0 auto;
+                @media screen and (max-width:768px) {
+                    width: 30px;
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+            }
+
+            @media screen and (max-width:768px) {
+                flex: 0 1 30px;
+            }
         }
-	}
+
+        .sale_btn {
+            flex: 2;
+            margin-right: 0;
+            display: flex;
+
+            a{
+                margin-left: auto;
+
+                @media screen and (max-width:768px) {
+                    margin: auto auto auto 20px;
+                }
+            }
+
+
+        }
+
+        @media screen and (max-width:768px) {
+            flex: unset;
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        flex-direction:column
+    }
+
+
 }
 
 
@@ -268,8 +301,15 @@
 
 	.sales__action .price {
 		flex: 0 1 100%;
-		margin-bottom: 13px;
 	}
+
+	.sales__action .like {
+		flex: 0 1 30px;
+	}
+    .sales__action .sale_btn a {
+        margin-left: 20px;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -279,6 +319,7 @@
 
 	.product_page_section .tovarinfo__side {
 		width: 100%;
+        margin-bottom: 20px;
 	}
 
 	.product_page_section {

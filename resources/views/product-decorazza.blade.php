@@ -25,7 +25,13 @@
                         :modules="modules"
                     >
                         @foreach ($galery as $item)
-                            <swiper-slide><img src="{{$item->link}}" alt="{{$product->title}} рисунок {{$loop->index}}"></swiper-slide>
+
+                                <swiper-slide>
+                                    <a data-fslightbox="prod_gp" href="{{$item->link}}">
+                                        <img src="{{$item->link}}" alt="{{$product->title}} рисунок {{$loop->index}}">
+                                    </a>
+                                </swiper-slide>
+
                         @endforeach
 
 
@@ -41,8 +47,8 @@
 
                     <div class="adv_list">
                         <ul>
-                            @foreach ( $product->advantages as $key => $item)
-                                <li>{{$item}}</li>
+                            @foreach ( $product->advantages as $item)
+                                <li>{{$item['Преимущество']}}</li>
                             @endforeach
                         </ul>
 
