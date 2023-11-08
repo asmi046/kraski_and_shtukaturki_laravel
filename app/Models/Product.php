@@ -64,9 +64,9 @@ class Product extends Model
         return $this->hasMany(ProductImage::class);
     }
 
-    public function tovar_texture()
+    public function effects()
     {
-        return $this->hasMany(ProductTexture::class);
+        return $this->hasMany(ColorEffect::class);
     }
 
     public function category_tovars() {

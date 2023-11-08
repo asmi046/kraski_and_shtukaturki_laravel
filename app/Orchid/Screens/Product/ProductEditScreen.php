@@ -32,17 +32,25 @@ class ProductEditScreen extends Screen
      public $product;
      public $product_galery;
      public $product_prices;
-     public $product_cat;
+     public $category;
+     public $effect;
 
     public function query($id): iterable
     {
         $product = ProductGroup::where('id',$id)->first();
-        $cat = $product->product_category;
+
         $product_galery = $product->tovar_images;
         $product_prices = $product->tovar_prices;
+
+        $category = $product->category_tovars;
+        $effect = $product->effects;
+
+        // dd($category, $effect);
+
         return [
             "product" => $product,
-            "product_cat"=> $cat,
+            "category"=> $category,
+            "effect"=> $effect,
             "product_galery"=> $product_galery,
             "product_prices"=> $product_prices,
         ];
@@ -129,6 +137,9 @@ class ProductEditScreen extends Screen
             'product.title' => ['required', 'string'],
             'product.sku' => ['required', 'string'],
         ]);
+
+        $this->product->category_tovars()->sync($request->get("category"));
+        $this->product->effects()->sync($request->get("effect"));
 
         $this->product->fill($request->get('product'))->save();
 

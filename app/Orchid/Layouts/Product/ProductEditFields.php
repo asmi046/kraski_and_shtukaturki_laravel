@@ -16,6 +16,8 @@ use Orchid\Screen\Fields\TextArea;
 use Orchid\Screen\Fields\Matrix;
 use Orchid\Screen\Fields\Relation;
 
+use App\Models\Category;
+use App\Models\ColorEffect;
 
 class ProductEditFields extends Rows
 {
@@ -76,6 +78,20 @@ class ProductEditFields extends Rows
                 ->title('Краткое описание')
                 ->help('Введите краткое описание товара')
                 ->horizontal(),
+
+            Relation::make('category.')
+                ->fromModel(Category::class, 'name', 'id')
+                ->title('Категории товара')
+                ->multiple()
+                ->horizontal()
+                ->help('Выберите категорию'),
+
+            Relation::make('effect.')
+                ->fromModel(ColorEffect::class, 'name', 'id')
+                ->title('Визуальный эффект')
+                ->multiple()
+                ->horizontal()
+                ->help('Выберите эффект'),
 
             Matrix::make('product.props')
                 ->title('Свойства')
