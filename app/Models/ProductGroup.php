@@ -80,6 +80,10 @@ class ProductGroup extends Model
         return $this->belongsToMany(Category::class);
     }
 
+    public function effects() {
+        return $this->belongsToMany(ColorEffect::class);
+    }
+
     public function setSlugAttribute($value)
     {
         if (empty($value))

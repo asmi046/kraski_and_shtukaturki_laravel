@@ -13,13 +13,14 @@
 
 @media (max-width: 1024px) {
 	.popular__column {
-		flex: 0 1 33.333%;
+		flex: 0 1 33%;
 	}
 
 	.box-categories__text {
 		font-size: 20px;
 	}
 
+    .effect-sec__main .popular__column,
 	.main-category__inner .popular__column {
 		flex: 0 1 50%;
 	}
@@ -76,8 +77,9 @@
 		flex: 0 1 100%;
 	}
 
+    .effect-sec__main .popular__column,
 	.main-category__inner .popular__column {
-		flex: 0 1 33.333%;
+		flex: 0 1 33%;
 	}
 
 	.filter-block__btn {
@@ -290,6 +292,7 @@
 }
 
 @media (max-width: 630px) {
+    .effect-sec__main .popular__column,
 	.main-category__inner .popular__column {
 		flex: 0 1 50%;
 		padding: 0 5px 10px 5px;
@@ -432,6 +435,7 @@
 		margin-left: 0;
 	}
 
+.effect-sec__main .popular__column,
 	.main-category__inner .popular__column {
 		flex: 0 1 100%;
 	}

@@ -9,7 +9,7 @@
 
         <input type="hidden" name="search_str" value="{{Request::get('search_str')}}">
 
-        <div class="filters-sidebar__price price-filter">
+        {{-- <div class="filters-sidebar__price price-filter">
             <div class="price-filter__input-block">
                 <div class="price-filter__input-block-item">
                     <label for="price-1" class="price-filter__label">От</label>
@@ -22,7 +22,7 @@
             </div>
 
             <button type="submit" class="price-filter__btn btn">Применить</button>
-        </div>
+        </div> --}}
 
         <div class="filters-sidebar__block spollers-block" data-spollers data-one-spoller>
 
@@ -31,21 +31,11 @@
                 <x-filter.chec-blk id="tm1" parametr="tm" value="DECORAZZA" valuetext="DECORAZZA"></x-filter.chec-blk>
             </x-filter.blk>
 
-            <x-filter.blk name="Объем / Вес">
-                @if (($name === "Фактурные покрытия")|| ($name === "Венецианские штукатурки"))
-                    <x-filter.chec-blk id="v1" parametr="volume" value="1" valuetext="1 кг."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v2" parametr="volume" value="7" valuetext="7 кг."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v3" parametr="volume" value="15" valuetext="15 кг."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v4" parametr="volume" value="24" valuetext="24 кг."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v5" parametr="volume" value="25" valuetext="25 кг."></x-filter.chec-blk>
+            <x-filter.blk name="Визуальный эффект">
+                @foreach ($visual_effects as $item)
+                    <x-filter.chec-blk id="ve{{$item->id}}" parametr="ve" value="{{$item->name}}" valuetext="{{$item->name}}"></x-filter.chec-blk>
+                @endforeach
 
-                @else
-                    <x-filter.chec-blk id="v1" parametr="volume" value="1" valuetext="1 л."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v2" parametr="volume" value="4" valuetext="4 л."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v3" parametr="volume" value="5" valuetext="5 л."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v4" parametr="volume" value="10" valuetext="10 л."></x-filter.chec-blk>
-                    <x-filter.chec-blk id="v5" parametr="volume" value="25" valuetext="25 л."></x-filter.chec-blk>
-                @endif
 
             </x-filter.blk>
 

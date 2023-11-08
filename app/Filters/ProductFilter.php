@@ -4,15 +4,7 @@ namespace App\Filters;
 
 class ProductFilter extends QueryFilter {
 
-    public function minprice($minprice) {
-        if (!empty($minprice))
-            $this->builder->where("price", '>', $minprice);
-    }
 
-    public function maxprice($maxprice) {
-        if (!empty($maxprice))
-            $this->builder->where("price", '<', $maxprice);
-    }
 
 
 
@@ -26,8 +18,11 @@ class ProductFilter extends QueryFilter {
             if ($tm != "%") $this->builder->whereIn("tm", $tm);
     }
 
-    public function volume($volume) {
-            if ($volume != "%") $this->builder->whereIn("volume", $volume);
+    public function ve($ve) {
+            if ($ve != "%") $this->builder->whereHas('effects',
+            function ($query) {
+                $query->whereIn('name', $this->request->input('ve'));
+            });
     }
 
     // public function subcat($subcat) {

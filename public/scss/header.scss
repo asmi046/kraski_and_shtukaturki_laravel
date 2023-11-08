@@ -209,7 +209,7 @@
 .mob-menu {
 	// visibility: hidden;
 	position: fixed;
-	z-index: 500;
+	z-index: 4500;
 	top: 0;
 	right: -100%;
 	width: 50%;
@@ -223,6 +223,11 @@
 	margin-top: 30px;
 	transition: right 0.8s;
 	overflow: auto;
+
+    h2{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 .mob-menu li a {
@@ -230,6 +235,9 @@
 	font-size: 16px;
 	// color: #fff;
 	padding-bottom: 13px;
+    &.active {
+        color:#CA9E67
+    }
 }
 
 .mob-menu.active {

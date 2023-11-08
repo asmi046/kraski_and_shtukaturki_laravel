@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Option;
 use App\Models\Category;
+use App\Models\ColorEffect;
 use App\Models\Celebration;
 use Illuminate\Support\ServiceProvider;
 
@@ -31,6 +32,7 @@ class OptionsProvider extends ServiceProvider
         View::composer('*', function ($view) {
             $all_options = Option::all();
             $categoryes = Category::all();
+            $effect = ColorEffect::all();
 
             $opt = [];
 
@@ -39,6 +41,7 @@ class OptionsProvider extends ServiceProvider
             }
             View::share('options', $opt);
             View::share('all_cat', $categoryes);
+            View::share('visual_effects', $effect);
         });
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\ProductGroup;
+use App\Models\ColorEffect;
 use App\Models\Category;
 
 use App\Filters\ProductFilter;
@@ -15,7 +16,9 @@ class CategoryController extends Controller
 
         $product_product = ProductGroup::select()->filter($request)->paginate(15)->withQueryString();
 
-        return view('catalog', ["products" => $product_product]);
+        return view('catalog', [
+            "products" => $product_product,
+        ]);
     }
 
     public function show_category($slug, ProductFilter $request) {

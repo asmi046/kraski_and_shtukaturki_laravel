@@ -11,7 +11,7 @@
 
 			<div class="search header__search">
 				<form role="search" method="GET" action="{{route('show_search_page')}}" id="searchform" class="search__form">
-					<input type="text" placeholder="Поиск" class="search__input input" value="" name="search_str" id="s">
+					<input type="text" placeholder="Поиск" class="search__input input" value="{{ old('search_str') }}" name="search_str" id="s">
 					<button type="submit" tabindex="2" value="" id="searchsubmit" class="search__btn"></button>
 				</form>
 			</div>
@@ -46,6 +46,20 @@
 	<ul class="mob-menu__list">
 		<x-header-menu-punkts></x-header-menu-punkts>
 	</ul>
+
+    <h2>Каталог</h2>
+    <ul>
+        @foreach ($all_cat as $item)
+            <li><a @class(['active' => (Request::is('catalog/'.$item->slug) )]) href="{{route("category", $item->slug)}}">{{$item->name}}</a></li>
+        @endforeach
+    </ul>
+
+    <h2>Эффекты</h2>
+    <ul>
+        @foreach ($visual_effects as $item)
+            <li><a @class(['active' => (Request::is('visual-effect/'.$item->slug) )]) href="{{route("effect_page", $item->slug)}}">{{$item->name}}</a></li>
+        @endforeach
+    </ul>
 	<a href="#callback" class="header__popup-link header__popup-link_mob _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
 </div>
 

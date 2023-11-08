@@ -17,6 +17,8 @@ class SearchController extends Controller
     public function show_search_page(ProductFilter $request) {
         $search_str = $request->request->get('search_str');
 
+        $request->request->flash();
+
         $tovars = ProductGroup::where('title', 'LIKE', "%".$search_str."%")
         ->orWhere('description', 'LIKE', "%".$search_str."%")
         ->orWhere('sku', 'LIKE', "%".$search_str."%")
