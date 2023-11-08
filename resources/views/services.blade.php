@@ -14,9 +14,7 @@
 
 <section class="page__categoty-top-sec categoty-top-sec section">
 	<div class="_container">
-
         <x-breadcrumbs :title="$title"></x-breadcrumbs>
-
 	</div>
 </section>
 

@@ -14,6 +14,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SenderController;
 
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ColorEffectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,8 @@ Route::get('/', [IndexController::class, "show"])->name('home');
 Route::get('/catalog', [CategoryController::class, "show"])->name('catalog');
 Route::get('/catalog/{slug}', [CategoryController::class, "show_category"])->name('category');
 Route::get('/product/{slug}', [ProductController::class, "show"])->name('product');
+
+Route::get('/visual-effect', [ColorEffectController::class, "index"])->name('visual-effect');
 
 Route::get('/contacts', [EasyPageController::class, "contacts"])->name('contacts');
 Route::get('/services', [EasyPageController::class, "services"])->name('services');
