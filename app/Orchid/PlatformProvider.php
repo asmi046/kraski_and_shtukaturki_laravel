@@ -43,6 +43,10 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('paint-bucket')
                 ->route('platform.effect'),
 
+            Menu::make('Проекты')
+                ->icon('check-square')
+                ->route('platform.projects'),
+
             Menu::make('Товары')
                 ->icon('grid')
                 ->route('platform.product'),

@@ -24,6 +24,10 @@ use App\Orchid\Screens\Category\CategoryCreateScreen;
 use App\Orchid\Screens\Category\CategoryEditScreen;
 use App\Orchid\Screens\Category\CategoryListScreen;
 
+use App\Orchid\Screens\Project\ProjectCreateScreen;
+use App\Orchid\Screens\Project\ProjectEditScreen;
+use App\Orchid\Screens\Project\ProjectListScreen;
+
 use App\Orchid\Screens\Effect\EffectCreateScreen;
 use App\Orchid\Screens\Effect\EffectEditScreen;
 use App\Orchid\Screens\Effect\EffectListScreen;
@@ -67,6 +71,22 @@ Route::screen('/categories/create', CategoryCreateScreen::class)
     ->name('platform.category_create')->breadcrumbs(fn (Trail $trail) => $trail
     ->parent('platform.category')
     ->push(__('Добавление категории'), route('platform.category_create')));
+
+// Проекты
+Route::screen('/projects', ProjectListScreen::class)
+    ->name('platform.projects')->breadcrumbs(fn (Trail $trail) => $trail
+    ->parent('platform.index')
+    ->push(__('Проекты'), route('platform.projects')));
+
+Route::screen('/projects/{id}/edit', ProjectEditScreen::class)
+    ->name('platform.projects_edit')->breadcrumbs(fn (Trail $trail, $id) => $trail
+    ->parent('platform.projects')
+    ->push(__('Редактирование проекта'), route('platform.projects_edit', $id)));
+
+Route::screen('/projects/create', ProjectCreateScreen::class)
+    ->name('platform.projects_create')->breadcrumbs(fn (Trail $trail) => $trail
+    ->parent('platform.projects')
+    ->push(__('Добавление пректа'), route('platform.projects_create')));
 
 
 // Эффекты
