@@ -37,6 +37,8 @@ class ColorEffectSeeder extends Seeder
         $i = 1;
         foreach ($main_data as $key => $item) {
 
+            Storage::disk('public')->put($item, file_get_contents(public_path('img/effect/'.$item)), 'public');
+
             $cat_elem = [
                 "order" => $i,
                 "name" => $key,
