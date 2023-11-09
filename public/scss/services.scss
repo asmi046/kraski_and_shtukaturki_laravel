@@ -64,10 +64,16 @@
 	background-repeat: no-repeat;
 	background-position: center;
 
+    img {
+        position: absolute;
+    }
+
 	@media (max-width: 480px) {
 		flex: 0 1 100%;
 		padding-bottom: 38%;
 	}
+
+
 }
 
 .card-services_01 {
