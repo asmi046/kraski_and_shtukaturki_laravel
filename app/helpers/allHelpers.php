@@ -32,11 +32,33 @@ if (!function_exists("effect_get")) {
 
 
 
-        if (strripos($str, "Cadoro") !== false) return [1,2];
-        if (strripos($str, "Velluto") !== false) return [1];
-
+        if (strripos($str, "Cadoro") !== false) return [1];
+        if (strripos($str, "Easy Art") !== false) return [1];
+        if (strripos($str, "Cadoro Velvet") !== false) return [2];
+        if (strripos($str, "Cavenier") !== false) return [4];
         if (strripos($str, "Marcopolo Luxury") !== false) return [6];
-        return $rez;
+        if (strripos($str, "Marcopolo") !== false) return [7];
+        if (strripos($str, "Fontego") !== false) return [7];
+        if (strripos($str, "Intonachino Minerale") !== false) return [10,11,13];
+        if (strripos($str, "Marmorino Classico") !== false) return [11];
+
+        if (strripos($str, "Decorazza Barilievo") !== false) return [14];
+        if (strripos($str, "Decorazza Traverta") !== false) return [13,10];
+        if (strripos($str, "Decorazza Sollievo") !== false) return [12];
+
+        if (strripos($str, "Decorazza Stucco Veneziano") !== false) return [11];
+        if (strripos($str, "Decorazza Calce Veneziana") !== false) return [11];
+        if (strripos($str, "Decorazza Travertino") !== false) return [10];
+        if (strripos($str, "Decorazza Effetto metallico") !== false) return [8];
+        if (strripos($str, "Decorazza Brezza") !== false) return [7];
+        if (strripos($str, "Decorazza Lucetezza") !== false) return [6];
+        if (strripos($str, "Decorazza Alcantara") !== false) return [5];
+        if (strripos($str, "Decorazza Velours") !== false) return [2];
+        if (strripos($str, "Decorazza Velluto") !== false) return [1];
+
+
+
+        return [];
     }
 }
 
