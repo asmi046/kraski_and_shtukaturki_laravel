@@ -13,6 +13,33 @@ if (!function_exists("get_ed")) {
     }
 }
 
+if (!function_exists("effect_get")) {
+    function effect_get($str) {
+        // 1 "Муаровый шёлк" => "muar-sholk.webp",
+        // 2 "Велюр, Вельвет, матовый шёлк" => "velur.webp",
+        // 3 "Перламутровый шёлк" => "perl-shok.webp",
+        // 4 "Искрящийся бархат" => "iskr-barhat.webp",
+        // 5 "Кожа, замша" => "zamha.webp",
+        // 6 "Песчаный перламутр" => "peshani-perla.webp",
+        // 7 "Песчаный матовый" => "peshani-mat.webp",
+        // 8 "Металлик" => "metamik.webp",
+        // 9 "Бетон" => "beton.webp",
+        // 10 "Травертин" => "travertin.webp",
+        // 11 "Шлифованный, глянцевый камень" => "kamen-gl.webp",
+        // 12 "Рустик, мазанка" => "rust.webp",
+        // 13 "Карта мира" => "world.webp",
+        // 14 "Гротто, мароканка" => "grotto.webp",
+
+
+
+        if (strripos($str, "Cadoro") !== false) return [1,2];
+        if (strripos($str, "Velluto") !== false) return [1];
+
+        if (strripos($str, "Marcopolo Luxury") !== false) return [6];
+        return $rez;
+    }
+}
+
 if (!function_exists("get_facturas")) {
     function get_facturas($str) {
         return "";
