@@ -68,7 +68,7 @@ class OptionSeeder extends Seeder
                     "name" => "phone_2",
                     "type" => "plan",
                     'title' => 'Телефон 2',
-                    "value" => "+7 (4712) 30 82 00",
+                    "value" => "+7 (910) 022 82 00",
                 ],
 
                 [
