@@ -57,6 +57,8 @@ if (!function_exists("effect_get")) {
         if (strripos($str, "Decorazza Velluto") !== false) return [1];
         if (strripos($str, "Art beton") !== false) return [9];
 
+        if (strripos($str, "Decorazza Seta") !== false) return [3];
+
 
 
         return [];
