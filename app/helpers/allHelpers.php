@@ -32,14 +32,14 @@ if (!function_exists("effect_get")) {
 
 
 
+        if (strripos($str, "Cadoro Velvet") !== false) return [2];
         if (strripos($str, "Cadoro") !== false) return [1];
         if (strripos($str, "Easy Art") !== false) return [1];
-        if (strripos($str, "Cadoro Velvet") !== false) return [2];
         if (strripos($str, "Cavenier") !== false) return [4];
         if (strripos($str, "Marcopolo Luxury") !== false) return [6];
         if (strripos($str, "Marcopolo") !== false) return [7];
         if (strripos($str, "Fontego") !== false) return [7];
-        if (strripos($str, "Intonachino Minerale") !== false) return [10,11,13];
+        if (strripos($str, "Intonachino Minerale") !== false) return [10,11,13,9];
         if (strripos($str, "Marmorino Classico") !== false) return [11];
 
         if (strripos($str, "Decorazza Barilievo") !== false) return [14];
@@ -55,6 +55,7 @@ if (!function_exists("effect_get")) {
         if (strripos($str, "Decorazza Alcantara") !== false) return [5];
         if (strripos($str, "Decorazza Velours") !== false) return [2];
         if (strripos($str, "Decorazza Velluto") !== false) return [1];
+        if (strripos($str, "Art beton") !== false) return [9];
 
 
 
