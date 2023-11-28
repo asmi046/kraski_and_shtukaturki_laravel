@@ -19,9 +19,9 @@ class ColorEffectSeeder extends Seeder
     {
         $main_data = [
             "Муаровый шёлк" => "muar-sholk.webp",
-            "Велюр, Вельвет, матовый шёлк" => "velur.webp",
+            "Велюр, Вельвет, матовый шёлк" => "iskr-barhat.webp",
             "Перламутровый шёлк" => "perl-shok.webp",
-            "Искрящийся бархат" => "iskr-barhat.webp",
+            "Искрящийся бархат" => "velur.webp",
             "Кожа, замша" => "zamha.webp",
             "Песчаный перламутр" => "peshani-perla.webp",
             "Песчаный матовый" => "peshani-mat.webp",

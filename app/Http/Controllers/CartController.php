@@ -65,11 +65,11 @@ class CartController extends Controller
 
         ]);
 
-        foreach ($request->input('tovars') as $item) {
-            $order->orderCart()->create($item);
-        }
+        // foreach ($request->input('tovars') as $item) {
+        //     $order->orderCart()->create($item);
+        // }
 
-        $order->orderProducts()->sync(array_column($request->input('tovars'), "id"));
+        // $order->orderProducts()->sync(array_column($request->input('tovars'), "id"));
 
         Mail::to(["asmi046@gmail.com","cubensis2009@yandex.ru"])->send(new BascetSend($request));
 
