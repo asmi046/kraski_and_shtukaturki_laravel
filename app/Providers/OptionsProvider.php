@@ -31,7 +31,7 @@ class OptionsProvider extends ServiceProvider
     {
         View::composer('*', function ($view) {
             $all_options = Option::all();
-            $categoryes = Category::all();
+            $categoryes = Category::orderBy('order')->get();
             $effect = ColorEffect::all();
 
             $opt = [];

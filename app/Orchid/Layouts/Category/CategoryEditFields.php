@@ -57,6 +57,7 @@ class CategoryEditFields extends Rows
                 ->fromQuery(Category::where('id', '!=', 'category.parentid'), 'name', 'id')
                 ->title('Родительская категория')
                 ->help('Выберите родительскую категорию')
+                ->empty('Не выбрано',0)
                 ->horizontal(),
 
             Quill::make('category.description')
