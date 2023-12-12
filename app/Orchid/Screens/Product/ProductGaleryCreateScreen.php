@@ -5,6 +5,7 @@ namespace App\Orchid\Screens\Product;
 use Orchid\Screen\Screen;
 
 use App\Models\ProductGroupImage;
+use App\Models\ProductGroup;
 use App\Models\Category;
 use App\Models\ProductImage;
 use App\Models\Celebration;
@@ -32,7 +33,7 @@ class ProductGaleryCreateScreen extends Screen
 
     public function query($id): iterable
     {
-        $tovar = ProductGroupImage::where('product_group_id', $id)->first();
+        $tovar = ProductGroup::where('id', $id)->first();
         return [
             "tovar" => $tovar
         ];
@@ -45,7 +46,7 @@ class ProductGaleryCreateScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'Создание элемента галереи для продукта: '.$this->tovar->product_info->title;
+        return 'Создание элемента галереи для продукта: '.$this->tovar->title;
     }
 
     /**
@@ -57,7 +58,7 @@ class ProductGaleryCreateScreen extends Screen
     {
         return [
             Link::make('Назад')
-            ->href(route("platform.product_edit", $this->tovar->product_info->id))
+            ->href(route("platform.product_edit", $this->tovar->id))
             ->icon('arrow-up-left'),
         ];
     }
@@ -81,7 +82,7 @@ class ProductGaleryCreateScreen extends Screen
         ]);
 
         $data = $request->get('element');
-        $data['product_group_id'] = $this->tovar->product_info->id;
+        $data['product_group_id'] = $this->tovar->id;
 
         $element_id = ProductGroupImage::create($data);
 

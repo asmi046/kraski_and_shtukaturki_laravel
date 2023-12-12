@@ -42,8 +42,8 @@ class ProductImageTable extends Table
                     return "<img width='50' height='50' src='".($element->link?$element->link:asset("img/noPhoto.jpg"))."'>";
                 }
             ),
-            TD::make('alt', 'Alt'),
-            TD::make('title', 'Title'),
+            TD::make('alt', 'Alt')->width("35%"),
+            TD::make('title', 'Title')->width("35%"),
 
             TD::make(__('Actions'))
             ->align(TD::ALIGN_CENTER)

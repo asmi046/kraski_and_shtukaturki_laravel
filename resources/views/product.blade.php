@@ -28,9 +28,15 @@
                             <a data-fslightbox="prod_g1" href="{{$product->img}}">
                                 <img src="{{$product->img}}" alt="{{$product->title}}">
                             </a>
-
                         </swiper-slide>
 
+                        @foreach ($product->tovar_images as $item)
+                            <swiper-slide>
+                                <a data-fslightbox="prod_g1" href="{{$item->link}}">
+                                    <img src="{{$item->link}}" alt="{{$item->title}}">
+                                </a>
+                            </swiper-slide>
+                        @endforeach
 
                     </swiper>
                 </div>
@@ -40,12 +46,14 @@
                         {!! $product->description !!}
                     </div>
 
-                    <div class="param">
-                        @foreach ( $product->props as $item)
-                            <x-tovar-page.tovar-param :key="$item['Параметр']" :item="$item['Величина']"></x-tovar-page.tovar-param>
-                        @endforeach
+                    @if (!empty($product->props))
+                        <div class="param">
+                            @foreach ( $product->props as $item)
+                                <x-tovar-page.tovar-param :key="$item['Параметр']" :item="$item['Величина']"></x-tovar-page.tovar-param>
+                            @endforeach
+                        </div>
+                    @endif
 
-                    </div>
 
                     <div class="sales__action">
 

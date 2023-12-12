@@ -72,4 +72,12 @@ class Product extends Model
     public function category_tovars() {
         return $this->belongsToMany(Category::class);
     }
+
+    public function setSlugAttribute($value)
+    {
+        if (empty($value))
+            $this->attributes['slug'] =  Str::slug($this->name);
+        else
+            $this->attributes['slug'] =  $value;
+    }
 }

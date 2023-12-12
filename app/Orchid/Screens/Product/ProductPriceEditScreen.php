@@ -44,7 +44,7 @@ class ProductPriceEditScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'Создание элемента галереи для продукта: '.$this->element->product_info->title;
+        return 'Редактирование ценового предложения для продукта: '.$this->element->product_info->title;
     }
 
     /**
