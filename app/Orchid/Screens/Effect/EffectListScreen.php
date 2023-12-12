@@ -11,6 +11,8 @@ use Orchid\Screen\Actions\Link;
 use Orchid\Support\Color;
 use Orchid\Support\Facades\Toast;
 
+use Orchid\Filter\Filterable;
+
 class EffectListScreen extends Screen
 {
     /**
@@ -21,7 +23,7 @@ class EffectListScreen extends Screen
     public function query(): iterable
     {
         return [
-            "effects" => ColorEffect::orderByDesc("created_at")->paginate(15)
+            "effects" => ColorEffect::filters()->orderByDesc("order")->paginate(15)
         ];
     }
 

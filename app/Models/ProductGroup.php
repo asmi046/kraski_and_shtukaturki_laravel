@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 
 use Orchid\Screen\AsSource;
 use Orchid\Filters\Filterable;
-
 use Orchid\Filters\Types\Like;
 
 use Illuminate\Support\Str;

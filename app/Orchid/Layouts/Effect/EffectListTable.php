@@ -41,19 +41,14 @@ class EffectListTable extends Table
                     return "<img width='50' height='50' src='".($element->img?$element->img:asset("img/no_photo.jpg"))."'>";
                 }
             )->width("10%"),
-            TD::make('name', 'Заголовок')->width("20%"),
-            TD::make('slug', 'Ссылка')->width("20%"),
-            TD::make('description', 'Описание')->width("35%")->render(function($element) {
+            TD::make('name', 'Заголовок')->sort()->width("20%"),
+            TD::make('slug', 'Ссылка')->width("15%"),
+
+            TD::make('description', 'Описание')->width("30%")->render(function($element) {
                 return  mb_strimwidth(strip_tags($element->description), 0, 30, "...");
             }),
 
-            // TD::make('action', 'Действие')->render(function($element) {
-            //     return  Group::make([
-            //         Link::make('Редактировать')->route('platform.category_edit',$element->id),
-            //         Button::make('Удалить')->method('delete_field', [$element->id])->type(Color::DANGER())
-            //     ]);
-            // })
-
+            TD::make('order', 'Порядок')->sort()->width("10%"),
 
             TD::make(__('Actions'))
             ->align(TD::ALIGN_CENTER)

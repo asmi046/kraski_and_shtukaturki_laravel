@@ -7,12 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Support\Str;
 
+
 use Orchid\Screen\AsSource;
+use Orchid\Filters\Filterable;
+use Orchid\Filters\Types\Like;
 
 class ColorEffect extends Model
 {
     use HasFactory;
     use AsSource;
+    use Filterable;
 
     protected $fillable = [
         'name',
@@ -22,6 +26,11 @@ class ColorEffect extends Model
         'description',
         'seo_title',
         'seo_description',
+    ];
+
+    protected $allowedSorts = [
+        'name',
+        'order',
     ];
 
     public function ce_tovars() {
