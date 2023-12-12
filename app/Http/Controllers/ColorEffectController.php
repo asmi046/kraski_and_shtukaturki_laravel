@@ -18,7 +18,7 @@ class ColorEffectController extends Controller
     }
 
     public function index() {
-        $all_effect = ColorEffect::all();
+        $all_effect = ColorEffect::select()->orderBy('order')->get();
         return view('color-effect', ['all_effects' => $all_effect]);
     }
 }
