@@ -35,7 +35,7 @@
 
             <offer id="{{$item->sku}}" available="{{($item->insklad > 0)?"true":"false"}}">
                 <name>{{$item->title}}</name>
-                <url>{{route('tovar', $item->slug)}}</url>
+                <url>{{route('product', $item->slug)}}</url>
 
                 @if(Storage::disk('local')->exists('public/products_galery/'.$item->img))
                     <picture>{{((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') ."://". $_SERVER['HTTP_HOST']}}{{Storage::url('public/products_galery/'.$item->img)}}</picture>
