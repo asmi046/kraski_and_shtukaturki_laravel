@@ -29,8 +29,23 @@
             @endif
 
             @if (Request::route()->named('effect_page'))
-                <span class="sep"> / </span> <a href="{{route("visual-effect")}}">Все эффекты</a>
-                <span class="sep"> / </span> <span class="finish">{{$effect['name']}}</span>
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="Каталог" itemprop="item" href="{{route("visual-effect")}}">
+                        <span itemprop="name">Все эффекты</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{$effect['name']}}" itemprop="item">
+                        <span itemprop="name">{{$effect['name']}}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
             @endif
 
             @if (Request::route()->named('product'))
