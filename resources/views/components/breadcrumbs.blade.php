@@ -11,8 +11,21 @@
 
 
             @if (Request::route()->named('category'))
-                <span class="sep"> / </span> <a href="{{route("catalog")}}">Каталог</a>
-                <span class="sep"> / </span> <span class="finish">{{$category['name']}}</span>
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="Каталог" itemprop="item" href="{{route("catalog")}}">
+                        <span itemprop="name">Каталог</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                <span class="sep"> / </span>
+
+                <span class="finish">{{$category['name']}}</span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{$category['name']}}" itemprop="item">
+                        <span itemprop="name">{{$category['name']}}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
             @endif
 
             @if (Request::route()->named('effect_page'))
@@ -28,29 +41,13 @@
             @if (isset($title))
                 <span class="sep"> / </span>
                     <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
-                        <span title="Смартфоны" itemprop="item">
+                        <span title="{{ $title }}" itemprop="item">
                             <span itemprop="name">{{ $title }}</span>
                             <meta itemprop="position" content="1">
                         </span>
-
                     </span>
             @endif
 
-            @if (isset($product))
-                <span class="sep"> / <a href="{{route("products")}}">Продукция</a>  / </span> <span class="finish">{{ $product }}</span>
-            @endif
-
-            @if (isset($productpage))
-                <span class="sep"> / <a href="{{route("products")}}">Продукция</a> / <a href="{{route('products_cat', $catslug)}}">{{$cattitle}}</a> / </span> <span class="finish">{{ $productpage }}</span>
-            @endif
-
-            @if (isset($napravlenie))
-                <span class="sep"> / <a href="{{route("work")}}">Направления деятельности</a> / <span>{{$napravlenie}}</span>
-            @endif
-
-            @if (isset($news))
-                <span class="sep"> / <a href="{{route("news")}}">Новости</a> / <span>{{$news}}</span>
-            @endif
          </div>
     </div>
 </div>
