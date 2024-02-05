@@ -69,9 +69,7 @@
     <gifts>
         <!-- подарки не из прайс‑листа -->
     </gifts>
-    <promos>
-        <!-- промоакции -->
-    </promos>
+
 </shop>
 
 </yml_catalog>
