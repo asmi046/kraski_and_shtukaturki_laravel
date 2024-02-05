@@ -26,12 +26,7 @@
 
                 <h2>Награды и достижения</h2>
                 <swiper
-                    :slides-per-view="3"
-                    :space-between = "50"
-                    :pagination="{
-                        clickable: true,
-                      }"
-                    :modules="modules"
+
                 >
                     <swiper-slide>
                         <a data-fslightbox="prod_g1" href="{{asset('img/diploms/diplom1.jpg')}}">
