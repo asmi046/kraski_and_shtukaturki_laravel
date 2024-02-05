@@ -22,7 +22,7 @@
             @php
 
                 if (empty($category)) {
-                    $cat = $item->tovar_categories()->first();
+                    $cat = $item->category_tovars()->first();
                     if (!empty($cat))
                         $cat = $cat["id"];
                     else
