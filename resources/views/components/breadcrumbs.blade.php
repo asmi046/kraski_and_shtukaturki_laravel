@@ -26,7 +26,14 @@
             @endif
 
             @if (isset($title))
-                <span class="sep"> / </span> <span class="finish">{{ $title }}</span>
+                <span class="sep"> / </span>
+                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                        <span title="Смартфоны" itemprop="item">
+                            <span itemprop="name">{{ $title }}</span>
+                            <meta itemprop="position" content="1">
+                        </span>
+
+                    </span>
             @endif
 
             @if (isset($product))
