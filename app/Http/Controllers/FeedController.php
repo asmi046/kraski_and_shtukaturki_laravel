@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\ProductGroup;
 
 
 class FeedController extends Controller
@@ -14,7 +14,7 @@ class FeedController extends Controller
     public function yml_actegory($slug) {
         if ($slug === 'all')
         {
-                $catProducts = Product::all();
+                $catProducts = ProductGroup::all();
                 $categoryInfo = null;
         }
         else

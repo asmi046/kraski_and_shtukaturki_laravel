@@ -5,15 +5,15 @@
 <yml_catalog date="{{ date("Y-m-d\TH:i:sP") }}">
 <shop>
     <name>KartaSveta</name>
-    <company>ООО "Карта Света"</company>
-    <url>https://kartasveta.ru/</url>
+    <company>Магазин "Краски и штукатурки"</company>
+    <url>https://xn--80aaxbgbbb2cfgocld8e.xn--p1ai/</url>
     <currencies>
         <currency id="RUR" rate="1"/>
     </currencies>
 
     <categories>
         @foreach ($all_cat as $item)
-            <category id="{{$item->id}}">{{$item->title}}</category>
+            <category id="{{$item->id}}">{{$item->name}}</category>
         @endforeach
     </categories>
 
