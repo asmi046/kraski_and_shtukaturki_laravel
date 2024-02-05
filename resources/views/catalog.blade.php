@@ -16,6 +16,7 @@
 
 <section class="categoty-top-sec">
 	<div class="_container">
+        <h2 style="display: none">Навигация по хлебным крошкам</h2>
         <x-category.all-cat curenname="Каталог продукции" ></x-category.all-cat>
 	</div>
 </section>
