@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
     <title>@yield('title') - Краски и Штукатурки</title>
     <meta name="description" content="@yield('description')">
 
@@ -14,7 +15,7 @@
     <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
 
-	<meta charset="UTF-8">
+
 	<meta name="format-detection" content="telephone=no">
 
     <link rel="icon" type="image/png" href="{{asset('/img/favicons/icon256.png')}}" sizes="256x256">
@@ -31,7 +32,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
     @vite([
         'resources/css/app.css',
@@ -65,8 +66,13 @@
 				'public/js/main.js',
     ])
 
+
+
+</head>
+
+<body>
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
+    <script>
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -83,9 +89,6 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/96331564" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
-</head>
-
-<body>
 	<div class="wrapper" id="global_app">
         <x-header></x-header>
 
