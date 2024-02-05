@@ -30,7 +30,7 @@
 				Корзина
 			</a>
 
-				<button type="button" class="icon-menu" aria-label="Иконка бургера">
+				<button type="button" class="icon-menu" >
 					<span></span>
 					<span></span>
 					<span></span>
