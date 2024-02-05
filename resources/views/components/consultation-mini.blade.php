@@ -10,12 +10,12 @@
 
 		<div class="consult__subtitle">
 			<p>
-				Оставьте свои контакты и наши специалисты свяжутся 
+				Оставьте свои контакты и наши специалисты свяжутся
 				с Вами в течении 15 минут
 			</p>
 		</div>
 
-		<Forma rout="/send_consult" redirect="/thencs"></Forma>
+		<forma-con rout="/send_consult" redirect="/thencs"></forma-con>
 
 		<p class="consult__form-policy">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
 
