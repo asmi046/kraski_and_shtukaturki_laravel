@@ -13,6 +13,7 @@
 
     <section class="page__categoty-top-sec categoty-top-sec section">
         <div class="_container">
+            <h2 style="display: none">Навигация по хлебным крошкам</h2>
             <x-breadcrumbs :title="$title"></x-breadcrumbs>
         </div>
     </section>
