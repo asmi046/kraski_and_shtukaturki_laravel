@@ -25,7 +25,13 @@
                 {!! $options["about_main"] !!}
 
                 <h2>Награды и достижения</h2>
-                <swiper>
+                <swiper
+                    :slides-per-view="3"
+                    :space-between = "50"
+                    :pagination="{
+                        clickable: true,
+                      }" :modules="modules"
+                >
                     <swiper-slide>
                         <a data-fslightbox="prod_g1" href="{{asset('img/diploms/diplom1.jpg')}}">
                             <img src="{{asset('img/diploms/diplom1.jpg')}}" alt="Диплом 1">
