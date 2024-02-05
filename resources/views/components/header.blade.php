@@ -67,7 +67,7 @@
 <div class="search header__search-mob">
 	<form role="search" method="get" action="{{route('show_search_page')}}" id="searchform_mob" class="search__form">
 		<input type="text" class="search__input input" placeholder="Поиск" value="" name="search_str"
-			id="s">
-		<button type="submit" id="searchsubmit" class="search__btn" tabindex="2" value=""></button>
+			id="s_mob">
+		<button type="submit" id="searchsubmit_mob" class="search__btn" tabindex="2" value=""></button>
 	</form>
 </div>
