@@ -31,8 +31,6 @@
                     $cat = $category->id;
                 }
 
-                $consist = $item->consist;
-                if (empty($consist)) continue;
             @endphp
 
             <offer id="{{$item->sku}}" available="{{($item->insklad > 0)?"true":"false"}}">
@@ -55,10 +53,6 @@
                 <currencyId>RUR</currencyId>
 
                 <categoryId>{{ $cat }}</categoryId>
-
-                @foreach ($consist as $elem)
-                    <consist name="{{$elem['Имя']}}" unit="шт">{{$elem['Количество']}}</consist>
-                @endforeach
 
 
 
