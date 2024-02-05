@@ -1,4 +1,4 @@
-<section class="uni_breadcrumbs">
+<div class="uni_breadcrumbs">
     <div class="_container">
         <h2 style="display: none">Навигация по хлебным крошкам</h2>
         <div class="breadcrumbs">
@@ -39,4 +39,4 @@
             @endif
          </div>
     </div>
-</section>
+</div>
