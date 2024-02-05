@@ -19,7 +19,6 @@
                     </a>
                 <span class="sep"> / </span>
 
-                <span class="finish">{{$category['name']}}</span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
                     <span title="{{$category['name']}}" itemprop="item">
                         <span itemprop="name">{{$category['name']}}</span>
