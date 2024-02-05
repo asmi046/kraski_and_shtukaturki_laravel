@@ -65,3 +65,5 @@ Route::post('/send_consult', [SenderController::class, "send_consultation"])->na
 
 Route::get('/search_pds', [SearchController::class, 'search_pds'])->name('search_pds');
 Route::get('/search', [SearchController::class, 'show_search_page'])->name('show_search_page');
+
+Route::get('/yml-feed/{slug}', [FeedController::class, "yml_actegory"])->name('yml_actegory');
