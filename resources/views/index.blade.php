@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="popular__btn-block">
-			<a href="{{route('catalog')}}" type="submit" class="popular__btn-all btn">Посмотреть все</a>
+			<a href="{{route('catalog')}}" class="popular__btn-all btn">Посмотреть все</a>
 		</div>
 
 	</div>
