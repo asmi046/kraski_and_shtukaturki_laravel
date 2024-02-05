@@ -16,6 +16,8 @@ use App\Http\Controllers\SenderController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ColorEffectController;
 
+use App\Http\Controllers\FeedController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
