@@ -33,33 +33,37 @@
 
             @endphp
 
-            <offer id="{{$item->sku}}" available="{{($item->insklad > 0)?"true":"false"}}">
-                <name>{{$item->title}}</name>
-                <url>{{route('product', $item->slug)}}</url>
+            @foreach ($item->tovar_prices as $price_item)
+                <offer id="{{$item->sku}}_{{$price_item->id}}" available="true">
+                    <name>{{$item->title}} {{$price_item->volume}}{{$price_item->ed_izm}}</name>
+                    <url>{{route('product', $item->slug)}}</url>
 
-                @if(Storage::disk('local')->exists('public/products_galery/'.$item->img))
-                    <picture>{{((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') ."://". $_SERVER['HTTP_HOST']}}{{Storage::url('public/products_galery/'.$item->img)}}</picture>
-                @endif
+                    @if(Storage::disk('local')->exists('public/products_galery/'.$item->img))
+                        <picture>{{((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') ."://". $_SERVER['HTTP_HOST']}}{{Storage::url('public/products_galery/'.$item->img)}}</picture>
+                    @endif
 
-                <picture>{{route('home').$item->img}}</picture>
+                    <picture>{{route('home').$item->img}}</picture>
 
-                <price>{{$item->price}}</price>
+                    <price>{{$price_item->price}}</price>
 
-                @if (!empty($item->price_old))
-                    <oldprice>{{$item->price_old}}</oldprice>
-                @endif
+                    @if (!empty($price_item->price_old))
+                        <oldprice>{{$price_item->price_old}}</oldprice>
+                    @endif
 
-                <description>{{$item->description}}</description>
-                <currencyId>RUR</currencyId>
+                    <description>{{$item->description}}</description>
+                    <currencyId>RUR</currencyId>
 
-                <categoryId>{{ $cat }}</categoryId>
+                    <categoryId>{{ $cat }}</categoryId>
 
 
 
-                <delivery>true</delivery>
-                <store>true</store>
-                <pickup>true</pickup>
-            </offer>
+                    <delivery>true</delivery>
+                    <store>true</store>
+                    <pickup>true</pickup>
+                </offer>
+            @endforeach
+
+
         @endforeach
     </offers>
     <gifts>
