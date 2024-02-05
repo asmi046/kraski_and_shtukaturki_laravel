@@ -32,7 +32,7 @@
                 <span class="sep"> / </span>
 
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a title="Каталог" itemprop="item" href="{{route("visual-effect")}}">
+                    <a title="Все эффекты" itemprop="item" href="{{route("visual-effect")}}">
                         <span itemprop="name">Все эффекты</span>
                         <meta itemprop="position" content="1">
                     </a>
@@ -49,8 +49,22 @@
             @endif
 
             @if (Request::route()->named('product'))
-                <span class="sep"> / </span> <a href="{{route('category', $category->slug)}}">{{$category->name}}</a>
-                <span class="sep"> / </span> <span class="finish">{{$tovar['title']}}</span>
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="{{$category->name}}" itemprop="item" href="{{route('category', $category->slug)}}">
+                        <span itemprop="name">{{$category->name}}</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{$tovar['title']}}" itemprop="item">
+                        <span itemprop="name">{{$tovar['title']}}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
             @endif
 
             @if (isset($title))
