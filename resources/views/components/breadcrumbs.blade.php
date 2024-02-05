@@ -2,10 +2,14 @@
     <div class="_container">
 
         <div itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
-            <a itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" itemprop="item" href="{{route('home')}}" >
-                <span itemprop="name">Главная</span>
-                <meta itemprop="position" content="0">
-            </a>
+            <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{route('home')}}" >
+                    <span itemprop="name">Главная</span>
+                    <meta itemprop="position" content="0">
+                </a>
+            </span>
+
+
             @if (Request::route()->named('category'))
                 <span class="sep"> / </span> <a href="{{route("catalog")}}">Каталог</a>
                 <span class="sep"> / </span> <span class="finish">{{$category['name']}}</span>
