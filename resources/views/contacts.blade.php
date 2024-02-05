@@ -16,7 +16,7 @@
     <section class="contact_page_section">
         <div class="_container">
 
-
+            <h2 style="display: none"Все контакты нашей компании</h2>
             <a href="tel:+7{{phone_format($options['phone'])}}" class="phone_in_pzge">{{$options['phone']}}</a>
             <br>
             <a href="tel:+7{{phone_format($options['phone_2'])}}" class="phone_in_pzge">{{$options['phone_2']}}</a>
