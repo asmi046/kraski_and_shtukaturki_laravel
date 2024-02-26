@@ -14,14 +14,21 @@
     <x-breadcrumbs :title="$title"></x-breadcrumbs>
 
     <section class="contact_page_section">
-        <div class="_container">
+        <div itemscope itemtype="http://schema.org/Organization" class="_container">
 
-            <h2 style="display: none">Все контакты нашей компании</h2>
-            <a href="tel:+7{{phone_format($options['phone'])}}" class="phone_in_pzge">{{$options['phone']}}</a>
+            <h2 itemprop="name" style="display: none">Краски и Штукатурки - декоративные покрытия и венецианские штукатурки в Курске</h2>
+
+            <div style="display: none" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">ул. Мирная 27а</span>
+                <span itemprop="postalCode">305004</span>
+                <span itemprop="addressLocality">Курск</span>
+            </div>
+
+            <a  itemprop="telephone" href="tel:+7{{phone_format($options['phone'])}}" class="phone_in_pzge">{{$options['phone']}}</a>
             <br>
-            <a href="tel:+7{{phone_format($options['phone_2'])}}" class="phone_in_pzge">{{$options['phone_2']}}</a>
+            <a itemprop="telephone" href="tel:+7{{phone_format($options['phone_2'])}}" class="phone_in_pzge">{{$options['phone_2']}}</a>
 
-            <p><strong>e-mail:</strong> {{$options['email']}}</p>
+            <p><strong>e-mail:</strong> <span itemprop="email">{{$options['email']}}</span></p>
             <p><strong>Адрес:</strong> {{$options['adress']}}</p>
 
             <yandex-map coordinate="{{$options['office_coordinate']}}" adress="<b>Краски-и-Штукатурки.рф.ru</b><br>{{$options['adress']}}"></yandex-map>
