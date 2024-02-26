@@ -73,7 +73,7 @@
                     <div style="display: none" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                         <span itemprop="price">{{ $product->tovar_prices[0]->price}}</span>
                         <span itemprop="priceCurrency">RUB</span>
-                        <link itemprop="availability" href="http://schema.org/InStock"> </div>
+                        <link itemprop="availability" href="http://schema.org/InStock">
                     </div>
 
                     <div class="sales__action">
