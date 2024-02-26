@@ -28,7 +28,7 @@
 
                                 <swiper-slide>
                                     <a data-fslightbox="prod_gp" href="{{$item->link}}">
-                                        <img src="{{$item->link}}" alt="{{$product->title}} рисунок {{$loop->index}}">
+                                        <img itemprop="image" src="{{$item->link}}" alt="{{$product->title}} рисунок {{$loop->index}}">
                                     </a>
                                 </swiper-slide>
 
@@ -42,7 +42,9 @@
                 <div class="tovarinfo__side">
                     <div class="tovar_description text_styles">
                         <h3>Краткое описание</h3>
-                        {!! $product->short_description !!}
+                        <div itemprop="description">
+                            {!! $product->short_description !!}
+                        </span>
                     </div>
 
                     <div class="adv_list">
@@ -65,6 +67,12 @@
                             </div>
                         </div>
 
+                    </div>
+
+                    <div style="display: none" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                        <span itemprop="price">{{ $product->tovar_prices[0]->price}}</span>
+                        <span itemprop="priceCurrency">RUB</span>
+                        <link itemprop="availability" href="http://schema.org/InStock"> </div>
                     </div>
 
                     <div class="sales__action">
