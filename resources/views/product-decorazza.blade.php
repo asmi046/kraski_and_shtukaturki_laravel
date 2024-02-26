@@ -45,7 +45,7 @@
                         <h3>Краткое описание</h3>
                         <div itemprop="description">
                             {!! $product->short_description !!}
-                        </span>
+                        </div>
                     </div>
 
                     <div class="adv_list">

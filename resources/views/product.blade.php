@@ -13,8 +13,9 @@
 
     <x-breadcrumbs :tovar="$product" :category="$category"></x-breadcrumbs>
 
-    <section class="product_page_section">
+    <section itemscope="" itemtype="http://schema.org/Product" class="product_page_section">
         <div class="_container">
+            <div style="display: none" itemprop="name">{{ $product['title'] }}</div>
             <div class="tovarinfo">
                 <div class="tovarinfo__side">
                     <swiper
@@ -26,7 +27,7 @@
                     >
                         <swiper-slide>
                             <a data-fslightbox="prod_g1" href="{{$product->img}}">
-                                <img src="{{$product->img}}" alt="{{$product->title}}">
+                                <img itemprop="image" src="{{$product->img}}" alt="{{$product->title}}">
                             </a>
                         </swiper-slide>
 
@@ -43,7 +44,9 @@
 
                 <div class="tovarinfo__side">
                     <div class="tovar_description text_styles">
-                        {!! $product->description !!}
+                        <div itemprop="description">
+                            {!! $product->description !!}
+                        </div>
                     </div>
 
                     @if (!empty($product->props))
@@ -56,6 +59,12 @@
 
 
                     <div class="sales__action">
+
+                        <div style="display: none" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <span itemprop="price">{{ $product->tovar_prices[0]->price}}</span>
+                            <span itemprop="priceCurrency">RUB</span>
+                            <link itemprop="availability" href="http://schema.org/InStock"> </div>
+                        </div>
 
                         <page-to-bascet sku="{{$product->sku}}" :prices="{{json_encode($product->tovar_prices)}}"></page-to-bascet>
 
