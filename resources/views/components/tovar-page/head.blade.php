@@ -1,4 +1,4 @@
-<section itemscope="" itemtype="http://schema.org/Product" class="tovarpage__banner" @style(
+<section class="tovarpage__banner" @style(
     "background-image: url(../img/cat_b_2.webp)"
 )>
     <div class="_container">

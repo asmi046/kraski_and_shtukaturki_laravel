@@ -13,8 +13,9 @@
 
     <x-breadcrumbs :tovar="$product" :category="$category"></x-breadcrumbs>
 
-    <section class="product_page_section">
+    <section itemscope="" itemtype="http://schema.org/Product" class="product_page_section">
         <div class="_container">
+            <div style="display: none" itemprop="name">{{$h1}}</div>
             <div class="tovarinfo">
                 <div class="tovarinfo__side">
                     <swiper
