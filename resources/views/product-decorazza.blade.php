@@ -15,7 +15,7 @@
 
     <section itemscope="" itemtype="http://schema.org/Product" class="product_page_section">
         <div class="_container">
-            <div style="display: none" itemprop="name">{{$h1}}</div>
+            <div style="display: none" itemprop="name">{{$product['title']}}</div>
             <div class="tovarinfo">
                 <div class="tovarinfo__side">
                     <swiper
