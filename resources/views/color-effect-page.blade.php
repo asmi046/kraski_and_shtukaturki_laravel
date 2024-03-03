@@ -32,4 +32,13 @@
 	</div>
 </section>
 
+
+@if ($effect->description)
+    <section class="category-description-sec section">
+        <div class="_container">
+            {!! $effect->description !!}
+        </div>
+    </section
+@endif
+
 @endsection

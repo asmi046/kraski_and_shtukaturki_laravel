@@ -41,4 +41,13 @@
 	</div>
 </section>
 
+@if ($category_info->description)
+    <section class="category-description-sec section">
+        <div class="_container">
+            {!! $category_info->description !!}
+        </div>
+    </section
+@endif
+
+
 @endsection
