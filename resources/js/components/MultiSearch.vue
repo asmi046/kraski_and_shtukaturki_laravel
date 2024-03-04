@@ -1,7 +1,7 @@
 <template>
     <div class=" multi_search search header__search">
     	<form role="search" method="GET" :action="url" id="searchform" class="search__form">
-    		<input @input="chenge" type="text" placeholder="Поиск" class="search__input input" v-model="squery" name="search_str" id="s">
+    		<input  type="text" placeholder="Поиск" class="search__input input" @input="evt=>squery=evt.target.value" :value="squery" name="search_str" id="s">
     		<button type="submit" tabindex="2" value="" id="searchsubmit" class="search__btn"></button>
     	</form>
         <div v-show="show_list" class="search_list">
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, watch, watchEffect } from 'vue'
 export default {
     props: {
         url:String,
@@ -46,7 +46,7 @@ export default {
         let category = ref([])
         let product = ref([])
 
-        const chenge = () => {
+        watch(squery, () => {
             if (squery.value.length > 4){
                 axios.get('/multi_search', { params: { squery: squery.value } })
                 .then((response) => {
@@ -62,12 +62,11 @@ export default {
                 })
                 .catch(error => console.log(error));
             } else show_list.value = false
-        }
+        });
 
         return {
             category,
             product,
-            chenge,
             show_list,
             url:props.url,
             squery
