@@ -20,6 +20,7 @@ import ToFavoritesBtn from './components/ToFavoritesBtn.vue'
 import FormaCon from './components/Forma.vue'
 import YandexMap from './components/YandexMap.vue'
 import PageToBascet from './components/PageToBascet.vue'
+import MultiSearch from './components/MultiSearch.vue'
 
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -50,6 +51,7 @@ const global_app = createApp({
         ToFavoritesBtn,
         PageToBascet,
         FormaCon,
+        MultiSearch,
         FsLightbox
     },
 

@@ -9,12 +9,13 @@
                 <x-svg.logo></x-svg.logo>
 			</a>
 
-			<div class="search header__search">
+            <multi-search url="{{route('show_search_page')}}" squery="{{ old('search_str') }}"></multi-search>
+			{{-- <div class="search header__search">
 				<form role="search" method="GET" action="{{route('show_search_page')}}" id="searchform" class="search__form">
 					<input type="text" placeholder="Поиск" class="search__input input" value="{{ old('search_str') }}" name="search_str" id="s">
 					<button type="submit" tabindex="2" value="" id="searchsubmit" class="search__btn"></button>
 				</form>
-			</div>
+			</div> --}}
 
             <button class="mob-search-btn header__mob-search-btn"></button>
 
@@ -65,9 +66,10 @@
 
 <!-- Строка мобильного поиска -->
 <div class="search header__search-mob">
-	<form role="search" method="get" action="{{route('show_search_page')}}" id="searchform_mob" class="search__form">
+	{{-- <form role="search" method="get" action="{{route('show_search_page')}}" id="searchform_mob" class="search__form">
 		<input type="text" class="search__input input" placeholder="Поиск" value="" name="search_str"
 			id="s_mob">
 		<button type="submit" id="searchsubmit_mob" class="search__btn" tabindex="2" value=""></button>
-	</form>
+	</form> --}}
+    <multi-search url="{{route('show_search_page')}}" squery="{{ old('search_str') }}"></multi-search>
 </div>

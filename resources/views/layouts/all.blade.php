@@ -48,8 +48,9 @@
 				'public/scss/ui.scss',
 				'public/scss/map.scss',
 				'public/scss/popup.scss',
-				'public/scss/main.scss',
 				'public/scss/header.scss',
+                'public/scss/main.scss',
+
 				'public/scss/footer.scss',
 				'public/scss/media.scss',
 				'public/scss/tovar-page.scss',
@@ -90,6 +91,8 @@
     <!-- /Yandex.Metrika counter -->
 
 	<div class="wrapper" id="global_app">
+        <x-all-icon></x-all-icon>
+        <x-messenger-btn></x-messenger-btn>
         <x-header></x-header>
 
         <main class="page">
