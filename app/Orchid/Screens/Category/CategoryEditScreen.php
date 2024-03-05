@@ -44,7 +44,7 @@ class CategoryEditScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'Редактирование категории: '.$this->category->title;
+        return 'Редактирование категории: '.$this->category->name;
     }
 
     /**
