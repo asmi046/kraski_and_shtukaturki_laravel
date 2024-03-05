@@ -35,7 +35,7 @@
 
 @if ($effect->description)
     <section class="category-description-sec section">
-        <div class="_container">
+        <div class="_container text_styles">
             {!! $effect->description !!}
         </div>
     </section

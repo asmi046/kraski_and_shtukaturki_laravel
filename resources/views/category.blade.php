@@ -43,7 +43,7 @@
 
 @if ($category_info->description)
     <section class="category-description-sec section">
-        <div class="_container">
+        <div class="_container text_styles">
             {!! $category_info->description !!}
         </div>
     </section
