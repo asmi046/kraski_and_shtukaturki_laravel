@@ -26,6 +26,12 @@
 
         <div class="filters-sidebar__block spollers-block" data-spollers data-one-spoller>
 
+            <x-filter.blk name="Категории товаров">
+                @foreach ($all_cat as $item)
+                    <a href="{{route("category", $item->slug)}}" @class(['filter_cat', '_active' => url()->current() == route("category", $item->slug)])>{{$item->name}}</a>
+                @endforeach
+            </x-filter.blk>
+
             <x-filter.blk name="Торговая марка">
                 <x-filter.chec-blk id="tm0" parametr="tm" value="San Marco" valuetext="San Marco"></x-filter.chec-blk>
                 <x-filter.chec-blk id="tm1" parametr="tm" value="DECORAZZA" valuetext="DECORAZZA"></x-filter.chec-blk>

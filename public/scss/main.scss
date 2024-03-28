@@ -749,6 +749,14 @@ h4 {
 
 .filters-sidebar {
 
+    .filter_cat {
+        margin: 4px 0;
+
+        &._active {
+            color:#CA9E67
+        }
+    }
+
 	&__block {
 		.spollers-block__item {
 			margin-bottom: 20px;
