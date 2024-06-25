@@ -15,6 +15,8 @@ class Project extends Model
     protected $fillable = [
         "title",
         "description",
+        "galery",
+        "params",
         "img",
         "img1",
         "img2",
@@ -25,5 +27,10 @@ class Project extends Model
         "img7",
         "img8",
         "img9"
+    ];
+
+    protected $casts = [
+        'galery' => 'array',
+        'params' => 'array',
     ];
 }

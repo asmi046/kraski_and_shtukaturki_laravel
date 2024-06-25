@@ -28,6 +28,10 @@ use App\Orchid\Screens\Project\ProjectCreateScreen;
 use App\Orchid\Screens\Project\ProjectEditScreen;
 use App\Orchid\Screens\Project\ProjectListScreen;
 
+use App\Orchid\Screens\Blog\BlogCreateScreen;
+use App\Orchid\Screens\Blog\BlogEditScreen;
+use App\Orchid\Screens\Blog\BlogListScreen;
+
 use App\Orchid\Screens\Effect\EffectCreateScreen;
 use App\Orchid\Screens\Effect\EffectEditScreen;
 use App\Orchid\Screens\Effect\EffectListScreen;
@@ -87,6 +91,22 @@ Route::screen('/projects/create', ProjectCreateScreen::class)
     ->name('platform.projects_create')->breadcrumbs(fn (Trail $trail) => $trail
     ->parent('platform.projects')
     ->push(__('Добавление пректа'), route('platform.projects_create')));
+
+// Блог
+Route::screen('/blog', BlogListScreen::class)
+    ->name('platform.blog')->breadcrumbs(fn (Trail $trail) => $trail
+    ->parent('platform.index')
+    ->push(__('Блог'), route('platform.blog')));
+
+Route::screen('/blog/{id}/edit', BlogEditScreen::class)
+    ->name('platform.blog_edit')->breadcrumbs(fn (Trail $trail, $id) => $trail
+    ->parent('platform.blog')
+    ->push(__('Редактирование статьи'), route('platform.blog_edit', $id)));
+
+Route::screen('/blog/create', BlogCreateScreen::class)
+    ->name('platform.blog_create')->breadcrumbs(fn (Trail $trail) => $trail
+    ->parent('platform.blog')
+    ->push(__('Добавление статьи'), route('platform.blog_create')));
 
 
 // Эффекты

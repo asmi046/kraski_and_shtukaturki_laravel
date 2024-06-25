@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Orchid\Layouts\Project;
+namespace App\Orchid\Layouts\Blog;
 
 use App\Models\Project;
 use Orchid\Screen\Field;
@@ -18,15 +18,16 @@ use Orchid\Screen\Fields\Picture;
 
 use Orchid\Support\Facades\Toast;
 use Orchid\Screen\Fields\TextArea;
+use Orchid\Support\Facades\Layout;
 
-class ProjectEditFields extends Rows
+class BlogEditFields extends Rows
 {
     /**
      * Used to create the title of a group of form elements.
      *
      * @var string|null
      */
-    protected $title = "Поля категории";
+    protected $title = "Поля статьи";
 
     /**
      * Get the fields elements to be displayed.
@@ -37,45 +38,37 @@ class ProjectEditFields extends Rows
     {
         return [
 
-            Input::make('project.title')
+            Input::make('blog.title')
                 ->title('Заголовок')
                 ->help('Заголовок проекта')
                 ->required()
                 ->horizontal(),
 
-            Quill::make('project.description')
+            Quill::make('blog.description')
                 ->title('Описание категории')
                 ->help('Введите описание категории')
                 ->horizontal(),
 
-            Matrix::make('project.galery')
-                ->title('Галерея проекта')
-                ->columns([
-                    'Изображение' => 'img',
-                    'alt/title' => 'title'
-                ])
-                ->fields([
-                    'img' => Picture::make('img')->storage('public')->targetRelativeUrl(),
-                    'title' => Input::make('title')
-                ]),
-
-            Matrix::make('project.params')
-                ->title('Параметры проекта')
-                ->columns([
-                    'Имя параметра' => 'name',
-                    'Значение параметра' => 'value'
-                ])
-                ->fields([
-                    'name' => Input::make('name'),
-                    'title' => Input::make('value')
-                ]),
-
-            Picture::make('project.img')
+            Picture::make('blog.img')
                 ->title('Основное изображение')
+                ->help('Основное изображение записи')
                 ->storage('public')
                 ->targetRelativeUrl()
                 ->required()
                 ->horizontal(),
+
+
+            Input::make('blog.seo_title')
+                ->title('SEO заголовок')
+                ->help('SEO заголовок')
+                ->horizontal(),
+
+            TextArea::make('blog.seo_description')
+                ->title('SEO описание')
+                ->help('SEO описание')
+                ->horizontal(),
+
+
 
             Button::make('Сохранить')->method('save_info')->type(Color::SUCCESS())
         ];
