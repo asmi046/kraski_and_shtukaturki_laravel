@@ -1,0 +1,36 @@
+.projects_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .project_card {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        border: 0.4px solid #C6C6C6;
+        .photo {
+            height: 250px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .more_info, h2 {
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .more_info {
+            margin-top: auto;
+            margin-bottom: 20px;
+        }
+
+    }
+}

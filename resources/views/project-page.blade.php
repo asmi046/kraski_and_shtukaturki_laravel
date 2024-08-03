@@ -1,8 +1,8 @@
 @extends('layouts.all')
 
 @php
-    $title = "Выполненные проекты";
-    $description = "Проекты выполненные нашей компание. Подбор покрытия, колеровка, нанесение";
+    $title = (!empty($product['seo_title']))?$product['seo_title']:$product['project'];
+    $description = (!empty($product['seo_description']))?$product['seo_description']:$product['project'];;
 @endphp
 
 @section('title', $title)

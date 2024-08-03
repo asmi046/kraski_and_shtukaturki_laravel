@@ -48,6 +48,26 @@
                 </span>
             @endif
 
+            @if (Request::route()->named('project_page'))
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="Все проекты" itemprop="item" href="{{route("projects")}}">
+                        <span itemprop="name">Все проекты</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{$project['name']}}" itemprop="item">
+                        <span itemprop="name">{{$project['name']}}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @endif
+
             @if (Request::route()->named('product'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">

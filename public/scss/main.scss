@@ -237,6 +237,7 @@ h4 {
 	border-top: 0.4px solid #C6C6C6;
 }
 
+.card-title,
 .card-popular__descp-title {
 	font-size: 22px;
 	font-weight: 700;
@@ -1070,3 +1071,4 @@ h4 {
 
 @import "multi-search";
 @import "messenger-btn";
+@import "projects";

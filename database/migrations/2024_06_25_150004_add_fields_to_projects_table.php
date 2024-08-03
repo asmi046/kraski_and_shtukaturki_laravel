@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('projects', function (Blueprint $table) {
+            $table->string('slug')->comment('Окончание ссылки');
             $table->json('galery')->comment('Галерея проекта');
             $table->json('params')->comment('Параметры проекта');
 
