@@ -1,4 +1,4 @@
-<dib class="project_card">
+<dib class="project_card cliced_proj">
     <div class="photo">
         <img src="{{ $item->img }}" alt="{{ $item->title }}">
     </div>

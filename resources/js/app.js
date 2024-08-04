@@ -72,3 +72,13 @@ global_app.use(VueAxios, axios)
 global_app.use(store)
 global_app.directive('mask', VMaskDirective)
 global_app.mount("#global_app")
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    let clicedRow = document.querySelectorAll(".cliced_proj");
+    for (let elem of clicedRow) {
+        elem.addEventListener('click', function (e) {
+            elem.querySelector(".more_info").click();
+        })
+    }
+})
