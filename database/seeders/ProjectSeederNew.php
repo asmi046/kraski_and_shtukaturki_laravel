@@ -50,6 +50,7 @@ class ProjectSeederNew extends Seeder
         $main_data = [
             [
                 "title" => "Известковая декоративная штукатурка от San Marco - Интонакино Минерале",
+                "slug" => Str::slug("Известковая декоративная штукатурка от San Marco - Интонакино Минерале"),
                 "description" => file_get_contents(base_path() . "/public/portfolio/project_1/desc.html"),
                 "img" => Storage::url("p1_1.jpg"),
                 "galery" => json_encode([
@@ -74,6 +75,7 @@ class ProjectSeederNew extends Seeder
 
             [
                 "title" => 'Антика Кальче+ с Велатурой и патиной "Хамелеон"',
+                "slug" => Str::slug('Антика Кальче + с Велатурой и патиной "Хамелеон"'),
                 "description" => file_get_contents(base_path() . "/public/portfolio/project_2/desc.html"),
                 "img" => Storage::url("p2_1.jpg"),
                 "galery" => json_encode([
@@ -95,6 +97,7 @@ class ProjectSeederNew extends Seeder
 
             [
                 "title" => "Декоративное покрытие Оптима",
+                "slug" => Str::slug("Декоративное покрытие Оптима"),
                 "description" => file_get_contents(base_path() . "/public/portfolio/project_3/desc.html"),
                 "img" => Storage::url("p3_1.jpg"),
                 "galery" => json_encode([
@@ -114,6 +117,7 @@ class ProjectSeederNew extends Seeder
 
             [
                 "title" => "Интонакино Минерале + Велатура",
+                "slug" => Str::slug("Интонакино Минерале + Велатура"),
                 "description" => file_get_contents(base_path() . "/public/portfolio/project_4/desc.html"),
                 "img" => Storage::url("p4_1.jpg"),
                 "galery" => json_encode([
@@ -133,6 +137,7 @@ class ProjectSeederNew extends Seeder
 
             [
                 "title" => "Интонакино Минерале (San Marco) + Воск",
+                "slug" => Str::slug("Интонакино Минерале (San Marco) + Воск"),
                 "description" => file_get_contents(base_path() . "/public/portfolio/project_5/desc.html"),
                 "img" => Storage::url("p5_1.jpg"),
                 "galery" => json_encode([
@@ -148,12 +153,13 @@ class ProjectSeederNew extends Seeder
                     ['name' => 'Материалы', 'value' => 'San Marco - Intonachino Minerale']
                 ]),
 
-                "seo_title" => "Проект: Нанесение декоративного покрытия Интонакино Минерале (San Marco) + Воск",
-                "seo_description" => "Проект: Нанесение декоративного покрытия Интонакино Минерале (San Marco) + Воск",
+                "seo_title" => "Нанесение декоративного покрытия Интонакино Минерале (San Marco) + Воск",
+                "seo_description" => "Нанесение декоративного покрытия Интонакино Минерале (San Marco) + Воск",
             ],
 
             [
                 "title" => "Известковая венецианская штукатурка Марморино Классико + Феничи (San Marco)",
+                "slug" => Str::slug("Известковая венецианская штукатурка Марморино Классико + Феничи (San Marco)"),
                 "description" => file_get_contents(base_path() . "/public/portfolio/project_6/desc.html"),
                 "img" => Storage::url("p6_1.jpg"),
                 "galery" => json_encode([
@@ -169,8 +175,8 @@ class ProjectSeederNew extends Seeder
                     ['name' => 'Материалы', 'value' => 'San Marco - Intonachino Minerale']
                 ]),
 
-                "seo_title" => "Проект: Известковая венецианская штукатурка Марморино Классико + Феничи (San Marco)",
-                "seo_description" => "Проект: Известковая венецианская штукатурка Марморино Классико + Феничи (San Marco)",
+                "seo_title" => "Известковая венецианская штукатурка Марморино Классико + Феничи (San Marco)",
+                "seo_description" => "Известковая венецианская штукатурка Марморино Классико + Феничи (San Marco)",
             ],
 
         ];

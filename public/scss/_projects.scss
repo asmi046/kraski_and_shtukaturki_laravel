@@ -34,3 +34,37 @@
 
     }
 }
+
+.cerecters {
+    display: flex;
+    flex-direction: column;
+    .cer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .dots{
+            flex: 1;
+            margin: auto 10px 0 10px;
+            border-bottom: 1px dotted darkgray;
+        }
+
+        .name {
+            margin: auto 0 0 0;
+        }
+
+        .value {
+            max-width: 40%;
+            text-align: right;
+            font-weight: 500;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .tovarinfo.project_card .tovarinfo__side {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

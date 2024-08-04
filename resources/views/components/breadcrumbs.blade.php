@@ -61,8 +61,8 @@
                 <span class="sep"> / </span>
 
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
-                    <span title="{{$project['name']}}" itemprop="item">
-                        <span itemprop="name">{{$project['name']}}</span>
+                    <span title="{{$project}}" itemprop="item">
+                        <span itemprop="name">{{$project}}</span>
                         <meta itemprop="position" content="2">
                     </span>
                 </span>
