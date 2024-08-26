@@ -1,22 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IndexController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProductController;
-
-use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\FeedController;
 
-use App\Http\Controllers\EasyPageController;
-use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\SearchController;
 
 use App\Http\Controllers\SenderController;
+use App\Http\Controllers\ProductController;
 
-use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ProjectController;
+
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EasyPageController;
+
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ColorEffectController;
-
-use App\Http\Controllers\FeedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,9 @@ Route::get('/policy', [EasyPageController::class, "policy"])->name('policy');
 
 Route::get('/projects', [ProjectController::class, "index"])->name('projects');
 Route::get('/projects/{slug}', [ProjectController::class, "project_page"])->name('project_page');
+
+Route::get('/blog', [BlogController::class, "blog"])->name('blog');
+Route::get('/blog/{slug}', [BlogController::class, "blog_page"])->name('blog_page');
 
 
 Route::get('/bascet/thencs', [CartController::class, "thencs"])->name("bascet_thencs");

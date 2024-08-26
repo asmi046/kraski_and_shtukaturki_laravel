@@ -44,9 +44,9 @@ class BlogEditFields extends Rows
                 ->required()
                 ->horizontal(),
 
-            Quill::make('blog.description')
-                ->title('Описание категории')
-                ->help('Введите описание категории')
+            Input::make('blog.slug')
+                ->title('Окончание ссылки')
+                ->help('Slug категории')
                 ->horizontal(),
 
             Picture::make('blog.img')
@@ -55,6 +55,11 @@ class BlogEditFields extends Rows
                 ->storage('public')
                 ->targetRelativeUrl()
                 ->required()
+                ->horizontal(),
+
+            Quill::make('blog.text')
+                ->title('Описание категории')
+                ->help('Введите описание категории')
                 ->horizontal(),
 
 

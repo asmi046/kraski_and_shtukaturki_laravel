@@ -69,7 +69,7 @@ class BlogEditScreen extends Screen
         ];
     }
 
-    public function save_info(Project $Project, Request $request) {
+    public function save_info( Request $request) {
 
         $request->validate([
             'blog.title' => ['required', 'string'],
