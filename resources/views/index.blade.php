@@ -23,6 +23,24 @@
 
 <x-categories></x-categories>
 
+<section class="cta_section">
+    <div class="_container">
+        <div class="cta_blk">
+            <div class="text">
+                <h2>Нужна помощь в подборе и нанесении декоративных покрытий?</h2>
+                <p>Наши опытные специалисты проконсультируют Вас и помогут с подбором совершенно бесплатно. Просто оставьте свой номер телефона</p>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="+7 (000) 000-00-00">
+                    <button class="btn" type=submit>Отправить</button>
+                </form>
+            </div>
+            <div class="photo">
+                <img src="{{ asset('img/cta/podbor-decor-pokr.webp')}}" alt="Помощь в подборе декоративных покрытий в Курске">
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="page__popular popular section">
 	<div class="_container">
 		<h2 class="popular__title title">Популярные товары</h2>
