@@ -29,9 +29,12 @@
             <div class="text">
                 <h2>Нужна помощь в подборе и нанесении декоративных покрытий?</h2>
                 <p>Наши опытные специалисты проконсультируют Вас и помогут с подбором совершенно бесплатно. Просто оставьте свой номер телефона</p>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="+7 (000) 000-00-00">
-                    <button class="btn" type=submit>Отправить</button>
+                <form method="POST" action="{{ route('send_consultation') }}">
+                    @csrf
+                    <input type="hidden" name="name" value="CTA">
+                    <input type="hidden" name="review" value="CTA">
+                    <input required id="masced_input" type="text" name="phone" id="" placeholder="+7 (000) 000-00-00">
+                    <button class="btn" type="submit">Отправить</button>
                 </form>
             </div>
             <div class="photo">

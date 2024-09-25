@@ -7,6 +7,18 @@ import VueAxios from 'vue-axios'
 
 import { VMaskDirective } from 'v-slim-mask'
 
+import IMask from 'imask';
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    IMask(
+        document.getElementById('masced_input'),
+        {
+          mask: '+{7}(000)000-00-00'
+        }
+      )
+});
 
 
 import ToBascetBtnPage from './components/ToBascetBtnPage.vue'

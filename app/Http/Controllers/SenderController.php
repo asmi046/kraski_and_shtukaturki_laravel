@@ -19,7 +19,10 @@ class SenderController extends Controller
 
         Mail::to(["asmi046@gmail.com","cubensis2009@yandex.ru"])->send(new ConsultMail($data));
 
-        return ["send" => "Сообщение отправлено"];
+        if ($data['name'] === "CTA")
+            return redirect()->route('thencs');
+        else
+            return ["send" => "Сообщение отправлено"];
     }
 
 
