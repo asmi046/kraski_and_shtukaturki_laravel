@@ -37,9 +37,7 @@
         bottom: 0;
     }
 
-    .img_wrapper {
-        height: 200px;
-    }
+
 
     .text {
         padding: 20px;
@@ -50,5 +48,14 @@
     .card-popular__btn {
         font-size: 14px;
         margin-top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .action_pop_up {
+        width: 250px;
+        .img_wrapper {
+            height: 150px;
+        }
     }
 }
