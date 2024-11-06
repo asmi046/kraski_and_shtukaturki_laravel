@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     public function blog() {
-        $blog = Blog::paginate(10);
+        $blog = Blog::orderBy('created_at', 'DESC')->paginate(10);
         return view('blog.blog', ['blog' => $blog]);
     }
 

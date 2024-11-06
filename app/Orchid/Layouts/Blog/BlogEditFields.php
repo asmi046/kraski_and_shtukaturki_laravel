@@ -17,6 +17,7 @@ use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Fields\Picture;
 
 use Orchid\Support\Facades\Toast;
+use Orchid\Screen\Fields\Switcher;
 use Orchid\Screen\Fields\TextArea;
 use Orchid\Support\Facades\Layout;
 
@@ -43,6 +44,13 @@ class BlogEditFields extends Rows
                 ->help('Заголовок проекта')
                 ->required()
                 ->horizontal(),
+
+            Switcher::make('blog.is_action')
+                ->sendTrueOrFalse()
+                ->title('Это акция')
+                ->placeholder('Это акция')
+                ->horizontal()
+                ->help('Включить если этот пост является акцией'),
 
             Input::make('blog.slug')
                 ->title('Окончание ссылки')
