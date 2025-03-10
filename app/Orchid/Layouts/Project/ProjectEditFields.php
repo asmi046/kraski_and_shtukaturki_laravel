@@ -43,6 +43,11 @@ class ProjectEditFields extends Rows
                 ->required()
                 ->horizontal(),
 
+            Input::make('project.slug')
+                ->title('Ссылка')
+                ->help('Адрес ссылки')
+                ->horizontal(),
+
             Quill::make('project.description')
                 ->title('Описание категории')
                 ->help('Введите описание категории')

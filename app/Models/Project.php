@@ -17,6 +17,7 @@ class Project extends Model
         "description",
         "galery",
         "params",
+        "slug",
         "img",
         "img1",
         "img2",
@@ -33,4 +34,13 @@ class Project extends Model
         'galery' => 'array',
         'params' => 'array',
     ];
+
+
+    public function setSlugAttribute($value)
+    {
+        if (empty($value))
+            $this->attributes['slug'] =  Str::slug($this->title);
+        else
+            $this->attributes['slug'] =  $value;
+    }
 }
