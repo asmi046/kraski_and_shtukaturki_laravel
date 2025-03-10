@@ -54,6 +54,7 @@ class ProjectEditFields extends Rows
                 ->horizontal(),
 
             Matrix::make('project.galery')
+            ->required()
                 ->title('Галерея проекта')
                 ->columns([
                     'Изображение' => 'img',
@@ -65,6 +66,7 @@ class ProjectEditFields extends Rows
                 ]),
 
             Matrix::make('project.params')
+            ->required()
                 ->title('Параметры проекта')
                 ->columns([
                     'Имя параметра' => 'name',
