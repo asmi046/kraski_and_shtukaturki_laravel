@@ -27,7 +27,11 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('projects', function (Blueprint $table) {
-            //
+            $table->dropColumn('slug');
+            $table->dropColumn('galery');
+            $table->dropColumn('params');
+            $table->dropColumn('seo_title');
+            $table->dropColumn('seo_description');
         });
     }
 };

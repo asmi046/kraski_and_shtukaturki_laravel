@@ -9,13 +9,14 @@ use Orchid\Support\Color;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
 use Orchid\Screen\Layouts\Rows;
+use Orchid\Screen\Fields\Attach;
 use Orchid\Screen\Fields\Matrix;
 use Orchid\Screen\Fields\Number;
 use Orchid\Screen\Fields\Select;
+
 use Orchid\Screen\Actions\Button;
 
 use Orchid\Screen\Fields\Picture;
-
 use Orchid\Support\Facades\Toast;
 use Orchid\Screen\Fields\TextArea;
 
@@ -80,6 +81,7 @@ class ProjectEditFields extends Rows
             Picture::make('project.img')
                 ->title('Основное изображение')
                 ->storage('public')
+                ->acceptedFiles('.jpg')
                 ->targetRelativeUrl()
                 ->required()
                 ->horizontal(),

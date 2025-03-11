@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ColorEffectSeeder::class,
             TrademarkSeeder::class,
+            UserSeeder::class,
             ProductGroupSeederDecorazza::class,
             ProductGroupSeeder::class,
             // ProductSeeder::class,

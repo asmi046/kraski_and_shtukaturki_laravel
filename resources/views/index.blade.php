@@ -87,7 +87,7 @@
 
 <section class="page__popular popular section">
 	<div class="_container">
-		<h2 class="popular__title title">Визуальные эффекты</h2>
+		<h2 class="popular__title title">Визуальные эффекты 1</h2>
 
         <div class="services__inner">
             @foreach ($effects as $item)

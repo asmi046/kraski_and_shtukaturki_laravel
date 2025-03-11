@@ -25,6 +25,7 @@
                         :modules="modules"
                     >
 
+                    @if ($project->galery)
                         @foreach ($project->galery as $item)
                             <swiper-slide>
                                 <a data-fslightbox="prod_g1" href="{{$item['img']}}">
@@ -32,6 +33,7 @@
                                 </a>
                             </swiper-slide>
                         @endforeach
+                    @endif
 
                     </swiper>
 
@@ -39,13 +41,16 @@
 
                 <div class="tovarinfo__side">
                     <div class="cerecters">
-                        @foreach ($project->params as $item)
-                            <div class="cer">
-                                <span class="name">{{ $item['name'] }}</span>
-                                <span class="dots"></span>
-                                <span class="value">{{ $item['value'] }}</span>
-                            </div>
-                        @endforeach
+                        @if ($project->params)
+                            @foreach ($project->params as $item)
+                                <div class="cer">
+                                    <span class="name">{{ $item['name'] }}</span>
+                                    <span class="dots"></span>
+                                    <span class="value">{{ $item['value'] }}</span>
+                                </div>
+                            @endforeach
+                        @endif
+
                     </div>
 
                     <div class="description text_styles">

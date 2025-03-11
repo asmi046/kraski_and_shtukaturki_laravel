@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
                     'name' => "Супер Админ",
                     'email' => "asmi046_1@gmail.com",
                     'password' => Hash::make("123"),
-                    'permissions' => '{"platform.index":true}',
+                    'permissions' => '{"platform.systems.roles":true,"platform.systems.users":true,"platform.systems.attachment":true,"platform.index":true}',
                     'email_verified_at' => date("Y-m-d H:i:s")
             ]
         );
