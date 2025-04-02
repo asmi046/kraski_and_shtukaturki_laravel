@@ -50,7 +50,7 @@ class ProductListTable extends Table
 
                 return $rstr;
             })->width("20%"),
-            TD::make('tm', 'Торговая арка')->sort()->width("15%"),
+            TD::make('tm', 'Торговая арка')->sort()->filter(TD::FILTER_TEXT)->width("15%"),
 
             TD::make('title', 'Заголовок')->width("45%")->filter(TD::FILTER_TEXT),
 
