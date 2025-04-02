@@ -25,6 +25,6 @@ class ProductController extends Controller
             return view('product-decorazza', ['product' => $prosuct, 'category'=> $categories, "galery"=>$tovar_images]);
         }
 
-        return view('product', ['product' => $prosuct, 'category'=> $categories]);
+        return view('product-universal', ['product' => $prosuct, 'category'=> $categories]);
     }
 }
