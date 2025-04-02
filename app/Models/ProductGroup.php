@@ -52,7 +52,8 @@ class ProductGroup extends Model
     ];
 
     protected $allowedFilters  = [
-        'title' => Like::class
+        'title' => Like::class,
+        'tm' => Like::class
     ];
 
 
