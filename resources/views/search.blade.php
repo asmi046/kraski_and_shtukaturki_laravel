@@ -19,7 +19,8 @@
 
         <div class="category-sec__wrap">
 
-            <x-filter.sidebar-filter></x-filter.sidebar-filter>
+            {{-- <x-filter.sidebar-filter></x-filter.sidebar-filter> --}}
+            <x-product-filter></x-product-filter>
 
             <div class="category-sec__main main-category">
                 <div class="main-category__inner">

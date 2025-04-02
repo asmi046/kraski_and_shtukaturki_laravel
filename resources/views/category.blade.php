@@ -26,7 +26,8 @@
 
         <div class="category-sec__wrap">
 
-            <x-filter.sidebar-filter :name="$category_info->name"></x-filter.sidebar-filter>
+            {{-- <x-filter.sidebar-filter :name="$category_info->name"></x-filter.sidebar-filter> --}}
+            <x-product-filter :name="$category_info->name"></x-product-filter>
 
             <div class="category-sec__main main-category">
                 <div class="main-category__inner">
