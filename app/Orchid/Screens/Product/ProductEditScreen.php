@@ -141,7 +141,11 @@ class ProductEditScreen extends Screen
         $this->product->category_tovars()->sync($request->get("category"));
         $this->product->effects()->sync($request->get("effect"));
 
-        $this->product->fill($request->get('product'))->save();
+        $product_info = $request->get('product');
+        $product_info['advantages'] = isset($product_info['advantages'])?$product_info['advantages']:null;
+        $product_info['props'] = isset($product_info['props'])?$product_info['props']:null;
+
+        $this->product->fill($product_info)->save();
 
         Toast::info("Продукт сохранен");
     }

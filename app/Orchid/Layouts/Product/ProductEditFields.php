@@ -96,7 +96,6 @@ class ProductEditFields extends Rows
             Matrix::make('product.props')
                 ->title('Свойства')
                 ->horizontal()
-                ->nullable()
                 ->columns([
                     'Параметр',
                     'Величина',
@@ -105,6 +104,7 @@ class ProductEditFields extends Rows
             Matrix::make('product.advantages')
                 ->title('Преимущества')
                 ->horizontal()
+                ->empty()
                 ->columns([
                     'Преимущество',
                 ]),
