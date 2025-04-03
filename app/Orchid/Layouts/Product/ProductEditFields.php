@@ -84,6 +84,7 @@ class ProductEditFields extends Rows
                 ->title('Категории товара')
                 ->multiple()
                 ->horizontal()
+                ->chunk(50)
                 ->help('Выберите категорию'),
 
             Relation::make('effect.')
@@ -91,6 +92,7 @@ class ProductEditFields extends Rows
                 ->title('Визуальный эффект')
                 ->multiple()
                 ->horizontal()
+                ->chunk(50)
                 ->help('Выберите эффект'),
 
             Matrix::make('product.props')
